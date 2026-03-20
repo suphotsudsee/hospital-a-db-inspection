@@ -60,9 +60,10 @@ async function getTableData(name: string): Promise<TableDetail | null> {
 export default async function TableDetailPage({ 
   params 
 }: { 
-  params: { name: string } 
+  params: Promise<{ name: string }> 
 }) {
-  const data = await getTableData(params.name)
+  const { name } = await params
+  const data = await getTableData(name)
   
   if (!data) {
     return (
@@ -73,7 +74,7 @@ export default async function TableDetailPage({
         <Card variant="bordered">
           <CardBody className="text-center py-12">
             <p className="text-gray-500 dark:text-gray-400">
-              The table &quot;{params.name}&quot; was not found.
+              The table &quot;{name}&quot; was not found.
             </p>
             <Link 
               href="/tables" 

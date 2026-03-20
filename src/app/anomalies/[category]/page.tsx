@@ -51,9 +51,10 @@ async function getCategoryData(category: string): Promise<AnomalyCategoryData | 
 export default async function AnomalyCategoryPage({ 
   params 
 }: { 
-  params: { category: string } 
+  params: Promise<{ category: string }> 
 }) {
-  const data = await getCategoryData(params.category)
+  const { category: categoryName } = await params
+  const data = await getCategoryData(categoryName)
   
   if (!data) {
     notFound()

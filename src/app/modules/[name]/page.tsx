@@ -73,9 +73,10 @@ async function getModuleData(name: string): Promise<ModuleDetailData | null> {
 export default async function ModuleDetailPage({ 
   params 
 }: { 
-  params: { name: string } 
+  params: Promise<{ name: string }> 
 }) {
-  const data = await getModuleData(params.name)
+  const { name } = await params
+  const data = await getModuleData(name)
   
   if (!data) {
     notFound()

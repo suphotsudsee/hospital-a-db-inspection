@@ -79,15 +79,16 @@ async function loadPageData(
 export default async function DataDictionaryPage({
   searchParams,
 }: {
-  searchParams: {
+  searchParams: Promise<{
     page?: string
     q?: string
     module?: string
-  }
+  }>
 }) {
-  const page = parseInt(searchParams.page || '1', 10)
-  const query = searchParams.q || ''
-  const moduleName = searchParams.module || ''
+  const resolvedSearchParams = await searchParams
+  const page = parseInt(resolvedSearchParams.page || '1', 10)
+  const query = resolvedSearchParams.q || ''
+  const moduleName = resolvedSearchParams.module || ''
   const data = await loadPageData(page, query, moduleName)
 
   if (!data) {

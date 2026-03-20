@@ -52,9 +52,10 @@ async function getTablesData(page: number = 1, limit: number = 50): Promise<Tabl
 export default async function TablesPage({
   searchParams,
 }: {
-  searchParams: { page?: string }
+  searchParams: Promise<{ page?: string }>
 }) {
-  const page = parseInt(searchParams.page || '1')
+  const resolvedSearchParams = await searchParams
+  const page = parseInt(resolvedSearchParams.page || '1')
   const data = await getTablesData(page, 30)
   
   if (!data) {
