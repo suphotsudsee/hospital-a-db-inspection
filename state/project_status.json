@@ -1,18 +1,31 @@
 {
   "project_name": "hospital-db-inspection",
   "project_type": "data-dictionary",
-  "status": "DONE",
-  "current_phase": 1,
+  "status": "COMPLETE",
+  "current_phase": 2,
   "overall_progress": 100,
-  "last_updated": "2026-03-20T16:11:00+07:00",
+  "last_updated": "2026-03-20T16:25:00+07:00",
   "retry_count": 0,
-  "notes": "Phase 1: Data Dictionary Generation - COMPLETED",
+  "notes": "Phase 2: Update Dashboard Schema with Data Dictionary - COMPLETED",
   "output_files": [
-    "docs/DATA_DICTIONARY.md"
+    "docs/DATA_DICTIONARY.md",
+    "state/dashboard_schema.json"
   ],
   "statistics": {
     "total_tables": 847,
-    "total_columns": "~15000",
-    "file_size_kb": 648
+    "total_columns": 8231,
+    "fields_with_thai_labels": 850,
+    "file_size_mb": 2.19
+  },
+  "data_dictionary": {
+    "standards": {
+      "label_standard": "มาตรฐานกระทรวงสาธารณสุข",
+      "description_standard": "คำนิยามตามมาตรฐาน HIS 43 แฟ้ม"
+    },
+    "coverage": {
+      "tables_documented": 847,
+      "columns_documented": 8231,
+      "thai_labels_added": 850
+    }
   }
 }
