@@ -1,6 +1,8 @@
-$projectPath = (Split-Path -Parent $PSScriptRoot).Replace('\', '/')
+$projectPath = Split-Path -Parent $PSScriptRoot
+$directorAgent = "01-team-director" -replace '^\d+-', ''
 
-openclaw agent --agent 01-team-director --message @"
+openclaw agent --agent $directorAgent --message @"
+
 เริ่มโปรเจกต์ที่ $projectPath
 
 เป้าหมาย: ฐานข้อมูลนี้ไม่มี Data Dictionary ให้ดำเนินการดังนี้:
