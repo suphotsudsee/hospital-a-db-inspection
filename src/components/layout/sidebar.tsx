@@ -56,6 +56,16 @@ const navItems = [
     ),
   },
   {
+    id: 'data-dictionary',
+    label: 'Dictionary',
+    href: '/data-dictionary',
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v11.494m-5.747-8.62l11.494 5.747M6.253 14.873l11.494-5.746" />
+      </svg>
+    ),
+  },
+  {
     id: 'search',
     label: 'Search',
     href: '/search',

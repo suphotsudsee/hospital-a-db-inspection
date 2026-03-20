@@ -219,6 +219,9 @@ export default async function TableDetailPage({
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase">
                     Default
                   </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-400 uppercase">
+                    Description
+                  </th>
                 </tr>
               </thead>
               <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
@@ -249,6 +252,9 @@ export default async function TableDetailPage({
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600 dark:text-gray-400">
                       {col.default || '-'}
+                    </td>
+                    <td className="px-6 py-4 text-sm text-gray-600 dark:text-gray-400 whitespace-normal">
+                      {col.comment || '-'}
                     </td>
                   </tr>
                 ))}

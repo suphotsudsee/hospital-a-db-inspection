@@ -274,7 +274,7 @@ export default async function OverviewPage() {
       )}
       
       {/* Quick Links */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
         <Link href="/modules" className="block">
           <Card variant="bordered" className="hover:shadow-md transition-shadow cursor-pointer h-full">
             <CardBody className="text-center py-8">
@@ -318,6 +318,22 @@ export default async function OverviewPage() {
               <h3 className="font-semibold text-gray-900 dark:text-gray-100">Index Recommendations</h3>
               <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
                 Optimize query performance
+              </p>
+            </CardBody>
+          </Card>
+        </Link>
+
+        <Link href="/data-dictionary" className="block">
+          <Card variant="bordered" className="hover:shadow-md transition-shadow cursor-pointer h-full">
+            <CardBody className="text-center py-8">
+              <div className="w-12 h-12 mx-auto bg-indigo-100 dark:bg-indigo-900/30 rounded-lg flex items-center justify-center mb-3">
+                <svg className="w-6 h-6 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v11.494m-5.747-8.62l11.494 5.747M6.253 14.873l11.494-5.746" />
+                </svg>
+              </div>
+              <h3 className="font-semibold text-gray-900 dark:text-gray-100">Data Dictionary</h3>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                Browse report structure by module and table
               </p>
             </CardBody>
           </Card>

@@ -957,6 +957,168 @@ export async function getTablesList(
 }
 
 /**
+ * Get data dictionary overview and table listing
+ */
+export async function getDataDictionary(
+  options: {
+    module?: string;
+    query?: string;
+    page?: number;
+    limit?: number;
+  } = {}
+): Promise<{
+  report: {
+    path: string;
+    database: string;
+    server_version: string;
+    generated_at: string;
+    total_tables: number;
+  };
+  summary: {
+    total_tables: number;
+    total_columns: number;
+    total_rows: number;
+    modules_count: number;
+    tables_with_pk: number;
+    tables_without_pk: number;
+  };
+  modules: Array<{
+    name: string;
+    description_th: string;
+    description_en: string;
+    table_count: number;
+    total_rows: number;
+    total_columns: number;
+  }>;
+  filters: {
+    module: string | null;
+    query: string;
+  };
+  tables: Array<{
+    name: string;
+    module: string;
+    row_count: number;
+    column_count: number;
+    engine: string;
+    has_primary_key: boolean;
+    primary_key: string[];
+    comment: string;
+    anomaly_count: number;
+  }>;
+  pagination: {
+    page: number;
+    limit: number;
+    total_count: number;
+    total_pages: number;
+    has_next_page: boolean;
+    has_prev_page: boolean;
+  };
+}> {
+  const moduleFilter = options.module?.trim().toLowerCase() || '';
+  const query = options.query?.trim().toLowerCase() || '';
+  const page = Math.max(1, options.page || 1);
+  const limit = Math.max(1, options.limit || 25);
+
+  const [schemaInventory, moduleMap, anomalies, indexAnalysis, reportMeta] = await Promise.all([
+    loadSchemaInventory(),
+    loadModuleMap(),
+    loadAnomalies(),
+    loadIndexAnalysis(),
+    loadDataDictionaryReportMeta(),
+  ]);
+
+  const moduleLookup = new Map<string, ModuleInfo>();
+  moduleMap.modules.forEach((module) => {
+    moduleLookup.set(module.name, module);
+  });
+
+  const modules = moduleMap.modules
+    .map((module) => {
+      const tableEntries = module.tables
+        .map((tableName) => schemaInventory.tables[tableName])
+        .filter(Boolean) as TableInfo[];
+
+      return {
+        name: module.name,
+        description_th: module.description_th,
+        description_en: module.description_en,
+        table_count: module.table_count,
+        total_rows: tableEntries.reduce((sum, table) => sum + (table.row_count || 0), 0),
+        total_columns: tableEntries.reduce((sum, table) => sum + (table.columns?.length || 0), 0),
+      };
+    })
+    .sort((a, b) => b.table_count - a.table_count || a.name.localeCompare(b.name));
+
+  const tables = Object.entries(schemaInventory.tables)
+    .map(([name, table]) => {
+      const moduleName = getModuleForTable(name, moduleMap.modules);
+      return {
+        name,
+        module: moduleName,
+        row_count: table.row_count || 0,
+        column_count: table.columns?.length || 0,
+        engine: table.engine || 'Unknown',
+        has_primary_key: Boolean(table.primary_key && table.primary_key.length > 0),
+        primary_key: table.primary_key || [],
+        comment: table.comment || '',
+        anomaly_count: anomalies.anomalies.filter((item) => item.table === name).length,
+      };
+    })
+    .filter((table) => {
+      const matchesModule = !moduleFilter || table.module.toLowerCase() === moduleFilter;
+      const haystack = `${table.name} ${table.module} ${table.comment}`.toLowerCase();
+      const matchesQuery = !query || haystack.includes(query);
+      return matchesModule && matchesQuery;
+    })
+    .sort((a, b) => a.name.localeCompare(b.name));
+
+  const totalCount = tables.length;
+  const totalPages = Math.ceil(totalCount / limit);
+  const safePage = Math.max(1, Math.min(page, totalPages || 1));
+  const startIndex = (safePage - 1) * limit;
+  const paginatedTables = tables.slice(startIndex, startIndex + limit);
+
+  const totalColumns = Object.values(schemaInventory.tables).reduce((sum, table) => sum + (table.columns?.length || 0), 0);
+  const totalRows = Object.values(schemaInventory.tables).reduce((sum, table) => sum + (table.row_count || 0), 0);
+
+  const selectedModule = moduleFilter
+    ? moduleLookup.get(moduleMap.modules.find((module) => module.name.toLowerCase() === moduleFilter)?.name || '')
+    : null;
+
+  return {
+    report: {
+      path: 'docs/DATA_DICTIONARY.md',
+      database: reportMeta.database || schemaInventory.database,
+      server_version: reportMeta.server_version || schemaInventory.server_version,
+      generated_at: reportMeta.generated_at || schemaInventory.discovered_at,
+      total_tables: reportMeta.total_tables || indexAnalysis.statistics.total_tables,
+    },
+    summary: {
+      total_tables: indexAnalysis.statistics.total_tables,
+      total_columns: totalColumns,
+      total_rows: totalRows,
+      modules_count: moduleMap.modules.length,
+      tables_with_pk: indexAnalysis.statistics.tables_with_pk,
+      tables_without_pk: indexAnalysis.statistics.tables_without_pk,
+    },
+    modules,
+    filters: {
+      module: selectedModule?.name || null,
+      query: options.query?.trim() || '',
+    },
+    tables: paginatedTables,
+    pagination: {
+      page: safePage,
+      limit,
+      total_count: totalCount,
+      total_pages: totalPages,
+      has_next_page: safePage < totalPages,
+      has_prev_page: safePage > 1,
+    },
+  };
+}
+
+/**
  * Get table by name
  */
 export async function getTableByName(name: string): Promise<{
@@ -979,11 +1141,12 @@ export async function getTableByName(name: string): Promise<{
   issues: Array<{ type: string; severity: string; message: string }>;
   recommendations: Array<{ priority: string; action: string; reason: string; sql: string }>;
 } | null> {
-  const [schemaInventory, anomalies, indexAnalysis, moduleMap] = await Promise.all([
+  const [schemaInventory, anomalies, indexAnalysis, moduleMap, dataDictionaryMeta] = await Promise.all([
     loadSchemaInventory(),
     loadAnomalies(),
     loadIndexAnalysis(),
     loadModuleMap(),
+    loadDataDictionaryTableMeta(name),
   ]);
 
   const tableData = schemaInventory.tables[name];
@@ -1010,8 +1173,11 @@ export async function getTableByName(name: string): Promise<{
     data_size_bytes: tableData.data_size_bytes || 0,
     index_size_bytes: tableData.index_size_bytes || 0,
     engine: tableData.engine || 'Unknown',
-    comment: tableData.comment || '',
-    columns: tableData.columns || [],
+    comment: tableData.comment || dataDictionaryMeta.tableDescription || '',
+    columns: (tableData.columns || []).map((column) => ({
+      ...column,
+      comment: column.comment || dataDictionaryMeta.columnDescriptions[column.name] || '',
+    })),
     primary_key: tableData.primary_key || [],
     foreign_keys: Array.isArray(tableData.foreign_keys) ? tableData.foreign_keys : [],
     indexes: tableData.indexes || [],
@@ -1270,4 +1436,90 @@ function getAnomalyImpactDescription(severity: string, rowCount: number): string
     return 'Medium - Should be addressed for optimal performance';
   }
   return 'Low - Minor impact, can be addressed later';
+}
+
+async function loadDataDictionaryReportMeta(): Promise<{
+  database: string;
+  server_version: string;
+  generated_at: string;
+  total_tables: number;
+}> {
+  const defaultMeta = {
+    database: '',
+    server_version: '',
+    generated_at: '',
+    total_tables: 0,
+  };
+
+  try {
+    const reportPath = path.join(process.cwd(), 'docs', 'DATA_DICTIONARY.md');
+    const content = await fs.readFile(reportPath, 'utf-8');
+
+    const databaseMatch = content.match(/\*\*Database:\*\*\s*(.+)/);
+    const serverVersionMatch = content.match(/\*\*Server Version:\*\*\s*(.+)/);
+    const generatedAtMatch = content.match(/\*\*Generated:\*\*\s*(.+)/);
+    const totalTablesMatch = content.match(/\*\*Total Tables:\*\*\s*(\d+)/);
+
+    return {
+      database: databaseMatch?.[1]?.trim() || '',
+      server_version: serverVersionMatch?.[1]?.trim() || '',
+      generated_at: generatedAtMatch?.[1]?.trim() || '',
+      total_tables: totalTablesMatch ? parseInt(totalTablesMatch[1], 10) : 0,
+    };
+  } catch {
+    return defaultMeta;
+  }
+}
+
+async function loadDataDictionaryTableMeta(tableName: string): Promise<{
+  tableDescription: string;
+  columnDescriptions: Record<string, string>;
+}> {
+  try {
+    const reportPath = path.join(process.cwd(), 'docs', 'DATA_DICTIONARY.md');
+    const content = await fs.readFile(reportPath, 'utf-8');
+    const escapedName = escapeRegExp(tableName);
+    const sectionRegex = new RegExp(`^###\\s+${escapedName}\\s*$([\\s\\S]*?)(?=^---\\s*$)`, 'm');
+    const sectionMatch = content.match(sectionRegex);
+
+    if (!sectionMatch) {
+      return {
+        tableDescription: '',
+        columnDescriptions: {},
+      };
+    }
+
+    const section = sectionMatch[1];
+    const descriptionMatch = section.match(/\*\*.*Description.*:\*\*\s*(.+)/i);
+    const columnDescriptions: Record<string, string> = {};
+
+    section.split(/\r?\n/).forEach((line) => {
+      const trimmed = line.trim();
+      if (!trimmed.startsWith('| `')) return;
+
+      const parts = trimmed.split('|').map((part) => part.trim());
+      const columnName = parts[1]?.replace(/^`|`$/g, '');
+      const description = parts[5];
+
+      if (columnName) {
+        columnDescriptions[columnName] = description && description !== '-' ? description : '';
+      }
+    });
+
+    return {
+      tableDescription: descriptionMatch?.[1]?.trim() === '-'
+        ? ''
+        : descriptionMatch?.[1]?.trim() || '',
+      columnDescriptions,
+    };
+  } catch {
+    return {
+      tableDescription: '',
+      columnDescriptions: {},
+    };
+  }
+}
+
+function escapeRegExp(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }

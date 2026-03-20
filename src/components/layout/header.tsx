@@ -88,6 +88,9 @@ export default function Header() {
             <Link href="/tables" className="block px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
               Tables
             </Link>
+            <Link href="/data-dictionary" className="block px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
+              Dictionary
+            </Link>
             <Link href="/search" className="block px-4 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
               Search
             </Link>
