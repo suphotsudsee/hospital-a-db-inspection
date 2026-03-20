@@ -1,0 +1,788 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "generated_at": "2026-03-20T09:45:00.000Z",
+    "database": "hidb10949",
+    "description": "TypeScript interfaces and example responses for Hospital DB Dashboard API"
+  },
+  "interfaces": {
+    "BaseResponse": {
+      "success": "boolean",
+      "error?": "ErrorDetail",
+      "timestamp": "string",
+      "generated_at": "string",
+      "cache_expires_at?": "string"
+    },
+    "ErrorDetail": {
+      "code": "string",
+      "message": "string",
+      "details?": "Record<string, unknown>"
+    },
+    "PaginationMeta": {
+      "page": "number",
+      "limit": "number",
+      "total_count": "number",
+      "total_pages": "number",
+      "has_next_page": "boolean",
+      "has_prev_page": "boolean"
+    }
+  },
+  "responses": {
+    "OverviewResponse": {
+      "description": "Complete database overview for dashboard header",
+      "extends": "BaseResponse",
+      "example": {
+        "success": true,
+        "timestamp": "2026-03-20T10:30:00.000Z",
+        "generated_at": "2026-03-20T10:30:00.000Z",
+        "cache_expires_at": "2026-03-20T11:30:00.000Z",
+        "data": {
+          "database": {
+            "name": "hidb10949",
+            "server_version": "10.11.16-MariaDB-ubu2404-log",
+            "charset": "utf8mb4",
+            "collation": "utf8mb4_general_ci"
+          },
+          "statistics": {
+            "total_tables": 847,
+            "total_rows": 124948696,
+            "total_size_bytes": 17930886144,
+            "total_size_human": "16.70 GB",
+            "data_size_bytes": 14987654144,
+            "index_size_bytes": 2944232000,
+            "total_columns": 12543,
+            "engine_types": ["InnoDB", "MyISAM", "MEMORY"]
+          },
+          "modules": {
+            "count": 25,
+            "distribution": [
+              { "name": "patient", "table_count": 123, "size_percentage": 32.32 },
+              { "name": "other", "table_count": 322, "size_percentage": 31.65 },
+              { "name": "opd", "table_count": 28, "size_percentage": 14.12 },
+              { "name": "pharmacy", "table_count": 31, "size_percentage": 9.56 },
+              { "name": "ipd", "table_count": 60, "size_percentage": 2.11 }
+            ]
+          },
+          "anomalies": {
+            "total": 527,
+            "critical": 24,
+            "warning": 152,
+            "info": 240,
+            "by_category": {
+              "missing_primary_keys": 242,
+              "missing_indexes": 155,
+              "large_tables_no_index": 104,
+              "orphan_tables": 50,
+              "naming_issues": 8
+            }
+          },
+          "health_score": {
+            "overall": 65,
+            "breakdown": {
+              "primary_key_health": 71.4,
+              "index_health": 58.7,
+              "table_usage_health": 88.5
+            },
+            "grade": "C",
+            "recommendation": "Database requires attention. 24 critical issues found."
+          },
+          "top_modules_by_size": [
+            {
+              "name": "patient",
+              "description_th": "ข้อมูลผู้ป่วยและบุคคล",
+              "description_en": "Patient and Personal Data",
+              "total_rows": 28944572,
+              "total_size_bytes": 5794839792,
+              "size_mb": 5525.87,
+              "size_gb": 5.40,
+              "size_percentage": 32.32
+            },
+            {
+              "name": "other",
+              "description_th": "อื่นๆ",
+              "description_en": "Other",
+              "total_rows": 43688780,
+              "total_size_bytes": 5673441304,
+              "size_mb": 5411.29,
+              "size_gb": 5.28,
+              "size_percentage": 31.65
+            },
+            {
+              "name": "opd",
+              "description_th": "บริการผู้ป่วยนอก",
+              "description_en": "Outpatient Services",
+              "total_rows": 20885760,
+              "total_size_bytes": 2532540324,
+              "size_mb": 2415.91,
+              "size_gb": 2.36,
+              "size_percentage": 14.12
+            },
+            {
+              "name": "pharmacy",
+              "description_th": "ระบบร้านขายยาและยา",
+              "description_en": "Pharmacy and Medications",
+              "total_rows": 11982169,
+              "total_size_bytes": 1714022032,
+              "size_mb": 1634.17,
+              "size_gb": 1.60,
+              "size_percentage": 9.56
+            },
+            {
+              "name": "moph",
+              "description_th": "เชื่อมต่อกระทรวงสาธารณสุข",
+              "description_en": "Ministry of Public Health Integration",
+              "total_rows": 6980234,
+              "total_size_bytes": 791626396,
+              "size_mb": 753.98,
+              "size_gb": 0.74,
+              "size_percentage": 4.41
+            }
+          ],
+          "top_largest_tables": [
+            { "name": "incoth", "module": "patient", "rows": 11694065, "size_mb": 2030.54 },
+            { "name": "prscdt", "module": "pharmacy", "rows": 10698227, "size_mb": 1407.51 },
+            { "name": "ovstdr", "module": "opd", "rows": 5997041, "size_mb": 418.00 },
+            { "name": "ovstdx", "module": "opd", "rows": 4008465, "size_mb": 313.70 },
+            { "name": "ovst", "module": "opd", "rows": 3248483, "size_mb": 742.39 }
+          ]
+        }
+      }
+    },
+    "ModulesListResponse": {
+      "description": "List of all modules with statistics",
+      "extends": "BaseResponse",
+      "example": {
+        "success": true,
+        "timestamp": "2026-03-20T10:30:00.000Z",
+        "generated_at": "2026-03-20T10:30:00.000Z",
+        "data": {
+          "modules": [
+            {
+              "name": "patient",
+              "description_th": "ข้อมูลผู้ป่วยและบุคคล",
+              "description_en": "Patient and Personal Data",
+              "table_count": 123,
+              "total_rows": 28944572,
+              "total_size_bytes": 5794839792,
+              "size_mb": 5525.87,
+              "size_gb": 5.40,
+              "size_percentage": 32.32,
+              "anomaly_count": 15,
+              "health_score": 72,
+              "top_tables": [
+                { "name": "incoth", "rows": 11694065, "size_mb": 2030.54, "purpose": "transaction" },
+                { "name": "PERSON", "rows": 105707, "size_mb": 17.55, "purpose": "transaction" },
+                { "name": "pt", "rows": 181351, "size_mb": 67.14, "purpose": "transaction" },
+                { "name": "PTINFO", "rows": 171129, "size_mb": 18.87, "purpose": "transaction" },
+                { "name": "prsc", "rows": 2819717, "size_mb": 574.02, "purpose": "transaction" }
+              ],
+              "purpose_distribution": {
+                "transaction": 45,
+                "data": 38,
+                "reference": 25,
+                "link": 10,
+                "log": 5
+              }
+            },
+            {
+              "name": "other",
+              "description_th": "อื่นๆ",
+              "description_en": "Other",
+              "table_count": 322,
+              "total_rows": 43688780,
+              "total_size_bytes": 5673441304,
+              "size_mb": 5411.29,
+              "size_gb": 5.28,
+              "size_percentage": 31.65,
+              "anomaly_count": 8,
+              "health_score": 58,
+              "top_tables": [
+                { "name": "o_archive_all_json", "rows": 1709071, "size_mb": 1060.97, "purpose": "transaction" },
+                { "name": "data_correct", "rows": 8437993, "size_mb": 1634.85, "purpose": "transaction" },
+                { "name": "sign", "rows": 3989291, "size_mb": 550.65, "purpose": "transaction" }
+              ],
+              "purpose_distribution": {
+                "transaction": 89,
+                "data": 145,
+                "reference": 67,
+                "link": 15,
+                "log": 6
+              }
+            }
+          ],
+          "total_count": 25,
+          "statistics": {
+            "average_table_count": 33.88,
+            "average_size_gb": 0.67,
+            "total_anomaly_count": 527
+          }
+        }
+      }
+    },
+    "ModuleDetailResponse": {
+      "description": "Detailed information for a specific module",
+      "extends": "BaseResponse",
+      "example": {
+        "success": true,
+        "timestamp": "2026-03-20T10:30:00.000Z",
+        "generated_at": "2026-03-20T10:30:00.000Z",
+        "data": {
+          "module": {
+            "name": "patient",
+            "description_th": "ข้อมูลผู้ป่วยและบุคคล",
+            "description_en": "Patient and Personal Data",
+            "table_count": 123,
+            "total_rows": 28944572,
+            "total_size_bytes": 5794839792,
+            "size_mb": 5525.87,
+            "size_gb": 5.40,
+            "size_percentage": 32.32
+          },
+          "statistics": {
+            "average_table_size_mb": 44.93,
+            "largest_table": { "name": "incoth", "size_mb": 2030.54 },
+            "smallest_table": { "name": "psn_timer", "size_mb": 0.002 },
+            "empty_tables_count": 5,
+            "tables_over_1m_rows": 12
+          },
+          "tables": [
+            {
+              "name": "incoth",
+              "row_count": 11694065,
+              "size_bytes": 2128674816,
+              "size_mb": 2030.54,
+              "size_gb": 1.98,
+              "engine": "InnoDB",
+              "purpose": "transaction",
+              "severity": "CRITICAL",
+              "has_primary_key": true,
+              "index_count": 3,
+              "column_count": 45,
+              "issues": []
+            },
+            {
+              "name": "PERSON",
+              "row_count": 105707,
+              "size_bytes": 18399232,
+              "size_mb": 17.55,
+              "size_gb": 0.02,
+              "engine": "InnoDB",
+              "purpose": "transaction",
+              "severity": "WARNING",
+              "has_primary_key": false,
+              "index_count": 0,
+              "column_count": 52,
+              "issues": [
+                { "type": "missing_primary_key", "severity": "CRITICAL", "message": "Missing PRIMARY KEY" }
+              ]
+            },
+            {
+              "name": "pt",
+              "row_count": 181351,
+              "size_bytes": 70402048,
+              "size_mb": 67.14,
+              "size_gb": 0.07,
+              "engine": "InnoDB",
+              "purpose": "transaction",
+              "severity": "WARNING",
+              "has_primary_key": true,
+              "index_count": 1,
+              "column_count": 38,
+              "issues": []
+            }
+          ],
+          "anomalies": {
+            "total": 15,
+            "by_severity": { "critical": 2, "warning": 5, "info": 8 },
+            "issues": [
+              { "table": "PERSON", "issue": "missing_primary_key", "severity": "CRITICAL" },
+              { "table": "PTINFO", "issue": "missing_primary_key", "severity": "CRITICAL" },
+              { "table": "pt_pab", "issue": "large_table_no_index", "severity": "WARNING" }
+            ]
+          },
+          "recommendations": [
+            {
+              "priority": "HIGH",
+              "table": "PERSON",
+              "action": "Add primary key",
+              "reason": "105,707 rows without primary key",
+              "sql": "ALTER TABLE `PERSON` ADD PRIMARY KEY (`id`);"
+            },
+            {
+              "priority": "HIGH",
+              "table": "PTINFO",
+              "action": "Add primary key",
+              "reason": "171,129 rows without primary key",
+              "sql": "ALTER TABLE `PTINFO` ADD PRIMARY KEY (`id`);"
+            }
+          ]
+        }
+      }
+    },
+    "AnomaliesResponse": {
+      "description": "Anomaly summary and categories",
+      "extends": "BaseResponse",
+      "example": {
+        "success": true,
+        "timestamp": "2026-03-20T10:30:00.000Z",
+        "generated_at": "2026-03-20T10:30:00.000Z",
+        "data": {
+          "summary": {
+            "total_anomalies": 527,
+            "critical": 24,
+            "warning": 152,
+            "info": 240,
+            "affected_tables": 398,
+            "health_impact": "Database requires attention. 24 critical issues found."
+          },
+          "categories": [
+            {
+              "name": "missing_primary_keys",
+              "display_name": "Missing Primary Keys",
+              "description": "Tables without primary key constraint",
+              "count": 242,
+              "severity_breakdown": { "critical": 8, "warning": 45, "info": 189 },
+              "percentage_of_total": 45.92,
+              "recommendation": "Add primary keys to improve data integrity and query performance"
+            },
+            {
+              "name": "missing_indexes",
+              "display_name": "Missing Indexes",
+              "description": "Tables without proper secondary indexes",
+              "count": 155,
+              "severity_breakdown": { "critical": 10, "warning": 52, "info": 93 },
+              "percentage_of_total": 29.41,
+              "recommendation": "Consider adding indexes on frequently queried columns"
+            },
+            {
+              "name": "large_tables_no_index",
+              "display_name": "Large Tables Without Indexes",
+              "description": "Large tables (>10K rows) missing proper indexing",
+              "count": 104,
+              "severity_breakdown": { "critical": 6, "warning": 48, "info": 50 },
+              "percentage_of_total": 19.73,
+              "recommendation": "Priority indexing needed for tables with high row counts"
+            },
+            {
+              "name": "orphan_tables",
+              "display_name": "Orphan Tables",
+              "description": "Tables not linked to any module classification",
+              "count": 50,
+              "severity_breakdown": { "critical": 0, "warning": 0, "info": 50 },
+              "percentage_of_total": 9.49,
+              "recommendation": "Review table purpose and classify appropriately"
+            },
+            {
+              "name": "naming_issues",
+              "display_name": "Naming Convention Issues",
+              "description": "Tables with non-standard naming conventions",
+              "count": 8,
+              "severity_breakdown": { "critical": 0, "warning": 0, "info": 8 },
+              "percentage_of_total": 1.52,
+              "recommendation": "Consider renaming for consistency"
+            }
+          ],
+          "severity_distribution": {
+            "critical": { "count": 24, "percentage": 4.55, "tables_affected": 24 },
+            "warning": { "count": 152, "percentage": 28.84, "tables_affected": 145 },
+            "info": { "count": 240, "percentage": 45.54, "tables_affected": 229 }
+          },
+          "priority_actions": [
+            { "priority": 1, "action": "Add primary key to PERSON table (105,707 rows)" },
+            { "priority": 2, "action": "Add primary key to PTINFO table (171,129 rows)" },
+            { "priority": 3, "action": "Add primary key to ovststatus table (1,368,963 rows)" },
+            { "priority": 4, "action": "Add primary key to data_correct table (8,437,993 rows)" },
+            { "priority": 5, "action": "Add primary key to deaDMn table (493,488 rows)" }
+          ]
+        }
+      }
+    },
+    "AnomalyCategoryResponse": {
+      "description": "Detailed tables for a specific anomaly category",
+      "extends": "BaseResponse",
+      "includes": "PaginationMeta",
+      "example": {
+        "success": true,
+        "timestamp": "2026-03-20T10:30:00.000Z",
+        "generated_at": "2026-03-20T10:30:00.000Z",
+        "pagination": {
+          "page": 1,
+          "limit": 50,
+          "total_count": 242,
+          "total_pages": 5,
+          "has_next_page": true,
+          "has_prev_page": false
+        },
+        "data": {
+          "category": {
+            "name": "missing_primary_keys",
+            "display_name": "Missing Primary Keys",
+            "description": "Tables without primary key constraint",
+            "total_count": 242,
+            "severity_breakdown": { "critical": 8, "warning": 45, "info": 189 }
+          },
+          "tables": [
+            {
+              "name": "PERSON",
+              "module": "patient",
+              "row_count": 105707,
+              "size_bytes": 18399232,
+              "size_mb": 17.55,
+              "engine": "InnoDB",
+              "severity": "CRITICAL",
+              "issue": "Missing primary key on table with 105,707 rows",
+              "recommendation": "ALTER TABLE `PERSON` ADD PRIMARY KEY (`id`);",
+              "impact": "High - Large table without PK can cause performance issues and data integrity problems"
+            },
+            {
+              "name": "PTINFO",
+              "module": "patient",
+              "row_count": 171129,
+              "size_bytes": 19788944,
+              "size_mb": 18.87,
+              "engine": "InnoDB",
+              "severity": "CRITICAL",
+              "issue": "Missing primary key on table with 171,129 rows",
+              "recommendation": "ALTER TABLE `PTINFO` ADD PRIMARY KEY (`id`);",
+              "impact": "High - Large table without PK can cause performance issues and data integrity problems"
+            },
+            {
+              "name": "ovststatus",
+              "module": "opd",
+              "row_count": 1368963,
+              "size_bytes": 56180736,
+              "size_mb": 53.48,
+              "engine": "InnoDB",
+              "severity": "CRITICAL",
+              "issue": "Missing primary key on table with 1,368,963 rows",
+              "recommendation": "ALTER TABLE `ovststatus` ADD PRIMARY KEY (`id`);",
+              "impact": "Critical - Very large table without PK severely impacts performance"
+            }
+          ]
+        }
+      }
+    },
+    "IndexRecommendationsResponse": {
+      "description": "Index recommendations with priorities",
+      "extends": "BaseResponse",
+      "example": {
+        "success": true,
+        "timestamp": "2026-03-20T10:30:00.000Z",
+        "generated_at": "2026-03-20T10:30:00.000Z",
+        "data": {
+          "summary": {
+            "total_recommendations": 342,
+            "by_priority": {
+              "high": 24,
+              "medium": 78,
+              "low": 240
+            },
+            "estimated_impact": {
+              "high": "Critical - Will significantly improve query performance on large tables",
+              "medium": "Moderate - Will improve query performance on medium tables",
+              "low": "Low - Minor improvement for small tables"
+            }
+          },
+          "recommendations": [
+            {
+              "priority": "HIGH",
+              "priority_order": 1,
+              "table": "PERSON",
+              "module": "patient",
+              "index_type": "PRIMARY KEY",
+              "suggested_column": "id",
+              "row_count": 105707,
+              "size_mb": 17.55,
+              "reason": "Table has 105,707 rows but no primary key",
+              "impact": "Critical - Large table without PK severely impacts performance",
+              "sql": "ALTER TABLE `PERSON` ADD PRIMARY KEY (`id`);"
+            },
+            {
+              "priority": "HIGH",
+              "priority_order": 2,
+              "table": "ovststatus",
+              "module": "opd",
+              "index_type": "PRIMARY KEY",
+              "suggested_column": "id",
+              "row_count": 1368963,
+              "size_mb": 53.48,
+              "reason": "Table has 1,368,963 rows but no primary key",
+              "impact": "Critical - Very large table without PK severely impacts performance",
+              "sql": "ALTER TABLE `ovststatus` ADD PRIMARY KEY (`id`);"
+            },
+            {
+              "priority": "HIGH",
+              "priority_order": 3,
+              "table": "data_correct",
+              "module": "other",
+              "index_type": "PRIMARY KEY",
+              "suggested_column": "id",
+              "row_count": 8437993,
+              "size_mb": 1634.85,
+              "reason": "Table has 8,437,993 rows but no primary key",
+              "impact": "Critical - Extremely large table without PK severely impacts performance",
+              "sql": "ALTER TABLE `data_correct` ADD PRIMARY KEY (`id`);"
+            }
+          ],
+          "by_module": {
+            "patient": { "high": 5, "medium": 12, "low": 45, "total": 62 },
+            "opd": { "high": 4, "medium": 8, "low": 22, "total": 34 },
+            "ipd": { "high": 3, "medium": 6, "low": 15, "total": 24 },
+            "other": { "high": 8, "medium": 35, "low": 98, "total": 141 }
+          },
+          "estimated_benefits": {
+            "query_performance": "30-50% improvement on large table queries",
+            "data_integrity": "Significant improvement in data consistency",
+            "join_performance": "20-40% faster JOIN operations with proper keys"
+          }
+        }
+      }
+    },
+    "TablesListResponse": {
+      "description": "Paginated list of all tables",
+      "extends": "BaseResponse",
+      "includes": "PaginationMeta",
+      "example": {
+        "success": true,
+        "timestamp": "2026-03-20T10:30:00.000Z",
+        "generated_at": "2026-03-20T10:30:00.000Z",
+        "pagination": {
+          "page": 1,
+          "limit": 50,
+          "total_count": 847,
+          "total_pages": 17,
+          "has_next_page": true,
+          "has_prev_page": false
+        },
+        "data": {
+          "tables": [
+            {
+              "name": "incoth",
+              "module": "patient",
+              "row_count": 11694065,
+              "size_bytes": 2128674816,
+              "size_mb": 2030.54,
+              "size_gb": 1.98,
+              "size_human": "1.98 GB",
+              "engine": "InnoDB",
+              "purpose": "transaction",
+              "has_primary_key": true,
+              "index_count": 3,
+              "column_count": 45,
+              "anomaly_count": 0,
+              "severity": "CRITICAL"
+            },
+            {
+              "name": "prscdt",
+              "module": "pharmacy",
+              "row_count": 10698227,
+              "size_bytes": 1474936832,
+              "size_mb": 1407.51,
+              "size_gb": 1.37,
+              "size_human": "1.37 GB",
+              "engine": "InnoDB",
+              "purpose": "transaction",
+              "has_primary_key": true,
+              "index_count": 2,
+              "column_count": 38,
+              "anomaly_count": 1,
+              "severity": "CRITICAL"
+            },
+            {
+              "name": "ovstdr",
+              "module": "opd",
+              "row_count": 5997041,
+              "size_bytes": 437813248,
+              "size_mb": 418.00,
+              "size_gb": 0.41,
+              "size_human": "418.00 MB",
+              "engine": "InnoDB",
+              "purpose": "transaction",
+              "has_primary_key": true,
+              "index_count": 4,
+              "column_count": 32,
+              "anomaly_count": 0,
+              "severity": "CRITICAL"
+            }
+          ],
+          "filters_applied": {
+            "module": null,
+            "severity": null,
+            "has_primary_key": null
+          },
+          "sort": {
+            "field": "size_bytes",
+            "order": "desc"
+          }
+        }
+      }
+    },
+    "TableDetailResponse": {
+      "description": "Complete information for a single table",
+      "extends": "BaseResponse",
+      "example": {
+        "success": true,
+        "timestamp": "2026-03-20T10:30:00.000Z",
+        "generated_at": "2026-03-20T10:30:00.000Z",
+        "data": {
+          "table": {
+            "name": "PERSON",
+            "module": "patient",
+            "row_count": 105707,
+            "size": {
+              "data_bytes": 18399232,
+              "index_bytes": 0,
+              "total_bytes": 18399232,
+              "data_mb": 17.55,
+              "index_mb": 0.00,
+              "total_mb": 17.55,
+              "total_human": "17.55 MB"
+            },
+            "engine": "InnoDB",
+            "collation": "utf8mb4_general_ci",
+            "purpose": "transaction",
+            "auto_increment": null,
+            "create_time": "2024-01-15T08:30:00.000Z",
+            "update_time": "2026-03-20T09:15:00.000Z",
+            "comment": "Patient personal information"
+          },
+          "schema": {
+            "column_count": 52,
+            "has_primary_key": false,
+            "index_count": 0,
+            "unique_constraints": 0,
+            "foreign_keys": 0
+          },
+          "size_context": {
+            "rank_in_module": 3,
+            "module_total_size_mb": 5525.87,
+            "percentage_of_module": 0.32,
+            "database_total_size_mb": 17088.87,
+            "percentage_of_database": 0.10
+          },
+          "issues": [
+            {
+              "type": "missing_primary_key",
+              "severity": "CRITICAL",
+              "message": "Table PERSON has no primary key. This can cause performance issues and data integrity problems.",
+              "recommendation": "ALTER TABLE `PERSON` ADD PRIMARY KEY (`id`);",
+              "impact": "High - 105,707 rows without primary key"
+            }
+          ],
+          "recommendations": [
+            {
+              "priority": "HIGH",
+              "action": "Add primary key",
+              "sql": "ALTER TABLE `PERSON` ADD PRIMARY KEY (`id`);",
+              "reason": "Every table should have a primary key for data integrity"
+            }
+          ],
+          "columns": [
+            { "name": "hn", "type": "varchar(13)", "nullable": "NO", "key": "", "default": null, "comment": "Hospital Number" },
+            { "name": "cid", "type": "varchar(13)", "nullable": "YES", "key": "", "default": null, "comment": "Citizen ID" },
+            { "name": "pname", "type": "varchar(50)", "nullable": "YES", "key": "", "default": null, "comment": "Prefix Name" },
+            { "name": "fname", "type": "varchar(100)", "nullable": "YES", "key": "", "default": null, "comment": "First Name" },
+            { "name": "lname", "type": "varchar(100)", "nullable": "YES", "key": "", "default": null, "comment": "Last Name" }
+          ],
+          "indexes": []
+        }
+      }
+    },
+    "SearchResponse": {
+      "description": "Search results for tables, modules, or columns",
+      "extends": "BaseResponse",
+      "example": {
+        "success": true,
+        "timestamp": "2026-03-20T10:30:00.000Z",
+        "generated_at": "2026-03-20T10:30:00.000Z",
+        "data": {
+          "query": "person",
+          "type": "tables",
+          "results": [
+            {
+              "type": "table",
+              "name": "PERSON",
+              "module": "patient",
+              "row_count": 105707,
+              "size_mb": 17.55,
+              "relevance_score": 100,
+              "match_type": "exact"
+            },
+            {
+              "type": "table",
+              "name": "person_drp",
+              "module": "patient",
+              "row_count": 2,
+              "size_mb": 0.02,
+              "relevance_score": 80,
+              "match_type": "starts_with"
+            },
+            {
+              "type": "table",
+              "name": "personconsent",
+              "module": "patient",
+              "row_count": 14,
+              "size_mb": 0.03,
+              "relevance_score": 60,
+              "match_type": "contains"
+            },
+            {
+              "type": "table",
+              "name": "persong6pd",
+              "module": "patient",
+              "row_count": 405,
+              "size_mb": 0.03,
+              "relevance_score": 60,
+              "match_type": "contains"
+            }
+          ],
+          "total_count": 4,
+          "search_time_ms": 12
+        }
+      }
+    }
+  },
+  "typescript_interfaces": {
+    "BaseResponse": "interface BaseResponse {\n  success: boolean;\n  error?: ErrorDetail;\n  timestamp: string;\n  generated_at: string;\n  cache_expires_at?: string;\n}",
+    "ErrorDetail": "interface ErrorDetail {\n  code: string;\n  message: string;\n  details?: Record<string, unknown>;\n}",
+    "PaginationMeta": "interface PaginationMeta {\n  page: number;\n  limit: number;\n  total_count: number;\n  total_pages: number;\n  has_next_page: boolean;\n  has_prev_page: boolean;\n}",
+    "OverviewResponse": "interface OverviewResponse extends BaseResponse {\n  data: {\n    database: DatabaseInfo;\n    statistics: DatabaseStatistics;\n    modules: ModuleSummary;\n    anomalies: AnomalySummary;\n    health_score: HealthScore;\n    top_modules_by_size: TopModule[];\n    top_largest_tables: LargestTable[];\n  };\n}",
+    "DatabaseInfo": "interface DatabaseInfo {\n  name: string;\n  server_version: string;\n  charset: string;\n  collation: string;\n}",
+    "DatabaseStatistics": "interface DatabaseStatistics {\n  total_tables: number;\n  total_rows: number;\n  total_size_bytes: number;\n  total_size_human: string;\n  data_size_bytes: number;\n  index_size_bytes: number;\n  total_columns: number;\n  engine_types: string[];\n}",
+    "ModuleSummary": "interface ModuleSummary {\n  count: number;\n  distribution: ModuleDistribution[];\n}",
+    "ModuleDistribution": "interface ModuleDistribution {\n  name: string;\n  table_count: number;\n  size_percentage: number;\n}",
+    "AnomalySummary": "interface AnomalySummary {\n  total: number;\n  critical: number;\n  warning: number;\n  info: number;\n  by_category: Record<string, number>;\n}",
+    "HealthScore": "interface HealthScore {\n  overall: number;\n  breakdown: {\n    primary_key_health: number;\n    index_health: number;\n    table_usage_health: number;\n  };\n  grade: string;\n  recommendation: string;\n}",
+    "TopModule": "interface TopModule {\n  name: string;\n  description_th: string;\n  description_en: string;\n  total_rows: number;\n  total_size_bytes: number;\n  size_mb: number;\n  size_gb: number;\n  size_percentage: number;\n}",
+    "LargestTable": "interface LargestTable {\n  name: string;\n  module: string;\n  rows: number;\n  size_mb: number;\n}",
+    "ModulesListResponse": "interface ModulesListResponse extends BaseResponse {\n  data: {\n    modules: ModuleDetail[];\n    total_count: number;\n    statistics: {\n      average_table_count: number;\n      average_size_gb: number;\n      total_anomaly_count: number;\n    };\n  };\n}",
+    "ModuleDetail": "interface ModuleDetail {\n  name: string;\n  description_th: string;\n  description_en: string;\n  table_count: number;\n  total_rows: number;\n  total_size_bytes: number;\n  size_mb: number;\n  size_gb: number;\n  size_percentage: number;\n  anomaly_count: number;\n  health_score: number;\n  top_tables: TopTable[];\n  purpose_distribution: Record<string, number>;\n}",
+    "TopTable": "interface TopTable {\n  name: string;\n  rows: number;\n  size_mb: number;\n  purpose: string;\n}",
+    "ModuleDetailResponse": "interface ModuleDetailResponse extends BaseResponse {\n  data: {\n    module: ModuleInfo;\n    statistics: ModuleStatistics;\n    tables: TableInfo[];\n    anomalies: ModuleAnomalies;\n    recommendations: TableRecommendation[];\n  };\n}",
+    "ModuleInfo": "interface ModuleInfo {\n  name: string;\n  description_th: string;\n  description_en: string;\n  table_count: number;\n  total_rows: number;\n  total_size_bytes: number;\n  size_mb: number;\n  size_gb: number;\n  size_percentage: number;\n}",
+    "ModuleStatistics": "interface ModuleStatistics {\n  average_table_size_mb: number;\n  largest_table: { name: string; size_mb: number };\n  smallest_table: { name: string; size_mb: number };\n  empty_tables_count: number;\n  tables_over_1m_rows: number;\n}",
+    "TableInfo": "interface TableInfo {\n  name: string;\n  row_count: number;\n  size_bytes: number;\n  size_mb: number;\n  size_gb: number;\n  engine: string;\n  purpose: string;\n  severity: 'CRITICAL' | 'WARNING' | 'INFO';\n  has_primary_key: boolean;\n  index_count: number;\n  column_count: number;\n  issues: TableIssue[];\n}",
+    "TableIssue": "interface TableIssue {\n  type: string;\n  severity: string;\n  message: string;\n}",
+    "ModuleAnomalies": "interface ModuleAnomalies {\n  total: number;\n  by_severity: { critical: number; warning: number; info: number };\n  issues: { table: string; issue: string; severity: string }[];\n}",
+    "TableRecommendation": "interface TableRecommendation {\n  priority: string;\n  table: string;\n  action: string;\n  reason: string;\n  sql: string;\n}",
+    "AnomaliesResponse": "interface AnomaliesResponse extends BaseResponse {\n  data: {\n    summary: AnomalySummaryDetail;\n    categories: AnomalyCategory[];\n    severity_distribution: SeverityDistribution;\n    priority_actions: PriorityAction[];\n  };\n}",
+    "AnomalySummaryDetail": "interface AnomalySummaryDetail {\n  total_anomalies: number;\n  critical: number;\n  warning: number;\n  info: number;\n  affected_tables: number;\n  health_impact: string;\n}",
+    "AnomalyCategory": "interface AnomalyCategory {\n  name: string;\n  display_name: string;\n  description: string;\n  count: number;\n  severity_breakdown: { critical: number; warning: number; info: number };\n  percentage_of_total: number;\n  recommendation: string;\n}",
+    "SeverityDistribution": "interface SeverityDistribution {\n  critical: { count: number; percentage: number; tables_affected: number };\n  warning: { count: number; percentage: number; tables_affected: number };\n  info: { count: number; percentage: number; tables_affected: number };\n}",
+    "PriorityAction": "interface PriorityAction {\n  priority: number;\n  action: string;\n}",
+    "AnomalyCategoryResponse": "interface AnomalyCategoryResponse extends BaseResponse {\n  pagination: PaginationMeta;\n  data: {\n    category: AnomalyCategory;\n    tables: AnomalyTable[];\n  };\n}",
+    "AnomalyTable": "interface AnomalyTable {\n  name: string;\n  module: string;\n  row_count: number;\n  size_bytes: number;\n  size_mb: number;\n  engine: string;\n  severity: string;\n  issue: string;\n  recommendation: string;\n  impact: string;\n}",
+    "IndexRecommendationsResponse": "interface IndexRecommendationsResponse extends BaseResponse {\n  data: {\n    summary: {\n      total_recommendations: number;\n      by_priority: { high: number; medium: number; low: number };\n      estimated_impact: { high: string; medium: string; low: string };\n    };\n    recommendations: IndexRecommendation[];\n    by_module: Record<string, { high: number; medium: number; low: number; total: number }>;\n    estimated_benefits: { query_performance: string; data_integrity: string; join_performance: string };\n  };\n}",
+    "IndexRecommendation": "interface IndexRecommendation {\n  priority: string;\n  priority_order: number;\n  table: string;\n  module: string;\n  index_type: string;\n  suggested_column: string;\n  row_count: number;\n  size_mb: number;\n  reason: string;\n  impact: string;\n  sql: string;\n}",
+    "TablesListResponse": "interface TablesListResponse extends BaseResponse {\n  pagination: PaginationMeta;\n  data: {\n    tables: TableListItem[];\n    filters_applied: { module?: string; severity?: string; has_primary_key?: boolean };\n    sort: { field: string; order: 'asc' | 'desc' };\n  };\n}",
+    "TableListItem": "interface TableListItem {\n  name: string;\n  module: string;\n  row_count: number;\n  size_bytes: number;\n  size_mb: number;\n  size_gb: number;\n  size_human: string;\n  engine: string;\n  purpose: string;\n  has_primary_key: boolean;\n  index_count: number;\n  column_count: number;\n  anomaly_count: number;\n  severity: 'CRITICAL' | 'WARNING' | 'INFO';\n}",
+    "TableDetailResponse": "interface TableDetailResponse extends BaseResponse {\n  data: {\n    table: TableDetail;\n    schema: TableSchema;\n    size_context: SizeContext;\n    issues: TableIssue[];\n    recommendations: TableRecommendation[];\n    columns: TableColumn[];\n    indexes: TableIndex[];\n  };\n}",
+    "TableDetail": "interface TableDetail {\n  name: string;\n  module: string;\n  row_count: number;\n  size: { data_bytes: number; index_bytes: number; total_bytes: number; data_mb: number; index_mb: number; total_mb: number; total_human: string };\n  engine: string;\n  collation: string;\n  purpose: string;\n  auto_increment?: number;\n  create_time?: string;\n  update_time?: string;\n  comment?: string;\n}",
+    "TableSchema": "interface TableSchema {\n  column_count: number;\n  has_primary_key: boolean;\n  index_count: number;\n  unique_constraints: number;\n  foreign_keys: number;\n}",
+    "SizeContext": "interface SizeContext {\n  rank_in_module: number;\n  module_total_size_mb: number;\n  percentage_of_module: number;\n  database_total_size_mb: number;\n  percentage_of_database: number;\n}",
+    "TableColumn": "interface TableColumn {\n  name: string;\n  type: string;\n  nullable: string;\n  key: string;\n  default?: string;\n  comment?: string;\n}",
+    "TableIndex": "interface TableIndex {\n  name: string;\n  columns: string[];\n  unique: boolean;\n  type: string;\n}",
+    "SearchResponse": "interface SearchResponse extends BaseResponse {\n  data: {\n    query: string;\n    type: 'tables' | 'modules' | 'columns';\n    results: SearchResult[];\n    total_count: number;\n    search_time_ms: number;\n  };\n}",
+    "SearchResult": "interface SearchResult {\n  type: 'table' | 'module' | 'column';\n  name: string;\n  module?: string;\n  row_count?: number;\n  size_mb?: number;\n  relevance_score: number;\n  match_type: 'exact' | 'starts_with' | 'contains';\n}"
+  }
+}

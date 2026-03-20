@@ -1,0 +1,465 @@
+{
+  "project": {
+    "name": "Hospital DB Dashboard",
+    "database": "hidb10949",
+    "version": "1.0.0",
+    "created": "2026-03-20"
+  },
+  "pages": [
+    {
+      "path": "/",
+      "title": "Database Overview",
+      "description": "หน้าแรกแสดงภาพรวมของฐานข้อมูล",
+      "priority": "HIGH",
+      "components": [
+        "SummaryCards",
+        "HealthScoreIndicator",
+        "ModuleDistributionChart",
+        "AnomalySummaryCards"
+      ],
+      "data_sources": [
+        "state/dashboard_schema.json",
+        "outputs/anomalies.json"
+      ],
+      "api_endpoint": "/api/overview"
+    },
+    {
+      "path": "/modules",
+      "title": "Module Explorer",
+      "description": "แสดงรายการ modules ทั้งหมดพร้อมสถิติ",
+      "priority": "HIGH",
+      "components": [
+        "ModuleList",
+        "ModuleCards",
+        "SearchFilter",
+        "SortControls"
+      ],
+      "data_sources": [
+        "outputs/module_map.json",
+        "state/dashboard_schema.json"
+      ],
+      "api_endpoint": "/api/modules"
+    },
+    {
+      "path": "/modules/[module_name]",
+      "title": "Module Detail",
+      "description": "แสดงรายละเอียดของแต่ละ module",
+      "priority": "MEDIUM",
+      "components": [
+        "ModuleHeader",
+        "TableList",
+        "TableCards",
+        "SizeDistributionChart"
+      ],
+      "data_sources": [
+        "outputs/module_map.json",
+        "outputs/schema_inventory.json"
+      ],
+      "api_endpoint": "/api/modules/[module_name]"
+    },
+    {
+      "path": "/anomalies",
+      "title": "Anomaly Dashboard",
+      "description": "แสดงปัญหาที่พบในฐานข้อมูล จัดกลุ่มตาม severity",
+      "priority": "HIGH",
+      "components": [
+        "SeverityTabs",
+        "CategoryCards",
+        "AnomalyList",
+        "FilterByModule"
+      ],
+      "data_sources": [
+        "outputs/anomalies.json"
+      ],
+      "api_endpoint": "/api/anomalies"
+    },
+    {
+      "path": "/anomalies/[category]",
+      "title": "Anomaly Category",
+      "description": "แสดงรายละเอียดของแต่ละประเภท anomaly",
+      "priority": "MEDIUM",
+      "components": [
+        "CategoryHeader",
+        "TableListWithIssues",
+        "SeverityFilter",
+        "QuickActions"
+      ],
+      "data_sources": [
+        "outputs/anomalies.json"
+      ],
+      "api_endpoint": "/api/anomalies/[category]"
+    },
+    {
+      "path": "/indexes",
+      "title": "Index Recommendations",
+      "description": "แสดง index ที่ควรเพิ่มเพื่อปรับปรุงประสิทธิภาพ",
+      "priority": "MEDIUM",
+      "components": [
+        "PriorityTabs",
+        "RecommendationCards",
+        "AffectedTablesStats",
+        "SQLPreview"
+      ],
+      "data_sources": [
+        "outputs/index_gap_report.md"
+      ],
+      "api_endpoint": "/api/indexes/recommendations"
+    },
+    {
+      "path": "/tables/[table_name]",
+      "title": "Table Details",
+      "description": "แสดงรายละเอียดของแต่ละ table",
+      "priority": "MEDIUM",
+      "components": [
+        "TableHeader",
+        "StatisticsCard",
+        "SchemaInformation",
+        "AnomalyList",
+        "ModuleContext"
+      ],
+      "data_sources": [
+        "outputs/schema_inventory.json",
+        "outputs/module_map.json",
+        "outputs/anomalies.json"
+      ],
+      "api_endpoint": "/api/tables/[table_name]"
+    },
+    {
+      "path": "/search",
+      "title": "Search",
+      "description": "ค้นหา table หรือ module",
+      "priority": "LOW",
+      "components": [
+        "SearchInput",
+        "ResultsList",
+        "QuickLinks"
+      ],
+      "data_sources": [
+        "outputs/module_map.json",
+        "outputs/schema_inventory.json"
+      ],
+      "api_endpoint": "/api/search"
+    }
+  ],
+  "api_endpoints": [
+    {
+      "path": "/api/overview",
+      "method": "GET",
+      "description": "Get database overview statistics",
+      "query_name": "getDatabaseOverview",
+      "response_schema": {
+        "total_tables": "number",
+        "total_rows": "number",
+        "total_size_bytes": "number",
+        "modules_count": "number",
+        "anomalies": {
+          "critical": "number",
+          "warning": "number",
+          "info": "number"
+        },
+        "top_modules_by_size": "array",
+        "health_score": "number"
+      }
+    },
+    {
+      "path": "/api/modules",
+      "method": "GET",
+      "description": "Get all modules with statistics",
+      "query_name": "getAllModules",
+      "response_schema": {
+        "modules": [
+          {
+            "name": "string",
+            "tables_count": "number",
+            "total_rows": "number",
+            "total_size_bytes": "number",
+            "description": "string",
+            "top_tables": "array"
+          }
+        ]
+      }
+    },
+    {
+      "path": "/api/modules/[module_name]",
+      "method": "GET",
+      "description": "Get module details by name",
+      "query_name": "getModuleByName",
+      "response_schema": {
+        "module_name": "string",
+        "description": "string",
+        "statistics": "object",
+        "tables": "array"
+      }
+    },
+    {
+      "path": "/api/anomalies",
+      "method": "GET",
+      "description": "Get all anomalies summary",
+      "query_name": "getAllAnomalies",
+      "response_schema": {
+        "categories": {
+          "missing_primary_keys": "object",
+          "missing_indexes": "object",
+          "large_tables_no_index": "object",
+          "orphan_tables": "object",
+          "naming_issues": "object"
+        },
+        "summary": {
+          "total": "number",
+          "critical": "number",
+          "warning": "number",
+          "info": "number"
+        }
+      }
+    },
+    {
+      "path": "/api/anomalies/[category]",
+      "method": "GET",
+      "description": "Get anomaly category details",
+      "query_name": "getAnomalyCategory",
+      "response_schema": {
+        "category": "string",
+        "description": "string",
+        "total": "number",
+        "by_severity": "object",
+        "items": "array"
+      }
+    },
+    {
+      "path": "/api/indexes/recommendations",
+      "method": "GET",
+      "description": "Get index recommendations",
+      "query_name": "getIndexRecommendations",
+      "response_schema": {
+        "recommendations": [
+          {
+            "priority": "string",
+            "table": "string",
+            "row_count": "number",
+            "recommendation": "string",
+            "sql": "string",
+            "impact": "string"
+          }
+        ],
+        "by_priority": {
+          "high": "number",
+          "medium": "number",
+          "low": "number"
+        }
+      }
+    },
+    {
+      "path": "/api/tables",
+      "method": "GET",
+      "description": "Get all tables (paginated)",
+      "query_name": "getAllTables",
+      "query_params": ["page", "limit", "module", "search"],
+      "response_schema": {
+        "tables": "array",
+        "pagination": {
+          "page": "number",
+          "limit": "number",
+          "total": "number",
+          "total_pages": "number"
+        }
+      }
+    },
+    {
+      "path": "/api/tables/[table_name]",
+      "method": "GET",
+      "description": "Get table details by name",
+      "query_name": "getTableByName",
+      "response_schema": {
+        "table_name": "string",
+        "module": "string",
+        "purpose": "string",
+        "row_count": "number",
+        "size_bytes": "number",
+        "has_pk": "boolean",
+        "index_count": "number",
+        "issues": "array",
+        "columns": "array",
+        "related_tables": "array"
+      }
+    },
+    {
+      "path": "/api/search",
+      "method": "GET",
+      "description": "Search tables and modules",
+      "query_name": "searchDatabase",
+      "query_params": ["q"],
+      "response_schema": {
+        "query": "string",
+        "results": {
+          "modules": "array",
+          "tables": "array"
+        }
+      }
+    }
+  ],
+  "dependencies": {
+    "frontend": [
+      {
+        "name": "next",
+        "version": "^14.0.0",
+        "purpose": "Next.js framework"
+      },
+      {
+        "name": "react",
+        "version": "^18.0.0",
+        "purpose": "UI library"
+      },
+      {
+        "name": "recharts",
+        "version": "^2.10.0",
+        "purpose": "Charts and visualizations"
+      },
+      {
+        "name": "tailwindcss",
+        "version": "^3.4.0",
+        "purpose": "CSS framework"
+      },
+      {
+        "name": "lucide-react",
+        "version": "^0.300.0",
+        "purpose": "Icons"
+      },
+      {
+        "name": "clsx",
+        "version": "^2.0.0",
+        "purpose": "Class name utility"
+      },
+      {
+        "name": "date-fns",
+        "version": "^3.0.0",
+        "purpose": "Date formatting"
+      }
+    ],
+    "devDependencies": [
+      {
+        "name": "typescript",
+        "version": "^5.0.0",
+        "purpose": "Type safety"
+      },
+      {
+        "name": "@types/node",
+        "version": "^20.0.0",
+        "purpose": "Node types"
+      },
+      {
+        "name": "@types/react",
+        "version": "^18.0.0",
+        "purpose": "React types"
+      },
+      {
+        "name": "eslint",
+        "version": "^8.0.0",
+        "purpose": "Linting"
+      },
+      {
+        "name": "prettier",
+        "version": "^3.0.0",
+        "purpose": "Code formatting"
+      }
+    ],
+    "optional": [
+      {
+        "name": "mysql2",
+        "version": "^3.0.0",
+        "purpose": "MySQL connection for real-time stats"
+      },
+      {
+        "name": "pg",
+        "version": "^8.0.0",
+        "purpose": "PostgreSQL connection (if needed)"
+      }
+    ]
+  },
+  "folder_structure": {
+    "app": {
+      "description": "Next.js App Router pages",
+      "structure": [
+        "page.tsx (Overview)",
+        "modules/page.tsx",
+        "modules/[name]/page.tsx",
+        "anomalies/page.tsx",
+        "anomalies/[category]/page.tsx",
+        "indexes/page.tsx",
+        "tables/[name]/page.tsx",
+        "search/page.tsx"
+      ]
+    },
+    "components": {
+      "description": "Reusable UI components",
+      "structure": [
+        "ui/ (base components)",
+        "charts/ (chart components)",
+        "layout/ (layout components)",
+        "tables/ (table display components)",
+        "anomalies/ (anomaly-specific components)"
+      ]
+    },
+    "lib": {
+      "description": "Utility functions and data loaders",
+      "structure": [
+        "data-loader.ts",
+        "anomaly-parser.ts",
+        "index-recommender.ts",
+        "utils.ts"
+      ]
+    },
+    "api": {
+      "description": "API routes",
+      "structure": [
+        "overview/route.ts",
+        "modules/route.ts",
+        "modules/[name]/route.ts",
+        "anomalies/route.ts",
+        "anomalies/[category]/route.ts",
+        "indexes/recommendations/route.ts",
+        "tables/route.ts",
+        "tables/[name]/route.ts",
+        "search/route.ts"
+      ]
+    },
+    "types": {
+      "description": "TypeScript type definitions",
+      "structure": [
+        "module.ts",
+        "table.ts",
+        "anomaly.ts",
+        "index.ts",
+        "overview.ts"
+      ]
+    },
+    "data": {
+      "description": "Static data files (symlinked to inspection outputs)",
+      "structure": [
+        "dashboard_schema.json -> state/dashboard_schema.json",
+        "schema_inventory.json -> outputs/schema_inventory.json",
+        "module_map.json -> outputs/module_map.json",
+        "anomalies.json -> outputs/anomalies.json"
+      ]
+    }
+  },
+  "implementation_notes": {
+    "data_loading": "Use static JSON files loaded at build time or server-side",
+    "caching": "Consider implementing ISR (Incremental Static Regeneration)",
+    "real_time": "Optional: Add real-time database connection for live stats",
+    "export": "Add CSV/PDF export functionality for reports",
+    "authentication": "Not required for read-only dashboard (can be added later)",
+    "performance": "Paginate large tables, use virtual scrolling for lists"
+  },
+  "next_steps": [
+    "Initialize Next.js project with TypeScript",
+    "Setup Tailwind CSS",
+    "Create data loading utilities",
+    "Implement API routes",
+    "Build core pages (Overview, Modules, Anomalies)",
+    "Add detail pages",
+    "Implement search",
+    "Add charts and visualizations",
+    "Test with production data",
+    "Deploy"
+  ]
+}

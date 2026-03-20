@@ -1,0 +1,4150 @@
+{
+  "database": "hidb10949",
+  "analyzed_at": "2026-03-20T09:37:32.006503",
+  "tables_without_pk": [
+    {
+      "table": "accident",
+      "row_count": 29
+    },
+    {
+      "table": "allgtype",
+      "row_count": 4
+    },
+    {
+      "table": "bhtr",
+      "row_count": 9522
+    },
+    {
+      "table": "bhtri",
+      "row_count": 542
+    },
+    {
+      "table": "bhtro",
+      "row_count": 11224
+    },
+    {
+      "table": "BP",
+      "row_count": 123
+    },
+    {
+      "table": "ccd_appointment",
+      "row_count": 0
+    },
+    {
+      "table": "ccd_dispense_items",
+      "row_count": 0
+    },
+    {
+      "table": "ccd_lab_result",
+      "row_count": 0
+    },
+    {
+      "table": "ccd_opd_visit",
+      "row_count": 0
+    },
+    {
+      "table": "ccd_opd_visit_diag",
+      "row_count": 0
+    },
+    {
+      "table": "ccd_opd_visit_diag_text",
+      "row_count": 0
+    },
+    {
+      "table": "ccd_opd_visit_procedure",
+      "row_count": 0
+    },
+    {
+      "table": "ccd_opd_visit_screen",
+      "row_count": 0
+    },
+    {
+      "table": "ccd_person",
+      "row_count": 0
+    },
+    {
+      "table": "checkcovid",
+      "row_count": 0
+    },
+    {
+      "table": "checkvaccine",
+      "row_count": 0
+    },
+    {
+      "table": "CHRONIC-hi",
+      "row_count": 450
+    },
+    {
+      "table": "CHRONICk",
+      "row_count": 233
+    },
+    {
+      "table": "CHRONICm",
+      "row_count": 226
+    },
+    {
+      "table": "cidhn",
+      "row_count": 2478
+    },
+    {
+      "table": "ckd",
+      "row_count": 0
+    },
+    {
+      "table": "Claim_E",
+      "row_count": 634
+    },
+    {
+      "table": "Claim_HI",
+      "row_count": 656
+    },
+    {
+      "table": "CMI",
+      "row_count": 5914
+    },
+    {
+      "table": "ctzshp",
+      "row_count": 92
+    },
+    {
+      "table": "datahn",
+      "row_count": 270
+    },
+    {
+      "table": "datapit",
+      "row_count": 5
+    },
+    {
+      "table": "data_correct",
+      "row_count": 8437993
+    },
+    {
+      "table": "data_ini",
+      "row_count": 60
+    },
+    {
+      "table": "deaDMn",
+      "row_count": 493488
+    },
+    {
+      "table": "dengue",
+      "row_count": 0
+    },
+    {
+      "table": "dengue_ny",
+      "row_count": 0
+    },
+    {
+      "table": "disability",
+      "row_count": 1990
+    },
+    {
+      "table": "eclaim",
+      "row_count": 12856
+    },
+    {
+      "table": "emp",
+      "row_count": 13
+    },
+    {
+      "table": "export21f",
+      "row_count": 76534
+    },
+    {
+      "table": "foodorder",
+      "row_count": 234
+    },
+    {
+      "table": "foodsum",
+      "row_count": 138066
+    },
+    {
+      "table": "ftdate",
+      "row_count": 0
+    },
+    {
+      "table": "generator_16",
+      "row_count": 0
+    },
+    {
+      "table": "generator_256",
+      "row_count": 0
+    },
+    {
+      "table": "generator_4k",
+      "row_count": 0
+    },
+    {
+      "table": "generator_64k",
+      "row_count": 0
+    },
+    {
+      "table": "hcode",
+      "row_count": 14920
+    },
+    {
+      "table": "hifields",
+      "row_count": 1399
+    },
+    {
+      "table": "hifields1",
+      "row_count": 1361
+    },
+    {
+      "table": "hi_ini",
+      "row_count": 28
+    },
+    {
+      "table": "hnble",
+      "row_count": 2491
+    },
+    {
+      "table": "hndb",
+      "row_count": 3075
+    },
+    {
+      "table": "HNDM",
+      "row_count": 710
+    },
+    {
+      "table": "hnjoj",
+      "row_count": 5101
+    },
+    {
+      "table": "hnptcut",
+      "row_count": 2479
+    },
+    {
+      "table": "hntarget",
+      "row_count": 36
+    },
+    {
+      "table": "holiday",
+      "row_count": 521
+    },
+    {
+      "table": "hospcodeolde",
+      "row_count": 14916
+    },
+    {
+      "table": "icd1032",
+      "row_count": 7273
+    },
+    {
+      "table": "icdcm1",
+      "row_count": 3873
+    },
+    {
+      "table": "indexhi",
+      "row_count": 101
+    },
+    {
+      "table": "inscl",
+      "row_count": 120004
+    },
+    {
+      "table": "IP50new",
+      "row_count": 6049
+    },
+    {
+      "table": "IP51new",
+      "row_count": 6437
+    },
+    {
+      "table": "IP52new",
+      "row_count": 6740
+    },
+    {
+      "table": "IP53new",
+      "row_count": 7353
+    },
+    {
+      "table": "IP54new",
+      "row_count": 5635
+    },
+    {
+      "table": "IPD50_1",
+      "row_count": 5950
+    },
+    {
+      "table": "IPD51_1",
+      "row_count": 6521
+    },
+    {
+      "table": "IPD52_1",
+      "row_count": 6656
+    },
+    {
+      "table": "IPD53_1",
+      "row_count": 7320
+    },
+    {
+      "table": "IPD54_1",
+      "row_count": 5611
+    },
+    {
+      "table": "IPD56n",
+      "row_count": 6242
+    },
+    {
+      "table": "iptadm1",
+      "row_count": 110425
+    },
+    {
+      "table": "isitb",
+      "row_count": 472
+    },
+    {
+      "table": "kwcode1",
+      "row_count": 7430
+    },
+    {
+      "table": "labcat",
+      "row_count": 729
+    },
+    {
+      "table": "labcode_sps",
+      "row_count": 663
+    },
+    {
+      "table": "labdtx",
+      "row_count": 67
+    },
+    {
+      "table": "laborderrun",
+      "row_count": 52687
+    },
+    {
+      "table": "labresult",
+      "row_count": 0
+    },
+    {
+      "table": "labtype",
+      "row_count": 5
+    },
+    {
+      "table": "lab_sign",
+      "row_count": 4
+    },
+    {
+      "table": "lmgram",
+      "row_count": 97
+    },
+    {
+      "table": "lmothua",
+      "row_count": 395
+    },
+    {
+      "table": "lmpaprpt",
+      "row_count": 27
+    },
+    {
+      "table": "lmparasit",
+      "row_count": 154
+    },
+    {
+      "table": "lmplatelet",
+      "row_count": 10
+    },
+    {
+      "table": "lmpmstage",
+      "row_count": 7
+    },
+    {
+      "table": "lmpmtype",
+      "row_count": 8
+    },
+    {
+      "table": "lmrbc",
+      "row_count": 93
+    },
+    {
+      "table": "lmuacent",
+      "row_count": 3
+    },
+    {
+      "table": "lmuacolor",
+      "row_count": 14
+    },
+    {
+      "table": "lmuaepi",
+      "row_count": 11
+    },
+    {
+      "table": "lmuarbc",
+      "row_count": 11
+    },
+    {
+      "table": "lmuaturbid",
+      "row_count": 4
+    },
+    {
+      "table": "lmuawbc",
+      "row_count": 11
+    },
+    {
+      "table": "lmupt",
+      "row_count": 2
+    },
+    {
+      "table": "lmvtb",
+      "row_count": 14
+    },
+    {
+      "table": "lmwbc",
+      "row_count": 11
+    },
+    {
+      "table": "logvisit",
+      "row_count": 18981
+    },
+    {
+      "table": "lr",
+      "row_count": 5616
+    },
+    {
+      "table": "lr_c",
+      "row_count": 4
+    },
+    {
+      "table": "l_aetype",
+      "row_count": 19
+    },
+    {
+      "table": "l_aptype",
+      "row_count": 136
+    },
+    {
+      "table": "l_aptype_icd",
+      "row_count": 195
+    },
+    {
+      "table": "l_armsling",
+      "row_count": 0
+    },
+    {
+      "table": "l_clopido",
+      "row_count": 0
+    },
+    {
+      "table": "l_codefoot",
+      "row_count": 4
+    },
+    {
+      "table": "l_coderetina",
+      "row_count": 6
+    },
+    {
+      "table": "l_company",
+      "row_count": 482
+    },
+    {
+      "table": "l_department",
+      "row_count": 8694
+    },
+    {
+      "table": "l_disabtype",
+      "row_count": 7
+    },
+    {
+      "table": "l_drugflag",
+      "row_count": 4
+    },
+    {
+      "table": "l_drugs",
+      "row_count": 82329
+    },
+    {
+      "table": "l_ER",
+      "row_count": 0
+    },
+    {
+      "table": "l_garbage",
+      "row_count": 6
+    },
+    {
+      "table": "l_gennohiv",
+      "row_count": 8
+    },
+    {
+      "table": "l_groupcdt2",
+      "row_count": 15
+    },
+    {
+      "table": "l_housetype",
+      "row_count": 7
+    },
+    {
+      "table": "l_icd9cm-icd10tm",
+      "row_count": 16894
+    },
+    {
+      "table": "l_insclcost",
+      "row_count": 11
+    },
+    {
+      "table": "l_ocupation1",
+      "row_count": 129
+    },
+    {
+      "table": "l_PregT",
+      "row_count": 0
+    },
+    {
+      "table": "l_prename",
+      "row_count": 505
+    },
+    {
+      "table": "l_ptt",
+      "row_count": 0
+    },
+    {
+      "table": "l_rcpt",
+      "row_count": 0
+    },
+    {
+      "table": "l_rrttype",
+      "row_count": 4
+    },
+    {
+      "table": "l_rxdrughiv",
+      "row_count": 4
+    },
+    {
+      "table": "l_smitype",
+      "row_count": 5
+    },
+    {
+      "table": "l_specialpp",
+      "row_count": 292
+    },
+    {
+      "table": "l_statushiv",
+      "row_count": 3
+    },
+    {
+      "table": "l_tmtdrug",
+      "row_count": 31463
+    },
+    {
+      "table": "l_tmtdrug1",
+      "row_count": 25104
+    },
+    {
+      "table": "l_toilet",
+      "row_count": 7
+    },
+    {
+      "table": "l_ttm9",
+      "row_count": 0
+    },
+    {
+      "table": "l_villagerisktype",
+      "row_count": 18
+    },
+    {
+      "table": "l_viptype",
+      "row_count": 6
+    },
+    {
+      "table": "l_vstatus",
+      "row_count": 5
+    },
+    {
+      "table": "l_wastewater",
+      "row_count": 3
+    },
+    {
+      "table": "l_watertype",
+      "row_count": 8
+    },
+    {
+      "table": "mathhn",
+      "row_count": 125843
+    },
+    {
+      "table": "med_edtype",
+      "row_count": 7
+    },
+    {
+      "table": "money",
+      "row_count": 0
+    },
+    {
+      "table": "mophicall060708",
+      "row_count": 0
+    },
+    {
+      "table": "mophicchecklist",
+      "row_count": 0
+    },
+    {
+      "table": "mophichi",
+      "row_count": 0
+    },
+    {
+      "table": "Mrs_Center",
+      "row_count": 10
+    },
+    {
+      "table": "Mrs_Dead",
+      "row_count": 169
+    },
+    {
+      "table": "mrs_ipdsticker",
+      "row_count": 6573
+    },
+    {
+      "table": "Mrs_newSammary",
+      "row_count": 76378
+    },
+    {
+      "table": "Mrs_pttype",
+      "row_count": 34
+    },
+    {
+      "table": "Mrs_ssHealth_Check",
+      "row_count": 4
+    },
+    {
+      "table": "new PTTYPE",
+      "row_count": 3318
+    },
+    {
+      "table": "newin",
+      "row_count": 0
+    },
+    {
+      "table": "newIncoth",
+      "row_count": 0
+    },
+    {
+      "table": "nhsodeadNY",
+      "row_count": 406
+    },
+    {
+      "table": "ntnlty",
+      "row_count": 93
+    },
+    {
+      "table": "opno",
+      "row_count": 9
+    },
+    {
+      "table": "ositb",
+      "row_count": 9248
+    },
+    {
+      "table": "ovststatus",
+      "row_count": 1368963
+    },
+    {
+      "table": "pcukao",
+      "row_count": 34
+    },
+    {
+      "table": "pcukud",
+      "row_count": 84
+    },
+    {
+      "table": "pcunoon",
+      "row_count": 50
+    },
+    {
+      "table": "pcusewi",
+      "row_count": 286
+    },
+    {
+      "table": "pcusuk",
+      "row_count": 129
+    },
+    {
+      "table": "pcuyang",
+      "row_count": 18
+    },
+    {
+      "table": "PERSON",
+      "row_count": 105707
+    },
+    {
+      "table": "PERSONk",
+      "row_count": 686
+    },
+    {
+      "table": "PERSONm",
+      "row_count": 369
+    },
+    {
+      "table": "pitsanu",
+      "row_count": 3
+    },
+    {
+      "table": "prcd55",
+      "row_count": 452
+    },
+    {
+      "table": "prcdv",
+      "row_count": 452
+    },
+    {
+      "table": "prcd_kn",
+      "row_count": 302
+    },
+    {
+      "table": "prcd_n",
+      "row_count": 452
+    },
+    {
+      "table": "prcd_pb",
+      "row_count": 304
+    },
+    {
+      "table": "prcd_pbh",
+      "row_count": 807
+    },
+    {
+      "table": "prelr_c",
+      "row_count": 6
+    },
+    {
+      "table": "productcat",
+      "row_count": 7
+    },
+    {
+      "table": "psn_prename",
+      "row_count": 505
+    },
+    {
+      "table": "ptble",
+      "row_count": 4910
+    },
+    {
+      "table": "PTINFO",
+      "row_count": 171129
+    },
+    {
+      "table": "PTTY",
+      "row_count": 107
+    },
+    {
+      "table": "pttype_smm",
+      "row_count": 64
+    },
+    {
+      "table": "q4u_tokens",
+      "row_count": 2
+    },
+    {
+      "table": "queue_call",
+      "row_count": 2
+    },
+    {
+      "table": "referresulto",
+      "row_count": 4
+    },
+    {
+      "table": "reportbun",
+      "row_count": 33
+    },
+    {
+      "table": "report_admit",
+      "row_count": 0
+    },
+    {
+      "table": "report_admit_dc",
+      "row_count": 0
+    },
+    {
+      "table": "report_error_mdr",
+      "row_count": 0
+    },
+    {
+      "table": "report_er_dx",
+      "row_count": 0
+    },
+    {
+      "table": "report_fs",
+      "row_count": 0
+    },
+    {
+      "table": "report_grouppdx",
+      "row_count": 0
+    },
+    {
+      "table": "report_ip_dx",
+      "row_count": 0
+    },
+    {
+      "table": "report_ip_visit",
+      "row_count": 0
+    },
+    {
+      "table": "report_op_diag",
+      "row_count": 0
+    },
+    {
+      "table": "report_op_visit",
+      "row_count": 0
+    },
+    {
+      "table": "report_other_pp",
+      "row_count": 0
+    },
+    {
+      "table": "report_refer",
+      "row_count": 0
+    },
+    {
+      "table": "report_refer_er",
+      "row_count": 0
+    },
+    {
+      "table": "report_refer_ip",
+      "row_count": 0
+    },
+    {
+      "table": "report_refer_op",
+      "row_count": 0
+    },
+    {
+      "table": "report_visit",
+      "row_count": 0
+    },
+    {
+      "table": "roche",
+      "row_count": 70
+    },
+    {
+      "table": "rtnallggrpdt",
+      "row_count": 41
+    },
+    {
+      "table": "RWipd",
+      "row_count": 0
+    },
+    {
+      "table": "sign_backup_all",
+      "row_count": 1503
+    },
+    {
+      "table": "sitincoth",
+      "row_count": 8472
+    },
+    {
+      "table": "sitincothi",
+      "row_count": 542
+    },
+    {
+      "table": "sitincotho",
+      "row_count": 11325
+    },
+    {
+      "table": "ssop_billitem",
+      "row_count": 1414
+    },
+    {
+      "table": "ssop_dispenseditem",
+      "row_count": 701
+    },
+    {
+      "table": "ssop_opdx",
+      "row_count": 466
+    },
+    {
+      "table": "stm6702",
+      "row_count": 408
+    },
+    {
+      "table": "stm6703",
+      "row_count": 480
+    },
+    {
+      "table": "stm6704",
+      "row_count": 403
+    },
+    {
+      "table": "stm6705",
+      "row_count": 648
+    },
+    {
+      "table": "stm6706",
+      "row_count": 582
+    },
+    {
+      "table": "stm6707",
+      "row_count": 555
+    },
+    {
+      "table": "stm6801",
+      "row_count": 610
+    },
+    {
+      "table": "stm6802",
+      "row_count": 519
+    },
+    {
+      "table": "stm6803",
+      "row_count": 534
+    },
+    {
+      "table": "stm6804",
+      "row_count": 473
+    },
+    {
+      "table": "stm6805",
+      "row_count": 493
+    },
+    {
+      "table": "stm6806",
+      "row_count": 349
+    },
+    {
+      "table": "testinser",
+      "row_count": 1000
+    },
+    {
+      "table": "thaicancerbase_his",
+      "row_count": 0
+    },
+    {
+      "table": "thaicancerbase_his-old",
+      "row_count": 0
+    },
+    {
+      "table": "toydm",
+      "row_count": 0
+    },
+    {
+      "table": "toyht",
+      "row_count": 0
+    },
+    {
+      "table": "vaccine060764",
+      "row_count": 230
+    },
+    {
+      "table": "vaccineaefi",
+      "row_count": 1033
+    },
+    {
+      "table": "vaccineall0664",
+      "row_count": 408
+    },
+    {
+      "table": "vaccineallmonth060708",
+      "row_count": 9855
+    },
+    {
+      "table": "vaccineallmonth060708new",
+      "row_count": 9817
+    },
+    {
+      "table": "vaccinedrready",
+      "row_count": 187
+    },
+    {
+      "table": "vaccinemap",
+      "row_count": 0
+    },
+    {
+      "table": "vaccinenotappoint",
+      "row_count": 99
+    },
+    {
+      "table": "vaccine_mophic_history",
+      "row_count": 10171
+    },
+    {
+      "table": "vaccine_pregnancy",
+      "row_count": 166
+    },
+    {
+      "table": "view_address",
+      "row_count": 0
+    },
+    {
+      "table": "visit_pop",
+      "row_count": 0
+    },
+    {
+      "table": "VR10949",
+      "row_count": 55730
+    }
+  ],
+  "tables_without_indexes": [
+    {
+      "table": "allgtype",
+      "row_count": 4
+    },
+    {
+      "table": "bhtr",
+      "row_count": 9522
+    },
+    {
+      "table": "BP",
+      "row_count": 123
+    },
+    {
+      "table": "ccd_appointment",
+      "row_count": 0
+    },
+    {
+      "table": "ccd_dispense_items",
+      "row_count": 0
+    },
+    {
+      "table": "ccd_lab_result",
+      "row_count": 0
+    },
+    {
+      "table": "ccd_opd_visit",
+      "row_count": 0
+    },
+    {
+      "table": "ccd_opd_visit_diag",
+      "row_count": 0
+    },
+    {
+      "table": "ccd_opd_visit_diag_text",
+      "row_count": 0
+    },
+    {
+      "table": "ccd_opd_visit_procedure",
+      "row_count": 0
+    },
+    {
+      "table": "ccd_opd_visit_screen",
+      "row_count": 0
+    },
+    {
+      "table": "ccd_person",
+      "row_count": 0
+    },
+    {
+      "table": "checkcovid",
+      "row_count": 0
+    },
+    {
+      "table": "checkvaccine",
+      "row_count": 0
+    },
+    {
+      "table": "CHRONIC-hi",
+      "row_count": 450
+    },
+    {
+      "table": "CHRONICk",
+      "row_count": 233
+    },
+    {
+      "table": "CHRONICm",
+      "row_count": 226
+    },
+    {
+      "table": "cidhn",
+      "row_count": 2478
+    },
+    {
+      "table": "ckd",
+      "row_count": 0
+    },
+    {
+      "table": "Claim_E",
+      "row_count": 634
+    },
+    {
+      "table": "Claim_HI",
+      "row_count": 656
+    },
+    {
+      "table": "CMI",
+      "row_count": 5914
+    },
+    {
+      "table": "datahn",
+      "row_count": 270
+    },
+    {
+      "table": "datapit",
+      "row_count": 5
+    },
+    {
+      "table": "data_correct",
+      "row_count": 8437993
+    },
+    {
+      "table": "data_ini",
+      "row_count": 60
+    },
+    {
+      "table": "deaDMn",
+      "row_count": 493488
+    },
+    {
+      "table": "dengue",
+      "row_count": 0
+    },
+    {
+      "table": "dengue_ny",
+      "row_count": 0
+    },
+    {
+      "table": "eclaim",
+      "row_count": 12856
+    },
+    {
+      "table": "emp",
+      "row_count": 13
+    },
+    {
+      "table": "ftdate",
+      "row_count": 0
+    },
+    {
+      "table": "generator_16",
+      "row_count": 0
+    },
+    {
+      "table": "generator_256",
+      "row_count": 0
+    },
+    {
+      "table": "generator_4k",
+      "row_count": 0
+    },
+    {
+      "table": "generator_64k",
+      "row_count": 0
+    },
+    {
+      "table": "hifields",
+      "row_count": 1399
+    },
+    {
+      "table": "hifields1",
+      "row_count": 1361
+    },
+    {
+      "table": "hi_ini",
+      "row_count": 28
+    },
+    {
+      "table": "hnble",
+      "row_count": 2491
+    },
+    {
+      "table": "hndb",
+      "row_count": 3075
+    },
+    {
+      "table": "HNDM",
+      "row_count": 710
+    },
+    {
+      "table": "hnjoj",
+      "row_count": 5101
+    },
+    {
+      "table": "hnptcut",
+      "row_count": 2479
+    },
+    {
+      "table": "hntarget",
+      "row_count": 36
+    },
+    {
+      "table": "icd1032",
+      "row_count": 7273
+    },
+    {
+      "table": "indexhi",
+      "row_count": 101
+    },
+    {
+      "table": "IP50new",
+      "row_count": 6049
+    },
+    {
+      "table": "IP51new",
+      "row_count": 6437
+    },
+    {
+      "table": "IP52new",
+      "row_count": 6740
+    },
+    {
+      "table": "IP53new",
+      "row_count": 7353
+    },
+    {
+      "table": "IP54new",
+      "row_count": 5635
+    },
+    {
+      "table": "IPD50_1",
+      "row_count": 5950
+    },
+    {
+      "table": "IPD51_1",
+      "row_count": 6521
+    },
+    {
+      "table": "IPD52_1",
+      "row_count": 6656
+    },
+    {
+      "table": "IPD53_1",
+      "row_count": 7320
+    },
+    {
+      "table": "IPD54_1",
+      "row_count": 5611
+    },
+    {
+      "table": "IPD56n",
+      "row_count": 6242
+    },
+    {
+      "table": "kwcode1",
+      "row_count": 7430
+    },
+    {
+      "table": "labcode_sps",
+      "row_count": 663
+    },
+    {
+      "table": "labdtx",
+      "row_count": 67
+    },
+    {
+      "table": "labtype",
+      "row_count": 5
+    },
+    {
+      "table": "l_aetype",
+      "row_count": 19
+    },
+    {
+      "table": "l_aptype",
+      "row_count": 136
+    },
+    {
+      "table": "l_armsling",
+      "row_count": 0
+    },
+    {
+      "table": "l_clopido",
+      "row_count": 0
+    },
+    {
+      "table": "l_codefoot",
+      "row_count": 4
+    },
+    {
+      "table": "l_coderetina",
+      "row_count": 6
+    },
+    {
+      "table": "l_company",
+      "row_count": 482
+    },
+    {
+      "table": "l_disabtype",
+      "row_count": 7
+    },
+    {
+      "table": "l_drugflag",
+      "row_count": 4
+    },
+    {
+      "table": "l_ER",
+      "row_count": 0
+    },
+    {
+      "table": "l_garbage",
+      "row_count": 6
+    },
+    {
+      "table": "l_gennohiv",
+      "row_count": 8
+    },
+    {
+      "table": "l_groupcdt2",
+      "row_count": 15
+    },
+    {
+      "table": "l_housetype",
+      "row_count": 7
+    },
+    {
+      "table": "l_icd9cm-icd10tm",
+      "row_count": 16894
+    },
+    {
+      "table": "l_ocupation1",
+      "row_count": 129
+    },
+    {
+      "table": "l_PregT",
+      "row_count": 0
+    },
+    {
+      "table": "l_ptt",
+      "row_count": 0
+    },
+    {
+      "table": "l_rcpt",
+      "row_count": 0
+    },
+    {
+      "table": "l_rrttype",
+      "row_count": 4
+    },
+    {
+      "table": "l_rxdrughiv",
+      "row_count": 4
+    },
+    {
+      "table": "l_smitype",
+      "row_count": 5
+    },
+    {
+      "table": "l_statushiv",
+      "row_count": 3
+    },
+    {
+      "table": "l_tmtdrug",
+      "row_count": 31463
+    },
+    {
+      "table": "l_tmtdrug1",
+      "row_count": 25104
+    },
+    {
+      "table": "l_toilet",
+      "row_count": 7
+    },
+    {
+      "table": "l_ttm9",
+      "row_count": 0
+    },
+    {
+      "table": "l_villagerisktype",
+      "row_count": 18
+    },
+    {
+      "table": "l_viptype",
+      "row_count": 6
+    },
+    {
+      "table": "l_wastewater",
+      "row_count": 3
+    },
+    {
+      "table": "l_watertype",
+      "row_count": 8
+    },
+    {
+      "table": "money",
+      "row_count": 0
+    },
+    {
+      "table": "mophicall060708",
+      "row_count": 0
+    },
+    {
+      "table": "mophicchecklist",
+      "row_count": 0
+    },
+    {
+      "table": "mophichi",
+      "row_count": 0
+    },
+    {
+      "table": "Mrs_Center",
+      "row_count": 10
+    },
+    {
+      "table": "Mrs_Dead",
+      "row_count": 169
+    },
+    {
+      "table": "mrs_ipdsticker",
+      "row_count": 6573
+    },
+    {
+      "table": "Mrs_newSammary",
+      "row_count": 76378
+    },
+    {
+      "table": "Mrs_ssHealth_Check",
+      "row_count": 4
+    },
+    {
+      "table": "new PTTYPE",
+      "row_count": 3318
+    },
+    {
+      "table": "newin",
+      "row_count": 0
+    },
+    {
+      "table": "newIncoth",
+      "row_count": 0
+    },
+    {
+      "table": "nhsodeadNY",
+      "row_count": 406
+    },
+    {
+      "table": "ovststatus",
+      "row_count": 1368963
+    },
+    {
+      "table": "pcukao",
+      "row_count": 34
+    },
+    {
+      "table": "pcukud",
+      "row_count": 84
+    },
+    {
+      "table": "pcunoon",
+      "row_count": 50
+    },
+    {
+      "table": "pcusewi",
+      "row_count": 286
+    },
+    {
+      "table": "pcusuk",
+      "row_count": 129
+    },
+    {
+      "table": "pcuyang",
+      "row_count": 18
+    },
+    {
+      "table": "PERSON",
+      "row_count": 105707
+    },
+    {
+      "table": "PERSONk",
+      "row_count": 686
+    },
+    {
+      "table": "PERSONm",
+      "row_count": 369
+    },
+    {
+      "table": "pitsanu",
+      "row_count": 3
+    },
+    {
+      "table": "productcat",
+      "row_count": 7
+    },
+    {
+      "table": "ptble",
+      "row_count": 4910
+    },
+    {
+      "table": "PTTY",
+      "row_count": 107
+    },
+    {
+      "table": "q4u_tokens",
+      "row_count": 2
+    },
+    {
+      "table": "queue_call",
+      "row_count": 2
+    },
+    {
+      "table": "reportbun",
+      "row_count": 33
+    },
+    {
+      "table": "report_admit",
+      "row_count": 0
+    },
+    {
+      "table": "report_admit_dc",
+      "row_count": 0
+    },
+    {
+      "table": "report_error_mdr",
+      "row_count": 0
+    },
+    {
+      "table": "report_er_dx",
+      "row_count": 0
+    },
+    {
+      "table": "report_fs",
+      "row_count": 0
+    },
+    {
+      "table": "report_grouppdx",
+      "row_count": 0
+    },
+    {
+      "table": "report_ip_dx",
+      "row_count": 0
+    },
+    {
+      "table": "report_ip_visit",
+      "row_count": 0
+    },
+    {
+      "table": "report_op_diag",
+      "row_count": 0
+    },
+    {
+      "table": "report_op_visit",
+      "row_count": 0
+    },
+    {
+      "table": "report_other_pp",
+      "row_count": 0
+    },
+    {
+      "table": "report_refer",
+      "row_count": 0
+    },
+    {
+      "table": "report_refer_er",
+      "row_count": 0
+    },
+    {
+      "table": "report_refer_ip",
+      "row_count": 0
+    },
+    {
+      "table": "report_refer_op",
+      "row_count": 0
+    },
+    {
+      "table": "report_visit",
+      "row_count": 0
+    },
+    {
+      "table": "roche",
+      "row_count": 70
+    },
+    {
+      "table": "RWipd",
+      "row_count": 0
+    },
+    {
+      "table": "sign_backup_all",
+      "row_count": 1503
+    },
+    {
+      "table": "stm6702",
+      "row_count": 408
+    },
+    {
+      "table": "stm6703",
+      "row_count": 480
+    },
+    {
+      "table": "stm6704",
+      "row_count": 403
+    },
+    {
+      "table": "stm6705",
+      "row_count": 648
+    },
+    {
+      "table": "stm6706",
+      "row_count": 582
+    },
+    {
+      "table": "stm6707",
+      "row_count": 555
+    },
+    {
+      "table": "stm6801",
+      "row_count": 610
+    },
+    {
+      "table": "stm6802",
+      "row_count": 519
+    },
+    {
+      "table": "stm6803",
+      "row_count": 534
+    },
+    {
+      "table": "stm6804",
+      "row_count": 473
+    },
+    {
+      "table": "stm6805",
+      "row_count": 493
+    },
+    {
+      "table": "stm6806",
+      "row_count": 349
+    },
+    {
+      "table": "testinser",
+      "row_count": 1000
+    },
+    {
+      "table": "thaicancerbase_his",
+      "row_count": 0
+    },
+    {
+      "table": "thaicancerbase_his-old",
+      "row_count": 0
+    },
+    {
+      "table": "toydm",
+      "row_count": 0
+    },
+    {
+      "table": "toyht",
+      "row_count": 0
+    },
+    {
+      "table": "vaccine060764",
+      "row_count": 230
+    },
+    {
+      "table": "vaccineaefi",
+      "row_count": 1033
+    },
+    {
+      "table": "vaccineall0664",
+      "row_count": 408
+    },
+    {
+      "table": "vaccineallmonth060708",
+      "row_count": 9855
+    },
+    {
+      "table": "vaccineallmonth060708new",
+      "row_count": 9817
+    },
+    {
+      "table": "vaccinedrready",
+      "row_count": 187
+    },
+    {
+      "table": "vaccinemap",
+      "row_count": 0
+    },
+    {
+      "table": "vaccinenotappoint",
+      "row_count": 99
+    },
+    {
+      "table": "vaccine_mophic_history",
+      "row_count": 10171
+    },
+    {
+      "table": "vaccine_pregnancy",
+      "row_count": 166
+    },
+    {
+      "table": "view_address",
+      "row_count": 0
+    },
+    {
+      "table": "visit_pop",
+      "row_count": 0
+    },
+    {
+      "table": "VR10949",
+      "row_count": 55730
+    }
+  ],
+  "large_tables_missing_indexes": [
+    {
+      "table": "bhtr",
+      "row_count": 9522,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "an",
+        "hn",
+        "vn",
+        "chwpart",
+        "amppart",
+        "tmbpart",
+        "moopart",
+        "pttype",
+        "charge"
+      ]
+    },
+    {
+      "table": "bhtro",
+      "row_count": 11224,
+      "has_pk": false,
+      "index_count": 1,
+      "sample_columns": [
+        "an",
+        "hn",
+        "vn",
+        "chwpart",
+        "amppart",
+        "tmbpart",
+        "moopart",
+        "pttype",
+        "charge",
+        "daycnt"
+      ]
+    },
+    {
+      "table": "chkuseopd",
+      "row_count": 1893,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "vn",
+        "dct",
+        "vstdttm",
+        "ipaddr",
+        "status"
+      ]
+    },
+    {
+      "table": "chronic",
+      "row_count": 135555,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "hospcode",
+        "pid",
+        "date_diag",
+        "chronic",
+        "hosp_dx",
+        "hosp_rx",
+        "date_disch",
+        "typedisch",
+        "d_update",
+        "flag_confirm"
+      ]
+    },
+    {
+      "table": "cidhn",
+      "row_count": 2478,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "hn",
+        "pop_id",
+        "cpop"
+      ]
+    },
+    {
+      "table": "CMI",
+      "row_count": 5914,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "ECLAIM_NO",
+        "HCODE",
+        "HN",
+        "AN",
+        "DATEADM",
+        "TIMEADM",
+        "DATEDSC",
+        "TIMEDSC",
+        "PERSON_TYPE",
+        "PID"
+      ]
+    },
+    {
+      "table": "covidjully",
+      "row_count": 17043,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "id",
+        "runnumber",
+        "hn",
+        "name",
+        "cid",
+        "hometel",
+        "appointment_date",
+        "namechw",
+        "nameampur",
+        "nametumb"
+      ]
+    },
+    {
+      "table": "data_correct",
+      "row_count": 8437993,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "hospcode",
+        "tablename",
+        "data_correct",
+        "d_update",
+        "send_status"
+      ]
+    },
+    {
+      "table": "dbpop",
+      "row_count": 1897835,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "id",
+        "PID",
+        "TITLE",
+        "FNAME",
+        "LNAME",
+        "BIRTHDATE",
+        "SEX",
+        "CHAT",
+        "MAININSCL",
+        "STARTDATE"
+      ]
+    },
+    {
+      "table": "deaDMn",
+      "row_count": 493488,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "cid",
+        "hn",
+        "ddisch",
+        "ddis"
+      ]
+    },
+    {
+      "table": "disability",
+      "row_count": 1990,
+      "has_pk": false,
+      "index_count": 1,
+      "sample_columns": [
+        "pcucode",
+        "hn",
+        "disabid",
+        "disabtype",
+        "disabcause",
+        "icd10",
+        "date_detec",
+        "date_disab",
+        "d_update",
+        "disablive"
+      ]
+    },
+    {
+      "table": "disa_dbpop",
+      "row_count": 44199,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "pid",
+        "title",
+        "fname",
+        "lname",
+        "birthdate",
+        "sex",
+        "chat",
+        "status_dola",
+        "maininscl",
+        "subinscl"
+      ]
+    },
+    {
+      "table": "eclaim",
+      "row_count": 12856,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "ID",
+        "HCODE",
+        "HN",
+        "AN",
+        "DATEADM",
+        "TIMEADM",
+        "DATEDSC",
+        "TIMEDSC",
+        "PERSON_TYPE",
+        "PID"
+      ]
+    },
+    {
+      "table": "export21f",
+      "row_count": 76534,
+      "has_pk": false,
+      "index_count": 4,
+      "sample_columns": [
+        "pcucode",
+        "pid",
+        "cid",
+        "seq",
+        "f_type",
+        "exp_start",
+        "exp_end",
+        "exp_date",
+        "chronic",
+        "datedx"
+      ]
+    },
+    {
+      "table": "export_person",
+      "row_count": 45310,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "pcucode",
+        "pid",
+        "exp_start",
+        "exp_end",
+        "exp_date"
+      ]
+    },
+    {
+      "table": "firstdm",
+      "row_count": 4868,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "hn"
+      ]
+    },
+    {
+      "table": "firstht",
+      "row_count": 7972,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "hn"
+      ]
+    },
+    {
+      "table": "foodsum",
+      "row_count": 138066,
+      "has_pk": false,
+      "index_count": 2,
+      "sample_columns": [
+        "an",
+        "fooddate",
+        "f1",
+        "f2",
+        "f3",
+        "foodp"
+      ]
+    },
+    {
+      "table": "fp",
+      "row_count": 10011,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "vn",
+        "drxtime",
+        "dct",
+        "pttype",
+        "new",
+        "addr",
+        "g",
+        "p",
+        "a",
+        "l"
+      ]
+    },
+    {
+      "table": "hcode",
+      "row_count": 14920,
+      "has_pk": false,
+      "index_count": 3,
+      "sample_columns": [
+        "namehosp",
+        "codehosp",
+        "specifics",
+        "off_id",
+        "off_name1",
+        "off_name2",
+        "minis",
+        "off_type",
+        "bed",
+        "changwat"
+      ]
+    },
+    {
+      "table": "hierror",
+      "row_count": 1760,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "errno",
+        "errcode",
+        "errmessage",
+        "errmessage1",
+        "errmethod",
+        "errline",
+        "errfile",
+        "errdtime",
+        "ipaddr"
+      ]
+    },
+    {
+      "table": "hifields",
+      "row_count": 1399,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "field_name",
+        "field_type",
+        "field_len",
+        "field_dec"
+      ]
+    },
+    {
+      "table": "hifields1",
+      "row_count": 1361,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "field_name",
+        "field_type",
+        "field_len",
+        "field_dec"
+      ]
+    },
+    {
+      "table": "hnble",
+      "row_count": 2491,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "hn",
+        "pname",
+        "fname",
+        "lname",
+        "brthdate",
+        "truebrth",
+        "dthdate",
+        "male",
+        "ctzshp",
+        "ntnlty"
+      ]
+    },
+    {
+      "table": "hndb",
+      "row_count": 3075,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "Cnt"
+      ]
+    },
+    {
+      "table": "hnjoj",
+      "row_count": 5101,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "hn",
+        "name",
+        "datec",
+        "cln"
+      ]
+    },
+    {
+      "table": "hnptcut",
+      "row_count": 2479,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "hn",
+        "pop_id",
+        "min(ldate)"
+      ]
+    },
+    {
+      "table": "hospcode",
+      "row_count": 14929,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "namehosp",
+        "codehosp",
+        "specifics",
+        "off_id",
+        "off_name1",
+        "off_name2",
+        "minis",
+        "off_type",
+        "bed",
+        "changwat"
+      ]
+    },
+    {
+      "table": "hospcodeolde",
+      "row_count": 14916,
+      "has_pk": false,
+      "index_count": 3,
+      "sample_columns": [
+        "namehosp",
+        "codehosp",
+        "specifics",
+        "off_id",
+        "off_name1",
+        "off_name2",
+        "minis",
+        "off_type",
+        "bed",
+        "changwat"
+      ]
+    },
+    {
+      "table": "icd103",
+      "row_count": 7139,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "descs",
+        "kwcode"
+      ]
+    },
+    {
+      "table": "icd1032",
+      "row_count": 7273,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "descs",
+        "kwcode"
+      ]
+    },
+    {
+      "table": "icdcm1",
+      "row_count": 3873,
+      "has_pk": false,
+      "index_count": 1,
+      "sample_columns": [
+        "icd9name",
+        "icd9cm",
+        "drguse"
+      ]
+    },
+    {
+      "table": "icdcm3",
+      "row_count": 4853,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "kwcode",
+        "descs"
+      ]
+    },
+    {
+      "table": "inscl",
+      "row_count": 120004,
+      "has_pk": false,
+      "index_count": 3,
+      "sample_columns": [
+        "vn",
+        "hn",
+        "an",
+        "subinscl",
+        "relinscl",
+        "righttype",
+        "useright"
+      ]
+    },
+    {
+      "table": "interactdb",
+      "row_count": 8768,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "intactID",
+        "namemed1",
+        "namemed2",
+        "codesignlv",
+        "codeonset",
+        "codesever",
+        "codedoc",
+        "deffect",
+        "dmech",
+        "dmana"
+      ]
+    },
+    {
+      "table": "IP50new",
+      "row_count": 6049,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "AN",
+        "HN",
+        "fname",
+        "fullname",
+        "rgtdate",
+        "age",
+        "mrtlst",
+        "pop_id"
+      ]
+    },
+    {
+      "table": "IP51new",
+      "row_count": 6437,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "AN",
+        "HN",
+        "fname",
+        "fullname",
+        "rgtdate",
+        "age",
+        "mrtlst",
+        "pop_id"
+      ]
+    },
+    {
+      "table": "IP52new",
+      "row_count": 6740,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "AN",
+        "HN",
+        "fname",
+        "fullname",
+        "rgtdate",
+        "age",
+        "mrtlst",
+        "pop_id"
+      ]
+    },
+    {
+      "table": "IP53new",
+      "row_count": 7353,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "AN",
+        "HN",
+        "fname",
+        "fullname",
+        "rgtdate",
+        "age",
+        "mrtlst",
+        "pop_id"
+      ]
+    },
+    {
+      "table": "IP54new",
+      "row_count": 5635,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "AN",
+        "HN",
+        "fname",
+        "fullname",
+        "rgtdate",
+        "age",
+        "mrtlst",
+        "pop_id"
+      ]
+    },
+    {
+      "table": "IPD50_1",
+      "row_count": 5950,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "AN1",
+        "HN1",
+        "fullname1",
+        "Admit",
+        "เวลา Admit",
+        "เตียง",
+        "ตึก",
+        "ชื่อตึก",
+        "วัน D / C",
+        "DX"
+      ]
+    },
+    {
+      "table": "IPD51_1",
+      "row_count": 6521,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "AN",
+        "HN",
+        "fullname",
+        "Admit",
+        "เวลา Admit",
+        "เตียง",
+        "ตึก",
+        "ชื่อตึก",
+        "วัน D / C",
+        "DX"
+      ]
+    },
+    {
+      "table": "IPD52_1",
+      "row_count": 6656,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "AN",
+        "HN",
+        "fullname",
+        "Admit",
+        "เวลา Admit",
+        "เตียง",
+        "ตึก",
+        "ชื่อตึก",
+        "วัน D / C",
+        "DX"
+      ]
+    },
+    {
+      "table": "IPD53_1",
+      "row_count": 7320,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "AN",
+        "HN",
+        "fullname",
+        "Admit",
+        "เวลา Admit",
+        "เตียง",
+        "ตึก",
+        "ชื่อตึก",
+        "วัน D / C",
+        "DX"
+      ]
+    },
+    {
+      "table": "IPD54_1",
+      "row_count": 5611,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "AN",
+        "HN",
+        "fullname",
+        "Admit",
+        "เวลา Admit",
+        "เตียง",
+        "ตึก",
+        "ชื่อตึก",
+        "วัน D / C",
+        "DX"
+      ]
+    },
+    {
+      "table": "IPD56n",
+      "row_count": 6242,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "AN",
+        "HN",
+        "fullname",
+        "brthdate",
+        "rgtdate",
+        "Admit",
+        "cnt_year",
+        "cnt_month",
+        "cnt_day"
+      ]
+    },
+    {
+      "table": "ipt",
+      "row_count": 162881,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "vn",
+        "an",
+        "hn",
+        "ward",
+        "rgtdate",
+        "rgttime",
+        "pttype",
+        "prediag",
+        "dchdate",
+        "daycnt"
+      ]
+    },
+    {
+      "table": "ipt-08-09-2566",
+      "row_count": 150838,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "vn",
+        "an",
+        "hn",
+        "ward",
+        "rgtdate",
+        "rgttime",
+        "pttype",
+        "prediag",
+        "dchdate",
+        "daycnt"
+      ]
+    },
+    {
+      "table": "iptadm1",
+      "row_count": 110425,
+      "has_pk": false,
+      "index_count": 3,
+      "sample_columns": [
+        "an",
+        "indate",
+        "intime",
+        "roomno",
+        "bedno",
+        "bedtype",
+        "rate",
+        "daycnt",
+        "outdate",
+        "outtime"
+      ]
+    },
+    {
+      "table": "iptadm_copy1",
+      "row_count": 159826,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "an",
+        "indate",
+        "intime",
+        "roomno",
+        "bedno",
+        "bedtype",
+        "rate",
+        "daycnt",
+        "outdate",
+        "outtime"
+      ]
+    },
+    {
+      "table": "iptdr",
+      "row_count": 616557,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "id",
+        "an",
+        "dct",
+        "srvdttm"
+      ]
+    },
+    {
+      "table": "kwcode1",
+      "row_count": 7430,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "descs",
+        "kwcode"
+      ]
+    },
+    {
+      "table": "laborderrun",
+      "row_count": 52687,
+      "has_pk": false,
+      "index_count": 3,
+      "sample_columns": [
+        "order_date",
+        "l_number",
+        "l_group",
+        "hn",
+        "order_p",
+        "vn",
+        "an"
+      ]
+    },
+    {
+      "table": "lab_minio_log",
+      "row_count": 26117,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "ln",
+        "l_update"
+      ]
+    },
+    {
+      "table": "lcgt",
+      "row_count": 111880,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "ln",
+        "gct",
+        "comment"
+      ]
+    },
+    {
+      "table": "lmedtman",
+      "row_count": 37221,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "id",
+        "vstdttm",
+        "code",
+        "edtdate",
+        "edttime",
+        "hn",
+        "an",
+        "test",
+        "notice",
+        "name"
+      ]
+    },
+    {
+      "table": "loglabdr",
+      "row_count": 4568,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "id",
+        "ln",
+        "dct",
+        "srvdttm",
+        "user"
+      ]
+    },
+    {
+      "table": "logvisit",
+      "row_count": 18981,
+      "has_pk": false,
+      "index_count": 1,
+      "sample_columns": [
+        "hn",
+        "vn",
+        "vstdttm",
+        "delvstdttm",
+        "delman"
+      ]
+    },
+    {
+      "table": "lr",
+      "row_count": 5616,
+      "has_pk": false,
+      "index_count": 3,
+      "sample_columns": [
+        "edc_lr",
+        "lmp_lr",
+        "hbs_lr",
+        "hbe_lr",
+        "hiv_lr",
+        "vdrl_lr",
+        "wk_lr",
+        "anc_lr",
+        "lrno",
+        "an"
+      ]
+    },
+    {
+      "table": "l_department",
+      "row_count": 8694,
+      "has_pk": false,
+      "index_count": 2,
+      "sample_columns": [
+        "dep_code",
+        "dep_fname",
+        "used",
+        "maininscl",
+        "dep_cc",
+        "dep_aa",
+        "dep_name"
+      ]
+    },
+    {
+      "table": "l_drugs",
+      "row_count": 82329,
+      "has_pk": false,
+      "index_count": 2,
+      "sample_columns": [
+        "STD_CODE",
+        "TRADENAME",
+        "DRUGNAME",
+        "STRENGTH",
+        "DGDSFNM",
+        "UNIT",
+        "COMP",
+        "REGNO"
+      ]
+    },
+    {
+      "table": "l_icd9cm-icd10tm",
+      "row_count": 16894,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "icd10_tm",
+        "icd9_cm",
+        "anatomy",
+        "root",
+        "procedure",
+        "desc"
+      ]
+    },
+    {
+      "table": "l_tmtdrug",
+      "row_count": 31463,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "TMTID",
+        "FSN",
+        "MANUFACTURER",
+        "CHANGEDATE"
+      ]
+    },
+    {
+      "table": "l_tmtdrug1",
+      "row_count": 25104,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "TMTID",
+        "FSN",
+        "MANUFACTURER",
+        "CHANGEDATE"
+      ]
+    },
+    {
+      "table": "mathhn",
+      "row_count": 125843,
+      "has_pk": false,
+      "index_count": 3,
+      "sample_columns": [
+        "cid",
+        "hn",
+        "pid",
+        "typearea_hosp",
+        "typearea_pcu",
+        "d_update"
+      ]
+    },
+    {
+      "table": "microa",
+      "row_count": 2251,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "ln",
+        "micro"
+      ]
+    },
+    {
+      "table": "Mrsc_check_in",
+      "row_count": 76759,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "ID",
+        "Inumber",
+        "AN",
+        "HN",
+        "Pname",
+        "Fname",
+        "Lname",
+        "Sex",
+        "Age",
+        "Cid"
+      ]
+    },
+    {
+      "table": "Mrsc_Re_check",
+      "row_count": 67224,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "ID",
+        "Inumber",
+        "Rnumber",
+        "An",
+        "Hn",
+        "Pname",
+        "Fname",
+        "Lname",
+        "Sex",
+        "Age"
+      ]
+    },
+    {
+      "table": "Mrss_IPD",
+      "row_count": 3224,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "ID",
+        "idy",
+        "AN",
+        "HN",
+        "Cid",
+        "Ptname",
+        "Pname",
+        "Fname",
+        "Lname",
+        "Male"
+      ]
+    },
+    {
+      "table": "Mrss_R_IPD",
+      "row_count": 2948,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "IDK",
+        "IDY",
+        "AN",
+        "HN",
+        "Yname",
+        "Tname",
+        "Sector",
+        "Tel",
+        "Sname",
+        "Tnames"
+      ]
+    },
+    {
+      "table": "mrs_ipdsticker",
+      "row_count": 6573,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "AN",
+        "HN",
+        "fullname",
+        "dateAdmit",
+        "rgdate",
+        "fullage",
+        "sex"
+      ]
+    },
+    {
+      "table": "Mrs_newSammary",
+      "row_count": 76378,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "AN",
+        "HN",
+        "Pname",
+        "Fullname",
+        "Male",
+        "Brithdate",
+        "AgeY",
+        "AgeM",
+        "AgeD",
+        "pop_id"
+      ]
+    },
+    {
+      "table": "Mrs_No_Pttype",
+      "row_count": 32977,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "ID",
+        "HN",
+        "Kname",
+        "Fname",
+        "Lname",
+        "Cid",
+        "Sex",
+        "Dob",
+        "Age",
+        "Number"
+      ]
+    },
+    {
+      "table": "Mrs_OPD_Card_IN",
+      "row_count": 2182,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "ID",
+        "Onumber",
+        "INnumber",
+        "hn",
+        "fname",
+        "lname",
+        "sex",
+        "age",
+        "pttype",
+        "pop_id"
+      ]
+    },
+    {
+      "table": "new PTTYPE",
+      "row_count": 3318,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "NO",
+        "CID",
+        "NAME",
+        "CHANGWAT",
+        "SUB",
+        "HOSPITAL",
+        "DATEREGISTER"
+      ]
+    },
+    {
+      "table": "orderipd",
+      "row_count": 406075,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "prscno",
+        "an",
+        "prscdate",
+        "prsctime",
+        "dct",
+        "orddate",
+        "ordtime",
+        "chkorder"
+      ]
+    },
+    {
+      "table": "ositb",
+      "row_count": 9248,
+      "has_pk": false,
+      "index_count": 1,
+      "sample_columns": [
+        "an",
+        "hn",
+        "vn",
+        "chwpart",
+        "amppart",
+        "tmbpart",
+        "moopart",
+        "pttype"
+      ]
+    },
+    {
+      "table": "ovststatus",
+      "row_count": 1368963,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "vn",
+        "painscore",
+        "ovstst",
+        "emsname",
+        "emscode"
+      ]
+    },
+    {
+      "table": "o_archive_all_json",
+      "row_count": 1709071,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "archive_id",
+        "source_table",
+        "merged_at",
+        "row_data"
+      ]
+    },
+    {
+      "table": "PERSON",
+      "row_count": 105707,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "pcucode",
+        "cid",
+        "pid",
+        "hid",
+        "prename",
+        "name",
+        "lname",
+        "hn",
+        "sex",
+        "birth"
+      ]
+    },
+    {
+      "table": "phmdr",
+      "row_count": 185841,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "id",
+        "vn",
+        "an",
+        "dct",
+        "prscno",
+        "srvdttm"
+      ]
+    },
+    {
+      "table": "phr_visit_log",
+      "row_count": 614315,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "id",
+        "hn",
+        "vn",
+        "MessageCode",
+        "Message",
+        "create_date",
+        "create_time"
+      ]
+    },
+    {
+      "table": "ptble",
+      "row_count": 4910,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "hn",
+        "pname",
+        "fname",
+        "lname",
+        "brthdate",
+        "truebrth",
+        "dthdate",
+        "male",
+        "ctzshp",
+        "ntnlty"
+      ]
+    },
+    {
+      "table": "PTINFO",
+      "row_count": 171129,
+      "has_pk": false,
+      "index_count": 1,
+      "sample_columns": [
+        "hn",
+        "firstname",
+        "lastname",
+        "dob",
+        "deathdate",
+        "male",
+        "age",
+        "cid",
+        "hometel",
+        "offtel"
+      ]
+    },
+    {
+      "table": "q4u_docinroom",
+      "row_count": 2273,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "id",
+        "datein",
+        "van",
+        "docroom1",
+        "docroom2",
+        "docroom3",
+        "stroom1",
+        "stroom2",
+        "stroom3",
+        "st1"
+      ]
+    },
+    {
+      "table": "q4u_person",
+      "row_count": 74790,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "hn",
+        "title",
+        "first_name",
+        "last_name",
+        "birthdate",
+        "remark",
+        "update_date",
+        "sex"
+      ]
+    },
+    {
+      "table": "q4u_queue_group_detail",
+      "row_count": 4152,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "service_point_id",
+        "date_serv",
+        "last_queue",
+        "room_id",
+        "queue_id",
+        "update_date",
+        "queue_running"
+      ]
+    },
+    {
+      "table": "q4u_queue_number",
+      "row_count": 26400,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "service_point_id",
+        "date_serv",
+        "current_queue",
+        "update_date",
+        "priority_id"
+      ]
+    },
+    {
+      "table": "schedules",
+      "row_count": 94677,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "schedule_id",
+        "plan_id",
+        "fudate",
+        "treat_no"
+      ]
+    },
+    {
+      "table": "scr_it",
+      "row_count": 11415,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "id",
+        "hn",
+        "pname",
+        "fname",
+        "lname",
+        "sex",
+        "pop_id",
+        "age",
+        "twoq",
+        "dringing"
+      ]
+    },
+    {
+      "table": "service_type",
+      "row_count": 3118600,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "vn",
+        "service"
+      ]
+    },
+    {
+      "table": "sign_backup_all",
+      "row_count": 1503,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "sign",
+        "slct",
+        "source_table",
+        "staff_code"
+      ]
+    },
+    {
+      "table": "sign_merged_01",
+      "row_count": 25184,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "merge_id",
+        "source_table",
+        "id",
+        "sign",
+        "slct"
+      ]
+    },
+    {
+      "table": "sign_merged_02",
+      "row_count": 71233,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "merge_id",
+        "source_table",
+        "sign",
+        "slct"
+      ]
+    },
+    {
+      "table": "sign_merged_03",
+      "row_count": 6416349,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "merge_id",
+        "source_table",
+        "vn",
+        "sign",
+        "an"
+      ]
+    },
+    {
+      "table": "sitincoth",
+      "row_count": 8472,
+      "has_pk": false,
+      "index_count": 1,
+      "sample_columns": [
+        "vn",
+        "total"
+      ]
+    },
+    {
+      "table": "sitincotho",
+      "row_count": 11325,
+      "has_pk": false,
+      "index_count": 1,
+      "sample_columns": [
+        "vn",
+        "total"
+      ]
+    },
+    {
+      "table": "specialpp",
+      "row_count": 65811,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "id",
+        "vn",
+        "ppcode",
+        "d_update"
+      ]
+    },
+    {
+      "table": "ssop_billitem",
+      "row_count": 1414,
+      "has_pk": false,
+      "index_count": 1,
+      "sample_columns": [
+        "Invno",
+        "SvDate",
+        "BillMuad",
+        "LCCode",
+        "STDCode",
+        "Desc2",
+        "QTY",
+        "UP",
+        "ChargeAmt",
+        "ClaimUP"
+      ]
+    },
+    {
+      "table": "testinser",
+      "row_count": 1000,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "teshn",
+        "fname",
+        "surname",
+        "pop_id"
+      ]
+    },
+    {
+      "table": "vaccineaefi",
+      "row_count": 1033,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "visit_guid",
+        "is_target_person",
+        "need_aefi_followup",
+        "cid",
+        "hn",
+        "visit_date",
+        "visit_time",
+        "imd1",
+        "vaccine_manufacturer",
+        "patient_name"
+      ]
+    },
+    {
+      "table": "vaccineallmonth060708",
+      "row_count": 9855,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "hospital_name",
+        "cid",
+        "hospital_appointment_slot_id",
+        "slot_no",
+        "appointment_date",
+        "appointment_time",
+        "appointment_confirm_type_name",
+        "person_name",
+        "appointment_confirm_type_name_1",
+        "confirm_datetime"
+      ]
+    },
+    {
+      "table": "vaccineallmonth060708new",
+      "row_count": 9817,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "hospital_name",
+        "cid",
+        "hospital_appointment_slot_id",
+        "slot_no",
+        "appointment_date",
+        "appointment_time",
+        "appointment_confirm_type_name",
+        "person_name",
+        "appointment_confirm_type_name_1",
+        "confirm_datetime"
+      ]
+    },
+    {
+      "table": "vaccine_genqrcode",
+      "row_count": 11724,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "id",
+        "lotno",
+        "sn",
+        "exp",
+        "bottleno",
+        "doseid",
+        "create_date",
+        "vaccine_name"
+      ]
+    },
+    {
+      "table": "vaccine_mophic_history",
+      "row_count": 10171,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "hn",
+        "cid",
+        "json_data",
+        "fullname",
+        "visit_date",
+        "update_date",
+        "update_time"
+      ]
+    },
+    {
+      "table": "vaccine_mophic_lab_log",
+      "row_count": 2242,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "id",
+        "vn",
+        "hn",
+        "pop_id",
+        "labcode",
+        "patient_lab_ref_code",
+        "patient_lab_name_ref",
+        "patient_lab_normal_value_ref",
+        "tmlt_code",
+        "patient_lab_result_text"
+      ]
+    },
+    {
+      "table": "view_pt_log",
+      "row_count": 1158,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "id",
+        "user_id",
+        "viewdate",
+        "vn",
+        "user_addr",
+        "user_agent",
+        "user_mac"
+      ]
+    },
+    {
+      "table": "visitprt",
+      "row_count": 80424,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "id",
+        "vn",
+        "an",
+        "vstdttm",
+        "userprt",
+        "prttype"
+      ]
+    },
+    {
+      "table": "VR10949",
+      "row_count": 55730,
+      "has_pk": false,
+      "index_count": 0,
+      "sample_columns": [
+        "Cid",
+        "fname",
+        "lname",
+        "sex",
+        "pttype",
+        "hcode"
+      ]
+    },
+    {
+      "table": "xdose",
+      "row_count": 2113217,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "xdoseno",
+        "doseprn"
+      ]
+    },
+    {
+      "table": "xryremark",
+      "row_count": 1132,
+      "has_pk": true,
+      "index_count": 1,
+      "sample_columns": [
+        "id",
+        "xrycode",
+        "vn",
+        "VSTDATE",
+        "VSTTIME",
+        "Remark",
+        "Staff_code"
+      ]
+    }
+  ],
+  "recommended_indexes": [
+    {
+      "table": "accident",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "nameaccdnt"
+      ],
+      "reason": "Table has 29 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "allgtype",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "allgtype"
+      ],
+      "reason": "Table has 4 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "bhtr",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "an"
+      ],
+      "reason": "Table has 9522 rows but no primary key",
+      "priority": "HIGH"
+    },
+    {
+      "table": "bhtri",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "an"
+      ],
+      "reason": "Table has 542 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "bhtro",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "an"
+      ],
+      "reason": "Table has 11224 rows but no primary key",
+      "priority": "HIGH"
+    },
+    {
+      "table": "BP",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "HN"
+      ],
+      "reason": "Table has 123 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "ccd_appointment",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "hospcode"
+      ],
+      "reason": "Table has 0 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "ccd_opd_visit",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "hospcode"
+      ],
+      "reason": "Table has 0 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "ccd_opd_visit_diag",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "hospcode"
+      ],
+      "reason": "Table has 0 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "ccd_opd_visit_diag_text",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "hospcode"
+      ],
+      "reason": "Table has 0 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "ccd_opd_visit_procedure",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "hospcode"
+      ],
+      "reason": "Table has 0 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "ccd_opd_visit_screen",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "hospcode"
+      ],
+      "reason": "Table has 0 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "ccd_person",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "hospcode"
+      ],
+      "reason": "Table has 0 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "checkcovid",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "hn"
+      ],
+      "reason": "Table has 0 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "checkvaccine",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "vn"
+      ],
+      "reason": "Table has 0 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "CHRONIC-hi",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "pcucode"
+      ],
+      "reason": "Table has 450 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "CHRONICk",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "PCUCODE"
+      ],
+      "reason": "Table has 233 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "CHRONICm",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "PCUCODE"
+      ],
+      "reason": "Table has 226 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "cidhn",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "hn"
+      ],
+      "reason": "Table has 2478 rows but no primary key",
+      "priority": "HIGH"
+    },
+    {
+      "table": "ckd",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "visit_date"
+      ],
+      "reason": "Table has 0 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "Claim_E",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "HN"
+      ],
+      "reason": "Table has 634 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "Claim_HI",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "an"
+      ],
+      "reason": "Table has 656 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "CMI",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "ECLAIM_NO"
+      ],
+      "reason": "Table has 5914 rows but no primary key",
+      "priority": "HIGH"
+    },
+    {
+      "table": "ctzshp",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "namectzshp"
+      ],
+      "reason": "Table has 92 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "datahn",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "HN"
+      ],
+      "reason": "Table has 270 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "datapit",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "HCODE"
+      ],
+      "reason": "Table has 5 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "data_correct",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "hospcode"
+      ],
+      "reason": "Table has 8437993 rows but no primary key",
+      "priority": "HIGH"
+    },
+    {
+      "table": "data_ini",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "data"
+      ],
+      "reason": "Table has 60 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "deaDMn",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "cid"
+      ],
+      "reason": "Table has 493488 rows but no primary key",
+      "priority": "HIGH"
+    },
+    {
+      "table": "dengue",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "visit_date"
+      ],
+      "reason": "Table has 0 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "dengue_ny",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "visit_date"
+      ],
+      "reason": "Table has 0 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "disability",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "pcucode"
+      ],
+      "reason": "Table has 1990 rows but no primary key",
+      "priority": "HIGH"
+    },
+    {
+      "table": "eclaim",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "ID"
+      ],
+      "reason": "Table has 12856 rows but no primary key",
+      "priority": "HIGH"
+    },
+    {
+      "table": "emp",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "DEPTNO"
+      ],
+      "reason": "Table has 13 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "export21f",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "pcucode"
+      ],
+      "reason": "Table has 76534 rows but no primary key",
+      "priority": "HIGH"
+    },
+    {
+      "table": "foodorder",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "an"
+      ],
+      "reason": "Table has 234 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "foodsum",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "an"
+      ],
+      "reason": "Table has 138066 rows but no primary key",
+      "priority": "HIGH"
+    },
+    {
+      "table": "ftdate",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "mini"
+      ],
+      "reason": "Table has 0 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "generator_16",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "n"
+      ],
+      "reason": "Table has 0 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "generator_256",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "n"
+      ],
+      "reason": "Table has 0 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "generator_4k",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "n"
+      ],
+      "reason": "Table has 0 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "generator_64k",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "n"
+      ],
+      "reason": "Table has 0 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "hcode",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "namehosp"
+      ],
+      "reason": "Table has 14920 rows but no primary key",
+      "priority": "HIGH"
+    },
+    {
+      "table": "hifields",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "field_name"
+      ],
+      "reason": "Table has 1399 rows but no primary key",
+      "priority": "HIGH"
+    },
+    {
+      "table": "hifields1",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "field_name"
+      ],
+      "reason": "Table has 1361 rows but no primary key",
+      "priority": "HIGH"
+    },
+    {
+      "table": "hi_ini",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "data"
+      ],
+      "reason": "Table has 28 rows but no primary key",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "hnble",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "hn"
+      ],
+      "reason": "Table has 2491 rows but no primary key",
+      "priority": "HIGH"
+    },
+    {
+      "table": "hndb",
+      "type": "PRIMARY KEY",
+      "columns": [
+        "Cnt"
+      ],
+      "reason": "Table has 3075 rows but no primary key",
+      "priority": "HIGH"
+    },
+    {
+      "table": "Claim_HI",
+      "type": "INDEX",
+      "columns": [
+        "an"
+      ],
+      "reason": "Common query column in patient module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "HNDM",
+      "type": "INDEX",
+      "columns": [
+        "hn"
+      ],
+      "reason": "Common query column in patient module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "Mrs_No_Pttype",
+      "type": "INDEX",
+      "columns": [
+        "HN"
+      ],
+      "reason": "Common query column in patient module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "Mrs_newSammary",
+      "type": "INDEX",
+      "columns": [
+        "AN"
+      ],
+      "reason": "Common query column in patient module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "Mrsc_Re_check",
+      "type": "INDEX",
+      "columns": [
+        "An"
+      ],
+      "reason": "Common query column in patient module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "PERSON",
+      "type": "INDEX",
+      "columns": [
+        "hn"
+      ],
+      "reason": "Common query column in patient module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "PERSONk",
+      "type": "INDEX",
+      "columns": [
+        "HN"
+      ],
+      "reason": "Common query column in patient module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "PERSONm",
+      "type": "INDEX",
+      "columns": [
+        "HN"
+      ],
+      "reason": "Common query column in patient module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "PTTY",
+      "type": "INDEX",
+      "columns": [
+        "hn"
+      ],
+      "reason": "Common query column in patient module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "aipn_patient_",
+      "type": "INDEX",
+      "columns": [
+        "vn"
+      ],
+      "reason": "Common query column in patient module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "bhtr",
+      "type": "INDEX",
+      "columns": [
+        "an"
+      ],
+      "reason": "Common query column in patient module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "bhtri",
+      "type": "INDEX",
+      "columns": [
+        "hn"
+      ],
+      "reason": "Common query column in patient module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "bhtro",
+      "type": "INDEX",
+      "columns": [
+        "an"
+      ],
+      "reason": "Common query column in patient module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "ccd_person",
+      "type": "INDEX",
+      "columns": [
+        "hn"
+      ],
+      "reason": "Common query column in patient module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "child",
+      "type": "INDEX",
+      "columns": [
+        "hn"
+      ],
+      "reason": "Common query column in patient module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "chksitdrfee",
+      "type": "INDEX",
+      "columns": [
+        "vstdate"
+      ],
+      "reason": "Common query column in patient module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "Mrs_OPD_Card",
+      "type": "INDEX",
+      "columns": [
+        "hn"
+      ],
+      "reason": "Common query column in opd module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "Mrs_OPD_Card_IN",
+      "type": "INDEX",
+      "columns": [
+        "hn"
+      ],
+      "reason": "Common query column in opd module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "Mrs_OPD_EKG",
+      "type": "INDEX",
+      "columns": [
+        "hn"
+      ],
+      "reason": "Common query column in opd module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "Mrs_ssDATA_OPD",
+      "type": "INDEX",
+      "columns": [
+        "HN"
+      ],
+      "reason": "Common query column in opd module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "Mrss_OPD",
+      "type": "INDEX",
+      "columns": [
+        "HN"
+      ],
+      "reason": "Common query column in opd module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "Mrss_R_OPD",
+      "type": "INDEX",
+      "columns": [
+        "HN"
+      ],
+      "reason": "Common query column in opd module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "ccd_opd_visit",
+      "type": "INDEX",
+      "columns": [
+        "hn"
+      ],
+      "reason": "Common query column in opd module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "ccd_opd_visit_diag",
+      "type": "INDEX",
+      "columns": [
+        "hn"
+      ],
+      "reason": "Common query column in opd module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "ccd_opd_visit_diag_text",
+      "type": "INDEX",
+      "columns": [
+        "hn"
+      ],
+      "reason": "Common query column in opd module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "ccd_opd_visit_procedure",
+      "type": "INDEX",
+      "columns": [
+        "hn"
+      ],
+      "reason": "Common query column in opd module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "ccd_opd_visit_screen",
+      "type": "INDEX",
+      "columns": [
+        "hn"
+      ],
+      "reason": "Common query column in opd module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "chkuseopd",
+      "type": "INDEX",
+      "columns": [
+        "status"
+      ],
+      "reason": "Common query column in opd module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "ovst",
+      "type": "INDEX",
+      "columns": [
+        "an"
+      ],
+      "reason": "Common query column in opd module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "ovst_28-11-2565",
+      "type": "INDEX",
+      "columns": [
+        "an"
+      ],
+      "reason": "Common query column in opd module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "IPD51_1",
+      "type": "INDEX",
+      "columns": [
+        "AN"
+      ],
+      "reason": "Common query column in ipd module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "IPD52_1",
+      "type": "INDEX",
+      "columns": [
+        "AN"
+      ],
+      "reason": "Common query column in ipd module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "IPD53_1",
+      "type": "INDEX",
+      "columns": [
+        "AN"
+      ],
+      "reason": "Common query column in ipd module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "IPD54_1",
+      "type": "INDEX",
+      "columns": [
+        "AN"
+      ],
+      "reason": "Common query column in ipd module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "IPD56n",
+      "type": "INDEX",
+      "columns": [
+        "AN"
+      ],
+      "reason": "Common query column in ipd module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "Mrs_ssDATA_IPD",
+      "type": "INDEX",
+      "columns": [
+        "AN"
+      ],
+      "reason": "Common query column in ipd module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "Mrs_ssDATA_nIPD",
+      "type": "INDEX",
+      "columns": [
+        "AN"
+      ],
+      "reason": "Common query column in ipd module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "Mrsc_check_in",
+      "type": "INDEX",
+      "columns": [
+        "AN"
+      ],
+      "reason": "Common query column in ipd module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "Mrss_IPD",
+      "type": "INDEX",
+      "columns": [
+        "AN"
+      ],
+      "reason": "Common query column in ipd module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "Mrss_R_IPD",
+      "type": "INDEX",
+      "columns": [
+        "AN"
+      ],
+      "reason": "Common query column in ipd module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "RWipd",
+      "type": "INDEX",
+      "columns": [
+        "vn"
+      ],
+      "reason": "Common query column in ipd module",
+      "priority": "MEDIUM"
+    },
+    {
+      "table": "iprsc",
+      "type": "INDEX",
+      "columns": [
+        "hn"
+      ],
+      "reason": "Common query column in pharmacy module",
+      "priority": "MEDIUM"
+    }
+  ],
+  "statistics": {
+    "total_tables": 847,
+    "tables_with_pk": 605,
+    "tables_without_pk": 242,
+    "tables_with_indexes": 675,
+    "tables_without_indexes": 172,
+    "total_indexes": 0,
+    "potential_improvements": 90
+  }
+}

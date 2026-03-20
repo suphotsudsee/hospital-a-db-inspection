@@ -1,0 +1,11 @@
+{
+  "project_name": "hospital-db-inspection",
+  "hospital_name": "โรงพยาบาลตัวอย่าง",
+  "database_type": "mysql",
+  "host": "192.168.25.128",
+  "port": 3306,
+  "database_name": "hidb10949",
+  "username": "suphot",
+  "password": "0868757244",
+  "environment": "production"
+}

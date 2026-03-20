@@ -1,0 +1,413 @@
+{
+  "metadata": {
+    "database": "hidb10949",
+    "generated_at": "2026-03-20T09:40:00.000Z",
+    "total_queries": 32,
+    "server_version": "10.11.16-MariaDB-ubu2404-log",
+    "description": "Query metrics for Hospital DB Dashboard API endpoints"
+  },
+  "queries": [
+    {
+      "name": "get_database_overview",
+      "endpoint": "/api/overview",
+      "estimated_cost": "LOW",
+      "estimated_rows": 1,
+      "index_required": ["PRIMARY on information_schema.tables"],
+      "cache_ttl_seconds": 3600,
+      "description": "Get complete database statistics for dashboard header",
+      "performance_notes": "Uses information_schema which is already optimized. Safe for frequent execution."
+    },
+    {
+      "name": "get_table_engine_distribution",
+      "endpoint": "/api/overview",
+      "estimated_cost": "LOW",
+      "estimated_rows": 5,
+      "index_required": ["PRIMARY on information_schema.tables"],
+      "cache_ttl_seconds": 3600,
+      "description": "Get distribution of storage engines",
+      "performance_notes": "Aggregation query on information_schema. Low cost."
+    },
+    {
+      "name": "get_modules_count",
+      "endpoint": "/api/overview",
+      "estimated_cost": "LOW",
+      "estimated_rows": 25,
+      "index_required": [],
+      "cache_ttl_seconds": 86400,
+      "description": "Count modules from classification data",
+      "performance_notes": "Uses pre-computed classification. In static mode, uses JSON directly."
+    },
+    {
+      "name": "get_modules_list",
+      "endpoint": "/api/modules",
+      "estimated_cost": "MEDIUM",
+      "estimated_rows": 25,
+      "index_required": ["PRIMARY on tables"],
+      "cache_ttl_seconds": 1800,
+      "description": "Get all modules with their statistics",
+      "performance_notes": "Requires table scans for row counts. Cache recommended."
+    },
+    {
+      "name": "get_module_top_tables",
+      "endpoint": "/api/modules",
+      "estimated_cost": "MEDIUM",
+      "estimated_rows": 20,
+      "index_required": ["data_length", "index_length"],
+      "cache_ttl_seconds": 3600,
+      "description": "Get top N tables by size for each module",
+      "performance_notes": "Simple ORDER BY with LIMIT. Well optimized."
+    },
+    {
+      "name": "get_module_detail",
+      "endpoint": "/api/modules/[name]",
+      "estimated_cost": "LOW",
+      "estimated_rows": 50,
+      "index_required": ["table_name index"],
+      "cache_ttl_seconds": 1800,
+      "description": "Get detailed information for a specific module",
+      "performance_notes": "Filtered by module, returns limited results. Parameterized query safe."
+    },
+    {
+      "name": "get_module_table_issues",
+      "endpoint": "/api/modules/[name]",
+      "estimated_cost": "LOW",
+      "estimated_rows": 50,
+      "index_required": ["PRIMARY key columns"],
+      "cache_ttl_seconds": 3600,
+      "description": "Get anomaly issues for tables in a module",
+      "performance_notes": "Joins with anomaly data. Low cost for filtered results."
+    },
+    {
+      "name": "get_anomaly_categories",
+      "endpoint": "/api/anomalies",
+      "estimated_cost": "LOW",
+      "estimated_rows": 10,
+      "index_required": ["column_key"],
+      "cache_ttl_seconds": 3600,
+      "description": "Get all anomaly categories with counts",
+      "performance_notes": "UNION ALL queries are efficient. Cache aggressively."
+    },
+    {
+      "name": "get_anomaly_severity_summary",
+      "endpoint": "/api/anomalies",
+      "estimated_cost": "LOW",
+      "estimated_rows": 3,
+      "index_required": ["table_rows", "column_key"],
+      "cache_ttl_seconds": 3600,
+      "description": "Get overall severity distribution",
+      "performance_notes": "Aggregation with CASE statements. Low cost."
+    },
+    {
+      "name": "get_anomaly_category_tables",
+      "endpoint": "/api/anomalies/[category]",
+      "estimated_cost": "MEDIUM",
+      "estimated_rows": 242,
+      "index_required": ["column_key"],
+      "cache_ttl_seconds": 1800,
+      "description": "Get all tables with a specific anomaly type",
+      "performance_notes": "Can return many rows. Pagination recommended for UI."
+    },
+    {
+      "name": "get_index_recommendations",
+      "endpoint": "/api/indexes/recommendations",
+      "estimated_cost": "LOW",
+      "estimated_rows": 90,
+      "index_required": ["column_key", "table_rows"],
+      "cache_ttl_seconds": 86400,
+      "description": "Get all recommended indexes with priorities",
+      "performance_notes": "Pre-computed recommendations. Changes rarely, cache for 24h."
+    },
+    {
+      "name": "get_index_gap_analysis",
+      "endpoint": "/api/indexes/recommendations",
+      "estimated_cost": "MEDIUM",
+      "estimated_rows": 100,
+      "index_required": ["statistics"],
+      "cache_ttl_seconds": 3600,
+      "description": "Detailed analysis of missing indexes",
+      "performance_notes": "Subqueries on statistics table. Medium cost."
+    },
+    {
+      "name": "get_tables_paginated",
+      "endpoint": "/api/tables",
+      "estimated_cost": "LOW",
+      "estimated_rows": 50,
+      "index_required": ["data_length", "table_name"],
+      "cache_ttl_seconds": 1800,
+      "description": "Get paginated list of all tables",
+      "performance_notes": "Simple pagination with LIMIT/OFFSET. Add index on data_length for sorting."
+    },
+    {
+      "name": "get_tables_count",
+      "endpoint": "/api/tables",
+      "estimated_cost": "LOW",
+      "estimated_rows": 1,
+      "index_required": [],
+      "cache_ttl_seconds": 3600,
+      "description": "Get total count for pagination",
+      "performance_notes": "Simple COUNT query on information_schema."
+    },
+    {
+      "name": "get_tables_by_module",
+      "endpoint": "/api/tables?module=",
+      "estimated_cost": "LOW",
+      "estimated_rows": 50,
+      "index_required": ["table_name"],
+      "cache_ttl_seconds": 1800,
+      "description": "Get tables filtered by module",
+      "performance_notes": "Uses table naming patterns for module classification."
+    },
+    {
+      "name": "get_table_detail",
+      "endpoint": "/api/tables/[name]",
+      "estimated_cost": "LOW",
+      "estimated_rows": 1,
+      "index_required": ["table_name"],
+      "cache_ttl_seconds": 3600,
+      "description": "Get complete information for a single table",
+      "performance_notes": "Single row lookup. Very efficient."
+    },
+    {
+      "name": "get_table_columns",
+      "endpoint": "/api/tables/[name]",
+      "estimated_cost": "LOW",
+      "estimated_rows": 30,
+      "index_required": ["table_name, ordinal_position"],
+      "cache_ttl_seconds": 3600,
+      "description": "Get all columns for a table",
+      "performance_notes": "Filtered by table_name. Low cost."
+    },
+    {
+      "name": "get_table_indexes",
+      "endpoint": "/api/tables/[name]",
+      "estimated_cost": "LOW",
+      "estimated_rows": 10,
+      "index_required": ["table_name, index_name"],
+      "cache_ttl_seconds": 3600,
+      "description": "Get all indexes for a table",
+      "performance_notes": "GROUP BY on index_name. Low cost."
+    },
+    {
+      "name": "get_table_issues",
+      "endpoint": "/api/tables/[name]",
+      "estimated_cost": "LOW",
+      "estimated_rows": 5,
+      "index_required": ["column_key"],
+      "cache_ttl_seconds": 3600,
+      "description": "Get issues specific to a table",
+      "performance_notes": "Subqueries for issue detection. Low cost for single table."
+    },
+    {
+      "name": "search_tables",
+      "endpoint": "/api/search?q=",
+      "estimated_cost": "LOW",
+      "estimated_rows": 50,
+      "index_required": ["table_name"],
+      "cache_ttl_seconds": 300,
+      "description": "Search tables by name pattern",
+      "performance_notes": "LIKE queries on table_name. Short cache due to user input variation."
+    },
+    {
+      "name": "search_modules",
+      "endpoint": "/api/search?q=",
+      "estimated_cost": "LOW",
+      "estimated_rows": 25,
+      "index_required": [],
+      "cache_ttl_seconds": 300,
+      "description": "Search modules by name or description",
+      "performance_notes": "Uses pre-defined module list. Very fast."
+    },
+    {
+      "name": "search_columns",
+      "endpoint": "/api/search?q=",
+      "estimated_cost": "MEDIUM",
+      "estimated_rows": 100,
+      "index_required": ["column_name"],
+      "cache_ttl_seconds": 600,
+      "description": "Search columns across all tables",
+      "performance_notes": "Requires column scan. Medium cost, limited to 100 results."
+    },
+    {
+      "name": "calculate_health_score",
+      "endpoint": "/api/overview",
+      "estimated_cost": "MEDIUM",
+      "estimated_rows": 1,
+      "index_required": ["column_key", "table_rows"],
+      "cache_ttl_seconds": 3600,
+      "description": "Calculate overall database health score (0-100)",
+      "performance_notes": "Multiple subqueries with aggregations. Cache recommended."
+    },
+    {
+      "name": "get_health_breakdown",
+      "endpoint": "/api/overview",
+      "estimated_cost": "MEDIUM",
+      "estimated_rows": 3,
+      "index_required": ["column_key", "table_rows"],
+      "cache_ttl_seconds": 3600,
+      "description": "Get detailed health metrics breakdown",
+      "performance_notes": "UNION ALL with aggregations. Medium cost."
+    },
+    {
+      "name": "get_top_modules_by_size",
+      "endpoint": "/api/overview",
+      "estimated_cost": "LOW",
+      "estimated_rows": 12,
+      "index_required": ["data_length", "index_length"],
+      "cache_ttl_seconds": 1800,
+      "description": "Get top modules ordered by database size",
+      "performance_notes": "Aggregation with CROSS JOIN. Efficient for small module sets."
+    },
+    {
+      "name": "get_table_growth_estimate",
+      "endpoint": "/api/anomalies",
+      "estimated_cost": "LOW",
+      "estimated_rows": 50,
+      "index_required": ["auto_increment"],
+      "cache_ttl_seconds": 3600,
+      "description": "Estimate table growth based on auto_increment",
+      "performance_notes": "Simple WHERE on auto_increment. Low cost."
+    },
+    {
+      "name": "get_duplicate_tables",
+      "endpoint": "/api/anomalies",
+      "estimated_cost": "LOW",
+      "estimated_rows": 20,
+      "index_required": ["table_name"],
+      "cache_ttl_seconds": 86400,
+      "description": "Find potentially duplicate/backup tables",
+      "performance_notes": "Pattern matching on table_name. Rare changes, long cache."
+    }
+  ],
+  "recommended_indexes": [
+    {
+      "table": "information_schema.tables",
+      "columns": ["table_schema", "table_name"],
+      "type": "COMPOSITE",
+      "reason": "Speed up table lookups by schema and name"
+    },
+    {
+      "table": "information_schema.columns",
+      "columns": ["table_schema", "table_name", "column_key"],
+      "type": "COMPOSITE",
+      "reason": "Speed up primary key detection queries"
+    },
+    {
+      "table": "information_schema.statistics",
+      "columns": ["table_schema", "table_name", "index_name"],
+      "type": "COMPOSITE",
+      "reason": "Speed up index analysis queries"
+    }
+  ],
+  "cache_strategy": {
+    "description": "Recommended caching strategy for dashboard queries",
+    "layers": [
+      {
+        "layer": "application",
+        "method": "In-memory cache (Redis/Memcached)",
+        "default_ttl": 3600,
+        "description": "Cache query results at application level"
+      },
+      {
+        "layer": "http",
+        "method": "CDN/Reverse proxy cache",
+        "default_ttl": 300,
+        "description": "Cache API responses for anonymous users"
+      },
+      {
+        "layer": "database",
+        "method": "Query cache (if enabled)",
+        "description": "MariaDB query cache for identical queries"
+      }
+    ],
+    "invalidation_rules": [
+      {
+        "event": "schema_change",
+        "action": "clear_all_cache",
+        "description": "Clear all cache when schema changes detected"
+      },
+      {
+        "event": "data_refresh",
+        "action": "clear_module_cache",
+        "description": "Clear specific module cache when data is refreshed"
+      },
+      {
+        "event": "anomaly_update",
+        "action": "clear_anomaly_cache",
+        "description": "Clear anomaly cache when new analysis runs"
+      }
+    ]
+  },
+  "static_data_mode": {
+    "description": "When using static JSON data instead of live DB connection",
+    "data_sources": [
+      {
+        "file": "outputs/schema_inventory.json",
+        "usage": "Primary data source for table statistics",
+        "queries_replaced": ["get_database_overview", "get_tables_paginated", "get_table_detail"]
+      },
+      {
+        "file": "outputs/module_map.json",
+        "usage": "Module classification and table grouping",
+        "queries_replaced": ["get_modules_list", "get_module_detail", "get_top_modules_by_size"]
+      },
+      {
+        "file": "outputs/anomalies.json",
+        "usage": "Pre-computed anomaly data",
+        "queries_replaced": ["get_anomaly_categories", "get_anomaly_severity_summary", "get_anomaly_category_tables"]
+      },
+      {
+        "file": "outputs/index_gap_report.md",
+        "usage": "Index recommendations",
+        "queries_replaced": ["get_index_recommendations", "get_index_gap_analysis"]
+      }
+    ],
+    "implementation": [
+      {
+        "step": 1,
+        "action": "Load JSON files into memory on application startup",
+        "description": "Parse and index JSON data for fast lookups"
+      },
+      {
+        "step": 2,
+        "action": "Transform JSON data to match API response format",
+        "description": "Use JavaScript/TypeScript transformations instead of SQL"
+      },
+      {
+        "step": 3,
+        "action": "Implement in-memory caching with TTL",
+        "description": "Set appropriate TTL for each data type"
+      },
+      {
+        "step": 4,
+        "action": "Add file watcher for hot-reload",
+        "description": "Reload JSON files when they change on disk"
+      }
+    ]
+  },
+  "performance_tips": [
+    {
+      "tip": "Use EXPLAIN for slow queries",
+      "description": "Always run EXPLAIN on queries before deploying to production"
+    },
+    {
+      "tip": "Implement pagination",
+      "description": "Use LIMIT/OFFSET for large result sets. Consider cursor-based pagination for infinite scroll."
+    },
+    {
+      "tip": "Monitor query cache hit ratio",
+      "description": "If using MariaDB query cache, monitor hit ratio and adjust cache size"
+    },
+    {
+      "tip": "Use connection pooling",
+      "description": "Implement connection pooling to reduce connection overhead"
+    },
+    {
+      "tip": "Consider read replicas",
+      "description": "For high-traffic dashboards, use read replicas for queries"
+    },
+    {
+      "tip": "Batch similar queries",
+      "description": "Combine related queries into single requests to reduce round trips"
+    }
+  ]
+}

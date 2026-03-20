@@ -1,0 +1,2829 @@
+{
+  "generated_at": "2026-03-20T09:38:38.916528",
+  "database": "hidb10949",
+  "categories": {
+    "missing_primary_keys": [
+      {
+        "table": "accident",
+        "row_count": 29,
+        "severity": "INFO"
+      },
+      {
+        "table": "allgtype",
+        "row_count": 4,
+        "severity": "INFO"
+      },
+      {
+        "table": "bhtr",
+        "row_count": 9522,
+        "severity": "WARNING"
+      },
+      {
+        "table": "bhtri",
+        "row_count": 542,
+        "severity": "INFO"
+      },
+      {
+        "table": "bhtro",
+        "row_count": 11224,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "BP",
+        "row_count": 123,
+        "severity": "INFO"
+      },
+      {
+        "table": "ccd_appointment",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "ccd_dispense_items",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "ccd_lab_result",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "ccd_opd_visit",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "ccd_opd_visit_diag",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "ccd_opd_visit_diag_text",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "ccd_opd_visit_procedure",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "ccd_opd_visit_screen",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "ccd_person",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "checkcovid",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "checkvaccine",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "CHRONIC-hi",
+        "row_count": 450,
+        "severity": "INFO"
+      },
+      {
+        "table": "CHRONICk",
+        "row_count": 233,
+        "severity": "INFO"
+      },
+      {
+        "table": "CHRONICm",
+        "row_count": 226,
+        "severity": "INFO"
+      },
+      {
+        "table": "cidhn",
+        "row_count": 2478,
+        "severity": "WARNING"
+      },
+      {
+        "table": "ckd",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "Claim_E",
+        "row_count": 634,
+        "severity": "INFO"
+      },
+      {
+        "table": "Claim_HI",
+        "row_count": 656,
+        "severity": "INFO"
+      },
+      {
+        "table": "CMI",
+        "row_count": 5914,
+        "severity": "WARNING"
+      },
+      {
+        "table": "ctzshp",
+        "row_count": 92,
+        "severity": "INFO"
+      },
+      {
+        "table": "datahn",
+        "row_count": 270,
+        "severity": "INFO"
+      },
+      {
+        "table": "datapit",
+        "row_count": 5,
+        "severity": "INFO"
+      },
+      {
+        "table": "data_correct",
+        "row_count": 8437993,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "data_ini",
+        "row_count": 60,
+        "severity": "INFO"
+      },
+      {
+        "table": "deaDMn",
+        "row_count": 493488,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "dengue",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "dengue_ny",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "disability",
+        "row_count": 1990,
+        "severity": "WARNING"
+      },
+      {
+        "table": "eclaim",
+        "row_count": 12856,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "emp",
+        "row_count": 13,
+        "severity": "INFO"
+      },
+      {
+        "table": "export21f",
+        "row_count": 76534,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "foodorder",
+        "row_count": 234,
+        "severity": "INFO"
+      },
+      {
+        "table": "foodsum",
+        "row_count": 138066,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "ftdate",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "generator_16",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "generator_256",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "generator_4k",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "generator_64k",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "hcode",
+        "row_count": 14920,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "hifields",
+        "row_count": 1399,
+        "severity": "WARNING"
+      },
+      {
+        "table": "hifields1",
+        "row_count": 1361,
+        "severity": "WARNING"
+      },
+      {
+        "table": "hi_ini",
+        "row_count": 28,
+        "severity": "INFO"
+      },
+      {
+        "table": "hnble",
+        "row_count": 2491,
+        "severity": "WARNING"
+      },
+      {
+        "table": "hndb",
+        "row_count": 3075,
+        "severity": "WARNING"
+      },
+      {
+        "table": "HNDM",
+        "row_count": 710,
+        "severity": "INFO"
+      },
+      {
+        "table": "hnjoj",
+        "row_count": 5101,
+        "severity": "WARNING"
+      },
+      {
+        "table": "hnptcut",
+        "row_count": 2479,
+        "severity": "WARNING"
+      },
+      {
+        "table": "hntarget",
+        "row_count": 36,
+        "severity": "INFO"
+      },
+      {
+        "table": "holiday",
+        "row_count": 521,
+        "severity": "INFO"
+      },
+      {
+        "table": "hospcodeolde",
+        "row_count": 14916,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "icd1032",
+        "row_count": 7273,
+        "severity": "WARNING"
+      },
+      {
+        "table": "icdcm1",
+        "row_count": 3873,
+        "severity": "WARNING"
+      },
+      {
+        "table": "indexhi",
+        "row_count": 101,
+        "severity": "INFO"
+      },
+      {
+        "table": "inscl",
+        "row_count": 120004,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "IP50new",
+        "row_count": 6049,
+        "severity": "WARNING"
+      },
+      {
+        "table": "IP51new",
+        "row_count": 6437,
+        "severity": "WARNING"
+      },
+      {
+        "table": "IP52new",
+        "row_count": 6740,
+        "severity": "WARNING"
+      },
+      {
+        "table": "IP53new",
+        "row_count": 7353,
+        "severity": "WARNING"
+      },
+      {
+        "table": "IP54new",
+        "row_count": 5635,
+        "severity": "WARNING"
+      },
+      {
+        "table": "IPD50_1",
+        "row_count": 5950,
+        "severity": "WARNING"
+      },
+      {
+        "table": "IPD51_1",
+        "row_count": 6521,
+        "severity": "WARNING"
+      },
+      {
+        "table": "IPD52_1",
+        "row_count": 6656,
+        "severity": "WARNING"
+      },
+      {
+        "table": "IPD53_1",
+        "row_count": 7320,
+        "severity": "WARNING"
+      },
+      {
+        "table": "IPD54_1",
+        "row_count": 5611,
+        "severity": "WARNING"
+      },
+      {
+        "table": "IPD56n",
+        "row_count": 6242,
+        "severity": "WARNING"
+      },
+      {
+        "table": "iptadm1",
+        "row_count": 110425,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "isitb",
+        "row_count": 472,
+        "severity": "INFO"
+      },
+      {
+        "table": "kwcode1",
+        "row_count": 7430,
+        "severity": "WARNING"
+      },
+      {
+        "table": "labcat",
+        "row_count": 729,
+        "severity": "INFO"
+      },
+      {
+        "table": "labcode_sps",
+        "row_count": 663,
+        "severity": "INFO"
+      },
+      {
+        "table": "labdtx",
+        "row_count": 67,
+        "severity": "INFO"
+      },
+      {
+        "table": "laborderrun",
+        "row_count": 52687,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "labresult",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "labtype",
+        "row_count": 5,
+        "severity": "INFO"
+      },
+      {
+        "table": "lab_sign",
+        "row_count": 4,
+        "severity": "INFO"
+      },
+      {
+        "table": "lmgram",
+        "row_count": 97,
+        "severity": "INFO"
+      },
+      {
+        "table": "lmothua",
+        "row_count": 395,
+        "severity": "INFO"
+      },
+      {
+        "table": "lmpaprpt",
+        "row_count": 27,
+        "severity": "INFO"
+      },
+      {
+        "table": "lmparasit",
+        "row_count": 154,
+        "severity": "INFO"
+      },
+      {
+        "table": "lmplatelet",
+        "row_count": 10,
+        "severity": "INFO"
+      },
+      {
+        "table": "lmpmstage",
+        "row_count": 7,
+        "severity": "INFO"
+      },
+      {
+        "table": "lmpmtype",
+        "row_count": 8,
+        "severity": "INFO"
+      },
+      {
+        "table": "lmrbc",
+        "row_count": 93,
+        "severity": "INFO"
+      },
+      {
+        "table": "lmuacent",
+        "row_count": 3,
+        "severity": "INFO"
+      },
+      {
+        "table": "lmuacolor",
+        "row_count": 14,
+        "severity": "INFO"
+      },
+      {
+        "table": "lmuaepi",
+        "row_count": 11,
+        "severity": "INFO"
+      },
+      {
+        "table": "lmuarbc",
+        "row_count": 11,
+        "severity": "INFO"
+      },
+      {
+        "table": "lmuaturbid",
+        "row_count": 4,
+        "severity": "INFO"
+      },
+      {
+        "table": "lmuawbc",
+        "row_count": 11,
+        "severity": "INFO"
+      },
+      {
+        "table": "lmupt",
+        "row_count": 2,
+        "severity": "INFO"
+      },
+      {
+        "table": "lmvtb",
+        "row_count": 14,
+        "severity": "INFO"
+      },
+      {
+        "table": "lmwbc",
+        "row_count": 11,
+        "severity": "INFO"
+      },
+      {
+        "table": "logvisit",
+        "row_count": 18981,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "lr",
+        "row_count": 5616,
+        "severity": "WARNING"
+      },
+      {
+        "table": "lr_c",
+        "row_count": 4,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_aetype",
+        "row_count": 19,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_aptype",
+        "row_count": 136,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_aptype_icd",
+        "row_count": 195,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_armsling",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_clopido",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_codefoot",
+        "row_count": 4,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_coderetina",
+        "row_count": 6,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_company",
+        "row_count": 482,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_department",
+        "row_count": 8694,
+        "severity": "WARNING"
+      },
+      {
+        "table": "l_disabtype",
+        "row_count": 7,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_drugflag",
+        "row_count": 4,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_drugs",
+        "row_count": 82329,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "l_ER",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_garbage",
+        "row_count": 6,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_gennohiv",
+        "row_count": 8,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_groupcdt2",
+        "row_count": 15,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_housetype",
+        "row_count": 7,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_icd9cm-icd10tm",
+        "row_count": 16894,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "l_insclcost",
+        "row_count": 11,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_ocupation1",
+        "row_count": 129,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_PregT",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_prename",
+        "row_count": 505,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_ptt",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_rcpt",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_rrttype",
+        "row_count": 4,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_rxdrughiv",
+        "row_count": 4,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_smitype",
+        "row_count": 5,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_specialpp",
+        "row_count": 292,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_statushiv",
+        "row_count": 3,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_tmtdrug",
+        "row_count": 31463,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "l_tmtdrug1",
+        "row_count": 25104,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "l_toilet",
+        "row_count": 7,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_ttm9",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_villagerisktype",
+        "row_count": 18,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_viptype",
+        "row_count": 6,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_vstatus",
+        "row_count": 5,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_wastewater",
+        "row_count": 3,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_watertype",
+        "row_count": 8,
+        "severity": "INFO"
+      },
+      {
+        "table": "mathhn",
+        "row_count": 125843,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "med_edtype",
+        "row_count": 7,
+        "severity": "INFO"
+      },
+      {
+        "table": "money",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "mophicall060708",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "mophicchecklist",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "mophichi",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrs_Center",
+        "row_count": 10,
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrs_Dead",
+        "row_count": 169,
+        "severity": "INFO"
+      },
+      {
+        "table": "mrs_ipdsticker",
+        "row_count": 6573,
+        "severity": "WARNING"
+      },
+      {
+        "table": "Mrs_newSammary",
+        "row_count": 76378,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "Mrs_pttype",
+        "row_count": 34,
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrs_ssHealth_Check",
+        "row_count": 4,
+        "severity": "INFO"
+      },
+      {
+        "table": "new PTTYPE",
+        "row_count": 3318,
+        "severity": "WARNING"
+      },
+      {
+        "table": "newin",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "newIncoth",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "nhsodeadNY",
+        "row_count": 406,
+        "severity": "INFO"
+      },
+      {
+        "table": "ntnlty",
+        "row_count": 93,
+        "severity": "INFO"
+      },
+      {
+        "table": "opno",
+        "row_count": 9,
+        "severity": "INFO"
+      },
+      {
+        "table": "ositb",
+        "row_count": 9248,
+        "severity": "WARNING"
+      },
+      {
+        "table": "ovststatus",
+        "row_count": 1368963,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "pcukao",
+        "row_count": 34,
+        "severity": "INFO"
+      },
+      {
+        "table": "pcukud",
+        "row_count": 84,
+        "severity": "INFO"
+      },
+      {
+        "table": "pcunoon",
+        "row_count": 50,
+        "severity": "INFO"
+      },
+      {
+        "table": "pcusewi",
+        "row_count": 286,
+        "severity": "INFO"
+      },
+      {
+        "table": "pcusuk",
+        "row_count": 129,
+        "severity": "INFO"
+      },
+      {
+        "table": "pcuyang",
+        "row_count": 18,
+        "severity": "INFO"
+      },
+      {
+        "table": "PERSON",
+        "row_count": 105707,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "PERSONk",
+        "row_count": 686,
+        "severity": "INFO"
+      },
+      {
+        "table": "PERSONm",
+        "row_count": 369,
+        "severity": "INFO"
+      },
+      {
+        "table": "pitsanu",
+        "row_count": 3,
+        "severity": "INFO"
+      },
+      {
+        "table": "prcd55",
+        "row_count": 452,
+        "severity": "INFO"
+      },
+      {
+        "table": "prcdv",
+        "row_count": 452,
+        "severity": "INFO"
+      },
+      {
+        "table": "prcd_kn",
+        "row_count": 302,
+        "severity": "INFO"
+      },
+      {
+        "table": "prcd_n",
+        "row_count": 452,
+        "severity": "INFO"
+      },
+      {
+        "table": "prcd_pb",
+        "row_count": 304,
+        "severity": "INFO"
+      },
+      {
+        "table": "prcd_pbh",
+        "row_count": 807,
+        "severity": "INFO"
+      },
+      {
+        "table": "prelr_c",
+        "row_count": 6,
+        "severity": "INFO"
+      },
+      {
+        "table": "productcat",
+        "row_count": 7,
+        "severity": "INFO"
+      },
+      {
+        "table": "psn_prename",
+        "row_count": 505,
+        "severity": "INFO"
+      },
+      {
+        "table": "ptble",
+        "row_count": 4910,
+        "severity": "WARNING"
+      },
+      {
+        "table": "PTINFO",
+        "row_count": 171129,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "PTTY",
+        "row_count": 107,
+        "severity": "INFO"
+      },
+      {
+        "table": "pttype_smm",
+        "row_count": 64,
+        "severity": "INFO"
+      },
+      {
+        "table": "q4u_tokens",
+        "row_count": 2,
+        "severity": "INFO"
+      },
+      {
+        "table": "queue_call",
+        "row_count": 2,
+        "severity": "INFO"
+      },
+      {
+        "table": "referresulto",
+        "row_count": 4,
+        "severity": "INFO"
+      },
+      {
+        "table": "reportbun",
+        "row_count": 33,
+        "severity": "INFO"
+      },
+      {
+        "table": "report_admit",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "report_admit_dc",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "report_error_mdr",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "report_er_dx",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "report_fs",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "report_grouppdx",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "report_ip_dx",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "report_ip_visit",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "report_op_diag",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "report_op_visit",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "report_other_pp",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "report_refer",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "report_refer_er",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "report_refer_ip",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "report_refer_op",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "report_visit",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "roche",
+        "row_count": 70,
+        "severity": "INFO"
+      },
+      {
+        "table": "rtnallggrpdt",
+        "row_count": 41,
+        "severity": "INFO"
+      },
+      {
+        "table": "RWipd",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "sign_backup_all",
+        "row_count": 1503,
+        "severity": "WARNING"
+      },
+      {
+        "table": "sitincoth",
+        "row_count": 8472,
+        "severity": "WARNING"
+      },
+      {
+        "table": "sitincothi",
+        "row_count": 542,
+        "severity": "INFO"
+      },
+      {
+        "table": "sitincotho",
+        "row_count": 11325,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "ssop_billitem",
+        "row_count": 1414,
+        "severity": "WARNING"
+      },
+      {
+        "table": "ssop_dispenseditem",
+        "row_count": 701,
+        "severity": "INFO"
+      },
+      {
+        "table": "ssop_opdx",
+        "row_count": 466,
+        "severity": "INFO"
+      },
+      {
+        "table": "stm6702",
+        "row_count": 408,
+        "severity": "INFO"
+      },
+      {
+        "table": "stm6703",
+        "row_count": 480,
+        "severity": "INFO"
+      },
+      {
+        "table": "stm6704",
+        "row_count": 403,
+        "severity": "INFO"
+      },
+      {
+        "table": "stm6705",
+        "row_count": 648,
+        "severity": "INFO"
+      },
+      {
+        "table": "stm6706",
+        "row_count": 582,
+        "severity": "INFO"
+      },
+      {
+        "table": "stm6707",
+        "row_count": 555,
+        "severity": "INFO"
+      },
+      {
+        "table": "stm6801",
+        "row_count": 610,
+        "severity": "INFO"
+      },
+      {
+        "table": "stm6802",
+        "row_count": 519,
+        "severity": "INFO"
+      },
+      {
+        "table": "stm6803",
+        "row_count": 534,
+        "severity": "INFO"
+      },
+      {
+        "table": "stm6804",
+        "row_count": 473,
+        "severity": "INFO"
+      },
+      {
+        "table": "stm6805",
+        "row_count": 493,
+        "severity": "INFO"
+      },
+      {
+        "table": "stm6806",
+        "row_count": 349,
+        "severity": "INFO"
+      },
+      {
+        "table": "testinser",
+        "row_count": 1000,
+        "severity": "INFO"
+      },
+      {
+        "table": "thaicancerbase_his",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "thaicancerbase_his-old",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "toydm",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "toyht",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "vaccine060764",
+        "row_count": 230,
+        "severity": "INFO"
+      },
+      {
+        "table": "vaccineaefi",
+        "row_count": 1033,
+        "severity": "WARNING"
+      },
+      {
+        "table": "vaccineall0664",
+        "row_count": 408,
+        "severity": "INFO"
+      },
+      {
+        "table": "vaccineallmonth060708",
+        "row_count": 9855,
+        "severity": "WARNING"
+      },
+      {
+        "table": "vaccineallmonth060708new",
+        "row_count": 9817,
+        "severity": "WARNING"
+      },
+      {
+        "table": "vaccinedrready",
+        "row_count": 187,
+        "severity": "INFO"
+      },
+      {
+        "table": "vaccinemap",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "vaccinenotappoint",
+        "row_count": 99,
+        "severity": "INFO"
+      },
+      {
+        "table": "vaccine_mophic_history",
+        "row_count": 10171,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "vaccine_pregnancy",
+        "row_count": 166,
+        "severity": "INFO"
+      },
+      {
+        "table": "view_address",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "visit_pop",
+        "row_count": 0,
+        "severity": "INFO"
+      },
+      {
+        "table": "VR10949",
+        "row_count": 55730,
+        "severity": "CRITICAL"
+      }
+    ],
+    "missing_indexes": [
+      {
+        "table": "allgtype",
+        "row_count": 4,
+        "severity": "INFO"
+      },
+      {
+        "table": "bhtr",
+        "row_count": 9522,
+        "severity": "WARNING"
+      },
+      {
+        "table": "BP",
+        "row_count": 123,
+        "severity": "INFO"
+      },
+      {
+        "table": "CHRONIC-hi",
+        "row_count": 450,
+        "severity": "INFO"
+      },
+      {
+        "table": "CHRONICk",
+        "row_count": 233,
+        "severity": "INFO"
+      },
+      {
+        "table": "CHRONICm",
+        "row_count": 226,
+        "severity": "INFO"
+      },
+      {
+        "table": "cidhn",
+        "row_count": 2478,
+        "severity": "WARNING"
+      },
+      {
+        "table": "Claim_E",
+        "row_count": 634,
+        "severity": "INFO"
+      },
+      {
+        "table": "Claim_HI",
+        "row_count": 656,
+        "severity": "INFO"
+      },
+      {
+        "table": "CMI",
+        "row_count": 5914,
+        "severity": "WARNING"
+      },
+      {
+        "table": "datahn",
+        "row_count": 270,
+        "severity": "INFO"
+      },
+      {
+        "table": "datapit",
+        "row_count": 5,
+        "severity": "INFO"
+      },
+      {
+        "table": "data_correct",
+        "row_count": 8437993,
+        "severity": "WARNING"
+      },
+      {
+        "table": "data_ini",
+        "row_count": 60,
+        "severity": "INFO"
+      },
+      {
+        "table": "deaDMn",
+        "row_count": 493488,
+        "severity": "WARNING"
+      },
+      {
+        "table": "eclaim",
+        "row_count": 12856,
+        "severity": "WARNING"
+      },
+      {
+        "table": "emp",
+        "row_count": 13,
+        "severity": "INFO"
+      },
+      {
+        "table": "hifields",
+        "row_count": 1399,
+        "severity": "WARNING"
+      },
+      {
+        "table": "hifields1",
+        "row_count": 1361,
+        "severity": "WARNING"
+      },
+      {
+        "table": "hi_ini",
+        "row_count": 28,
+        "severity": "INFO"
+      },
+      {
+        "table": "hnble",
+        "row_count": 2491,
+        "severity": "WARNING"
+      },
+      {
+        "table": "hndb",
+        "row_count": 3075,
+        "severity": "WARNING"
+      },
+      {
+        "table": "HNDM",
+        "row_count": 710,
+        "severity": "INFO"
+      },
+      {
+        "table": "hnjoj",
+        "row_count": 5101,
+        "severity": "WARNING"
+      },
+      {
+        "table": "hnptcut",
+        "row_count": 2479,
+        "severity": "WARNING"
+      },
+      {
+        "table": "hntarget",
+        "row_count": 36,
+        "severity": "INFO"
+      },
+      {
+        "table": "icd1032",
+        "row_count": 7273,
+        "severity": "WARNING"
+      },
+      {
+        "table": "indexhi",
+        "row_count": 101,
+        "severity": "INFO"
+      },
+      {
+        "table": "IP50new",
+        "row_count": 6049,
+        "severity": "WARNING"
+      },
+      {
+        "table": "IP51new",
+        "row_count": 6437,
+        "severity": "WARNING"
+      },
+      {
+        "table": "IP52new",
+        "row_count": 6740,
+        "severity": "WARNING"
+      },
+      {
+        "table": "IP53new",
+        "row_count": 7353,
+        "severity": "WARNING"
+      },
+      {
+        "table": "IP54new",
+        "row_count": 5635,
+        "severity": "WARNING"
+      },
+      {
+        "table": "IPD50_1",
+        "row_count": 5950,
+        "severity": "WARNING"
+      },
+      {
+        "table": "IPD51_1",
+        "row_count": 6521,
+        "severity": "WARNING"
+      },
+      {
+        "table": "IPD52_1",
+        "row_count": 6656,
+        "severity": "WARNING"
+      },
+      {
+        "table": "IPD53_1",
+        "row_count": 7320,
+        "severity": "WARNING"
+      },
+      {
+        "table": "IPD54_1",
+        "row_count": 5611,
+        "severity": "WARNING"
+      },
+      {
+        "table": "IPD56n",
+        "row_count": 6242,
+        "severity": "WARNING"
+      },
+      {
+        "table": "kwcode1",
+        "row_count": 7430,
+        "severity": "WARNING"
+      },
+      {
+        "table": "labcode_sps",
+        "row_count": 663,
+        "severity": "INFO"
+      },
+      {
+        "table": "labdtx",
+        "row_count": 67,
+        "severity": "INFO"
+      },
+      {
+        "table": "labtype",
+        "row_count": 5,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_aetype",
+        "row_count": 19,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_aptype",
+        "row_count": 136,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_codefoot",
+        "row_count": 4,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_coderetina",
+        "row_count": 6,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_company",
+        "row_count": 482,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_disabtype",
+        "row_count": 7,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_drugflag",
+        "row_count": 4,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_garbage",
+        "row_count": 6,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_gennohiv",
+        "row_count": 8,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_groupcdt2",
+        "row_count": 15,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_housetype",
+        "row_count": 7,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_icd9cm-icd10tm",
+        "row_count": 16894,
+        "severity": "WARNING"
+      },
+      {
+        "table": "l_ocupation1",
+        "row_count": 129,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_rrttype",
+        "row_count": 4,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_rxdrughiv",
+        "row_count": 4,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_smitype",
+        "row_count": 5,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_statushiv",
+        "row_count": 3,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_tmtdrug",
+        "row_count": 31463,
+        "severity": "WARNING"
+      },
+      {
+        "table": "l_tmtdrug1",
+        "row_count": 25104,
+        "severity": "WARNING"
+      },
+      {
+        "table": "l_toilet",
+        "row_count": 7,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_villagerisktype",
+        "row_count": 18,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_viptype",
+        "row_count": 6,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_wastewater",
+        "row_count": 3,
+        "severity": "INFO"
+      },
+      {
+        "table": "l_watertype",
+        "row_count": 8,
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrs_Center",
+        "row_count": 10,
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrs_Dead",
+        "row_count": 169,
+        "severity": "INFO"
+      },
+      {
+        "table": "mrs_ipdsticker",
+        "row_count": 6573,
+        "severity": "WARNING"
+      },
+      {
+        "table": "Mrs_newSammary",
+        "row_count": 76378,
+        "severity": "WARNING"
+      },
+      {
+        "table": "Mrs_ssHealth_Check",
+        "row_count": 4,
+        "severity": "INFO"
+      },
+      {
+        "table": "new PTTYPE",
+        "row_count": 3318,
+        "severity": "WARNING"
+      },
+      {
+        "table": "nhsodeadNY",
+        "row_count": 406,
+        "severity": "INFO"
+      },
+      {
+        "table": "ovststatus",
+        "row_count": 1368963,
+        "severity": "WARNING"
+      },
+      {
+        "table": "pcukao",
+        "row_count": 34,
+        "severity": "INFO"
+      },
+      {
+        "table": "pcukud",
+        "row_count": 84,
+        "severity": "INFO"
+      },
+      {
+        "table": "pcunoon",
+        "row_count": 50,
+        "severity": "INFO"
+      },
+      {
+        "table": "pcusewi",
+        "row_count": 286,
+        "severity": "INFO"
+      },
+      {
+        "table": "pcusuk",
+        "row_count": 129,
+        "severity": "INFO"
+      },
+      {
+        "table": "pcuyang",
+        "row_count": 18,
+        "severity": "INFO"
+      },
+      {
+        "table": "PERSON",
+        "row_count": 105707,
+        "severity": "WARNING"
+      },
+      {
+        "table": "PERSONk",
+        "row_count": 686,
+        "severity": "INFO"
+      },
+      {
+        "table": "PERSONm",
+        "row_count": 369,
+        "severity": "INFO"
+      },
+      {
+        "table": "pitsanu",
+        "row_count": 3,
+        "severity": "INFO"
+      },
+      {
+        "table": "productcat",
+        "row_count": 7,
+        "severity": "INFO"
+      },
+      {
+        "table": "ptble",
+        "row_count": 4910,
+        "severity": "WARNING"
+      },
+      {
+        "table": "PTTY",
+        "row_count": 107,
+        "severity": "INFO"
+      },
+      {
+        "table": "q4u_tokens",
+        "row_count": 2,
+        "severity": "INFO"
+      },
+      {
+        "table": "queue_call",
+        "row_count": 2,
+        "severity": "INFO"
+      },
+      {
+        "table": "reportbun",
+        "row_count": 33,
+        "severity": "INFO"
+      },
+      {
+        "table": "roche",
+        "row_count": 70,
+        "severity": "INFO"
+      },
+      {
+        "table": "sign_backup_all",
+        "row_count": 1503,
+        "severity": "WARNING"
+      },
+      {
+        "table": "stm6702",
+        "row_count": 408,
+        "severity": "INFO"
+      },
+      {
+        "table": "stm6703",
+        "row_count": 480,
+        "severity": "INFO"
+      },
+      {
+        "table": "stm6704",
+        "row_count": 403,
+        "severity": "INFO"
+      },
+      {
+        "table": "stm6705",
+        "row_count": 648,
+        "severity": "INFO"
+      },
+      {
+        "table": "stm6706",
+        "row_count": 582,
+        "severity": "INFO"
+      },
+      {
+        "table": "stm6707",
+        "row_count": 555,
+        "severity": "INFO"
+      },
+      {
+        "table": "stm6801",
+        "row_count": 610,
+        "severity": "INFO"
+      },
+      {
+        "table": "stm6802",
+        "row_count": 519,
+        "severity": "INFO"
+      },
+      {
+        "table": "stm6803",
+        "row_count": 534,
+        "severity": "INFO"
+      },
+      {
+        "table": "stm6804",
+        "row_count": 473,
+        "severity": "INFO"
+      },
+      {
+        "table": "stm6805",
+        "row_count": 493,
+        "severity": "INFO"
+      },
+      {
+        "table": "stm6806",
+        "row_count": 349,
+        "severity": "INFO"
+      },
+      {
+        "table": "testinser",
+        "row_count": 1000,
+        "severity": "INFO"
+      },
+      {
+        "table": "vaccine060764",
+        "row_count": 230,
+        "severity": "INFO"
+      },
+      {
+        "table": "vaccineaefi",
+        "row_count": 1033,
+        "severity": "WARNING"
+      },
+      {
+        "table": "vaccineall0664",
+        "row_count": 408,
+        "severity": "INFO"
+      },
+      {
+        "table": "vaccineallmonth060708",
+        "row_count": 9855,
+        "severity": "WARNING"
+      },
+      {
+        "table": "vaccineallmonth060708new",
+        "row_count": 9817,
+        "severity": "WARNING"
+      },
+      {
+        "table": "vaccinedrready",
+        "row_count": 187,
+        "severity": "INFO"
+      },
+      {
+        "table": "vaccinenotappoint",
+        "row_count": 99,
+        "severity": "INFO"
+      },
+      {
+        "table": "vaccine_mophic_history",
+        "row_count": 10171,
+        "severity": "WARNING"
+      },
+      {
+        "table": "vaccine_pregnancy",
+        "row_count": 166,
+        "severity": "INFO"
+      },
+      {
+        "table": "VR10949",
+        "row_count": 55730,
+        "severity": "WARNING"
+      }
+    ],
+    "large_tables_no_index": [
+      {
+        "table": "bhtr",
+        "row_count": 9522,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "bhtro",
+        "row_count": 11224,
+        "has_pk": false,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "chkuseopd",
+        "row_count": 1893,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "chronic",
+        "row_count": 135555,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "cidhn",
+        "row_count": 2478,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "CMI",
+        "row_count": 5914,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "covidjully",
+        "row_count": 17043,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "data_correct",
+        "row_count": 8437993,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "dbpop",
+        "row_count": 1897835,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "deaDMn",
+        "row_count": 493488,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "disability",
+        "row_count": 1990,
+        "has_pk": false,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "disa_dbpop",
+        "row_count": 44199,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "eclaim",
+        "row_count": 12856,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "export21f",
+        "row_count": 76534,
+        "has_pk": false,
+        "index_count": 4,
+        "severity": "WARNING"
+      },
+      {
+        "table": "export_person",
+        "row_count": 45310,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "firstdm",
+        "row_count": 4868,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "firstht",
+        "row_count": 7972,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "foodsum",
+        "row_count": 138066,
+        "has_pk": false,
+        "index_count": 2,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "fp",
+        "row_count": 10011,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "hcode",
+        "row_count": 14920,
+        "has_pk": false,
+        "index_count": 3,
+        "severity": "WARNING"
+      },
+      {
+        "table": "hierror",
+        "row_count": 1760,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "hifields",
+        "row_count": 1399,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "hifields1",
+        "row_count": 1361,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "hnble",
+        "row_count": 2491,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "hndb",
+        "row_count": 3075,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "hnjoj",
+        "row_count": 5101,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "hnptcut",
+        "row_count": 2479,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "hospcode",
+        "row_count": 14929,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "hospcodeolde",
+        "row_count": 14916,
+        "has_pk": false,
+        "index_count": 3,
+        "severity": "WARNING"
+      },
+      {
+        "table": "icd103",
+        "row_count": 7139,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "icd1032",
+        "row_count": 7273,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "icdcm1",
+        "row_count": 3873,
+        "has_pk": false,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "icdcm3",
+        "row_count": 4853,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "inscl",
+        "row_count": 120004,
+        "has_pk": false,
+        "index_count": 3,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "interactdb",
+        "row_count": 8768,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "IP50new",
+        "row_count": 6049,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "IP51new",
+        "row_count": 6437,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "IP52new",
+        "row_count": 6740,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "IP53new",
+        "row_count": 7353,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "IP54new",
+        "row_count": 5635,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "IPD50_1",
+        "row_count": 5950,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "IPD51_1",
+        "row_count": 6521,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "IPD52_1",
+        "row_count": 6656,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "IPD53_1",
+        "row_count": 7320,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "IPD54_1",
+        "row_count": 5611,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "IPD56n",
+        "row_count": 6242,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "ipt",
+        "row_count": 162881,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "ipt-08-09-2566",
+        "row_count": 150838,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "iptadm1",
+        "row_count": 110425,
+        "has_pk": false,
+        "index_count": 3,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "iptadm_copy1",
+        "row_count": 159826,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "iptdr",
+        "row_count": 616557,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "kwcode1",
+        "row_count": 7430,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "laborderrun",
+        "row_count": 52687,
+        "has_pk": false,
+        "index_count": 3,
+        "severity": "WARNING"
+      },
+      {
+        "table": "lab_minio_log",
+        "row_count": 26117,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "lcgt",
+        "row_count": 111880,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "lmedtman",
+        "row_count": 37221,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "loglabdr",
+        "row_count": 4568,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "logvisit",
+        "row_count": 18981,
+        "has_pk": false,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "lr",
+        "row_count": 5616,
+        "has_pk": false,
+        "index_count": 3,
+        "severity": "WARNING"
+      },
+      {
+        "table": "l_department",
+        "row_count": 8694,
+        "has_pk": false,
+        "index_count": 2,
+        "severity": "WARNING"
+      },
+      {
+        "table": "l_drugs",
+        "row_count": 82329,
+        "has_pk": false,
+        "index_count": 2,
+        "severity": "WARNING"
+      },
+      {
+        "table": "l_icd9cm-icd10tm",
+        "row_count": 16894,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "l_tmtdrug",
+        "row_count": 31463,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "l_tmtdrug1",
+        "row_count": 25104,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "mathhn",
+        "row_count": 125843,
+        "has_pk": false,
+        "index_count": 3,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "microa",
+        "row_count": 2251,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "Mrsc_check_in",
+        "row_count": 76759,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "Mrsc_Re_check",
+        "row_count": 67224,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "Mrss_IPD",
+        "row_count": 3224,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "Mrss_R_IPD",
+        "row_count": 2948,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "mrs_ipdsticker",
+        "row_count": 6573,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "Mrs_newSammary",
+        "row_count": 76378,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "Mrs_No_Pttype",
+        "row_count": 32977,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "Mrs_OPD_Card_IN",
+        "row_count": 2182,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "new PTTYPE",
+        "row_count": 3318,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "orderipd",
+        "row_count": 406075,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "ositb",
+        "row_count": 9248,
+        "has_pk": false,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "ovststatus",
+        "row_count": 1368963,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "o_archive_all_json",
+        "row_count": 1709071,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "PERSON",
+        "row_count": 105707,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "phmdr",
+        "row_count": 185841,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "phr_visit_log",
+        "row_count": 614315,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "ptble",
+        "row_count": 4910,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "PTINFO",
+        "row_count": 171129,
+        "has_pk": false,
+        "index_count": 1,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "q4u_docinroom",
+        "row_count": 2273,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "q4u_person",
+        "row_count": 74790,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "q4u_queue_group_detail",
+        "row_count": 4152,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "q4u_queue_number",
+        "row_count": 26400,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "schedules",
+        "row_count": 94677,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "scr_it",
+        "row_count": 11415,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "service_type",
+        "row_count": 3118600,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "sign_backup_all",
+        "row_count": 1503,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "sign_merged_01",
+        "row_count": 25184,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "sign_merged_02",
+        "row_count": 71233,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "sign_merged_03",
+        "row_count": 6416349,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "sitincoth",
+        "row_count": 8472,
+        "has_pk": false,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "sitincotho",
+        "row_count": 11325,
+        "has_pk": false,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "specialpp",
+        "row_count": 65811,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "ssop_billitem",
+        "row_count": 1414,
+        "has_pk": false,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "testinser",
+        "row_count": 1000,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "vaccineaefi",
+        "row_count": 1033,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "vaccineallmonth060708",
+        "row_count": 9855,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "vaccineallmonth060708new",
+        "row_count": 9817,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "vaccine_genqrcode",
+        "row_count": 11724,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "vaccine_mophic_history",
+        "row_count": 10171,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "vaccine_mophic_lab_log",
+        "row_count": 2242,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "view_pt_log",
+        "row_count": 1158,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "visitprt",
+        "row_count": 80424,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      },
+      {
+        "table": "VR10949",
+        "row_count": 55730,
+        "has_pk": false,
+        "index_count": 0,
+        "severity": "WARNING"
+      },
+      {
+        "table": "xdose",
+        "row_count": 2113217,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "CRITICAL"
+      },
+      {
+        "table": "xryremark",
+        "row_count": 1132,
+        "has_pk": true,
+        "index_count": 1,
+        "severity": "WARNING"
+      }
+    ],
+    "orphan_tables": [
+      {
+        "table": "BP",
+        "severity": "INFO"
+      },
+      {
+        "table": "CHRONIC-hi",
+        "severity": "INFO"
+      },
+      {
+        "table": "CHRONICk",
+        "severity": "INFO"
+      },
+      {
+        "table": "CHRONICm",
+        "severity": "INFO"
+      },
+      {
+        "table": "CMI",
+        "severity": "INFO"
+      },
+      {
+        "table": "Claim_E",
+        "severity": "INFO"
+      },
+      {
+        "table": "Claim_HI",
+        "severity": "INFO"
+      },
+      {
+        "table": "HNDM",
+        "severity": "INFO"
+      },
+      {
+        "table": "IP50new",
+        "severity": "INFO"
+      },
+      {
+        "table": "IP51new",
+        "severity": "INFO"
+      },
+      {
+        "table": "IP52new",
+        "severity": "INFO"
+      },
+      {
+        "table": "IP53new",
+        "severity": "INFO"
+      },
+      {
+        "table": "IP54new",
+        "severity": "INFO"
+      },
+      {
+        "table": "IPD50_1",
+        "severity": "INFO"
+      },
+      {
+        "table": "IPD51_1",
+        "severity": "INFO"
+      },
+      {
+        "table": "IPD52_1",
+        "severity": "INFO"
+      },
+      {
+        "table": "IPD53_1",
+        "severity": "INFO"
+      },
+      {
+        "table": "IPD54_1",
+        "severity": "INFO"
+      },
+      {
+        "table": "IPD56n",
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrs_Center",
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrs_Dead",
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrs_No_Pttype",
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrs_OPD_Card",
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrs_OPD_Card_IN",
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrs_OPD_EKG",
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrs_OPD_Sub",
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrs_newSammary",
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrs_pttype",
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrs_ssDATA_IPD",
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrs_ssDATA_OPD",
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrs_ssDATA_nIPD",
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrs_ssHealth_Check",
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrs_ssOffice",
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrs_ssRefer",
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrs_ssRoom",
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrs_ssType",
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrs_ssUser",
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrsc_Pl",
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrsc_Pn",
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrsc_Re_check",
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrsc_check_in",
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrsc_docter",
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrss_Day_User",
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrss_IPD",
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrss_OPD",
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrss_PA",
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrss_PAA",
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrss_PYY",
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrss_R_IPD",
+        "severity": "INFO"
+      },
+      {
+        "table": "Mrss_R_OPD",
+        "severity": "INFO"
+      }
+    ],
+    "naming_issues": [
+      {
+        "table": "BP",
+        "issue": "Non-standard naming",
+        "severity": "INFO"
+      },
+      {
+        "table": "CHRONIC-hi",
+        "issue": "Non-standard naming",
+        "severity": "INFO"
+      },
+      {
+        "table": "CHRONICk",
+        "issue": "Non-standard naming",
+        "severity": "INFO"
+      },
+      {
+        "table": "CHRONICm",
+        "issue": "Non-standard naming",
+        "severity": "INFO"
+      },
+      {
+        "table": "Claim_E",
+        "issue": "Non-standard naming",
+        "severity": "INFO"
+      },
+      {
+        "table": "Claim_HI",
+        "issue": "Non-standard naming",
+        "severity": "INFO"
+      },
+      {
+        "table": "CMI",
+        "issue": "Non-standard naming",
+        "severity": "INFO"
+      },
+      {
+        "table": "deaDMn",
+        "issue": "Non-standard naming",
+        "severity": "INFO"
+      }
+    ]
+  },
+  "summary": {
+    "total_anomalies": 527,
+    "critical": 24,
+    "warning": 152,
+    "info": 240
+  }
+}

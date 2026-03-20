@@ -1,0 +1,1726 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Hospital DB Dashboard API",
+    "description": "REST API for Hospital Database Dashboard - hidb10949",
+    "version": "1.0.0",
+    "contact": {
+      "name": "Hospital DB Dashboard Team"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "Development server"
+    },
+    {
+      "url": "https://hospital-db-dashboard.example.com",
+      "description": "Production server"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Overview",
+      "description": "Database overview and statistics"
+    },
+    {
+      "name": "Modules",
+      "description": "Module exploration and details"
+    },
+    {
+      "name": "Anomalies",
+      "description": "Database anomaly detection and reports"
+    },
+    {
+      "name": "Indexes",
+      "description": "Index recommendations and analysis"
+    },
+    {
+      "name": "Tables",
+      "description": "Table details and metadata"
+    },
+    {
+      "name": "Search",
+      "description": "Search functionality"
+    }
+  ],
+  "paths": {
+    "/api/overview": {
+      "get": {
+        "tags": ["Overview"],
+        "summary": "Get database overview",
+        "description": "Returns comprehensive database statistics including table counts, row counts, sizes, module distribution, and health indicators.",
+        "operationId": "getDatabaseOverview",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OverviewResponse"
+                },
+                "example": {
+                  "success": true,
+                  "data": {
+                    "database": "hidb10949",
+                    "server_version": "10.11.16-MariaDB-ubu2404-log",
+                    "total_tables": 847,
+                    "total_rows": 124948696,
+                    "data_size_mb": 11505.36,
+                    "index_size_mb": 6396.48,
+                    "total_size_mb": 17901.84,
+                    "modules_count": 25,
+                    "anomalies": {
+                      "total": 527,
+                      "critical": 24,
+                      "warning": 152,
+                      "info": 240
+                    },
+                    "health_score": 72,
+                    "top_modules_by_size": [
+                      {
+                        "name": "other",
+                        "tables_count": 322,
+                        "total_size_mb": 5410.62,
+                        "row_count": 43688780
+                      },
+                      {
+                        "name": "patient",
+                        "tables_count": 130,
+                        "total_size_mb": 5526.39,
+                        "row_count": 28944572
+                      },
+                      {
+                        "name": "opd",
+                        "tables_count": 28,
+                        "total_size_mb": 2415.22,
+                        "row_count": 20885760
+                      }
+                    ],
+                    "connection_status": "success",
+                    "connection_time_ms": 169.01
+                  },
+                  "meta": {
+                    "cached": true,
+                    "generatedAt": "2026-03-20T10:00:00.000Z",
+                    "source": "static"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/modules": {
+      "get": {
+        "tags": ["Modules"],
+        "summary": "Get all modules",
+        "description": "Returns list of all database modules with statistics including table counts, sizes, and descriptions.",
+        "operationId": "getAllModules",
+        "parameters": [
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort field",
+            "schema": {
+              "type": "string",
+              "enum": ["name", "tables_count", "total_rows", "total_size"],
+              "default": "tables_count"
+            }
+          },
+          {
+            "name": "order",
+            "in": "query",
+            "description": "Sort order",
+            "schema": {
+              "type": "string",
+              "enum": ["asc", "desc"],
+              "default": "desc"
+            }
+          },
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Search query to filter modules by name or description",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ModulesListResponse"
+                },
+                "example": {
+                  "success": true,
+                  "data": {
+                    "modules": [
+                      {
+                        "name": "patient",
+                        "description": "ข้อมูลผู้ป่วยและบุคคล",
+                        "tables_count": 130,
+                        "total_rows": 28944572,
+                        "total_size_bytes": 5794839792,
+                        "total_size_mb": 5526.39,
+                        "top_tables": [
+                          {
+                            "name": "incoth",
+                            "row_count": 11694065,
+                            "size_bytes": 2128674816
+                          },
+                          {
+                            "name": "prsc",
+                            "row_count": 2819717,
+                            "size_bytes": 601817088
+                          }
+                        ]
+                      },
+                      {
+                        "name": "opd",
+                        "description": "บริการผู้ป่วยนอก",
+                        "tables_count": 28,
+                        "total_rows": 20885760,
+                        "total_size_bytes": 2532540324,
+                        "total_size_mb": 2415.22,
+                        "top_tables": []
+                      }
+                    ],
+                    "total": 25
+                  },
+                  "meta": {
+                    "cached": true,
+                    "generatedAt": "2026-03-20T10:00:00.000Z",
+                    "source": "static"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/modules/{name}": {
+      "get": {
+        "tags": ["Modules"],
+        "summary": "Get module by name",
+        "description": "Returns detailed information about a specific module including all tables in that module.",
+        "operationId": "getModuleByName",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "description": "Module name (e.g., 'patient', 'opd', 'ipd')",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ModuleDetailResponse"
+                },
+                "example": {
+                  "success": true,
+                  "data": {
+                    "name": "patient",
+                    "description": "ข้อมูลผู้ป่วยและบุคคล",
+                    "statistics": {
+                      "tables_count": 130,
+                      "total_rows": 28944572,
+                      "total_size_bytes": 5794839792,
+                      "total_size_mb": 5526.39,
+                      "avg_rows_per_table": 222650,
+                      "avg_size_per_table_mb": 42.51
+                    },
+                    "tables": [
+                      {
+                        "name": "PERSON",
+                        "purpose": "transaction",
+                        "row_count": 105707,
+                        "size_bytes": 18399232,
+                        "has_pk": false,
+                        "index_count": 0,
+                        "anomaly_count": 1
+                      },
+                      {
+                        "name": "incoth",
+                        "purpose": "transaction",
+                        "row_count": 11694065,
+                        "size_bytes": 2128674816,
+                        "has_pk": true,
+                        "index_count": 5,
+                        "anomaly_count": 0
+                      }
+                    ],
+                    "anomaly_summary": {
+                      "critical": 2,
+                      "warning": 15,
+                      "info": 8
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Module not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "example": {
+                  "success": false,
+                  "error": {
+                    "code": "MODULE_NOT_FOUND",
+                    "message": "Module 'unknown' not found",
+                    "details": {
+                      "available_modules": ["patient", "opd", "ipd", "pharmacy", "laboratory"]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/anomalies": {
+      "get": {
+        "tags": ["Anomalies"],
+        "summary": "Get anomalies summary",
+        "description": "Returns summary of all database anomalies grouped by category with severity counts.",
+        "operationId": "getAllAnomalies",
+        "parameters": [
+          {
+            "name": "severity",
+            "in": "query",
+            "description": "Filter by severity level",
+            "schema": {
+              "type": "string",
+              "enum": ["all", "critical", "warning", "info"],
+              "default": "all"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnomaliesSummaryResponse"
+                },
+                "example": {
+                  "success": true,
+                  "data": {
+                    "summary": {
+                      "total": 527,
+                      "critical": 24,
+                      "warning": 152,
+                      "info": 240
+                    },
+                    "categories": {
+                      "missing_primary_keys": {
+                        "description": "Tables without primary key",
+                        "total": 192,
+                        "by_severity": {
+                          "critical": 24,
+                          "warning": 45,
+                          "info": 123
+                        }
+                      },
+                      "missing_indexes": {
+                        "description": "Tables missing recommended indexes",
+                        "total": 115,
+                        "by_severity": {
+                          "critical": 0,
+                          "warning": 83,
+                          "info": 32
+                        }
+                      },
+                      "large_tables_no_index": {
+                        "description": "Large tables without proper indexing",
+                        "total": 105,
+                        "by_severity": {
+                          "critical": 0,
+                          "warning": 24,
+                          "info": 81
+                        }
+                      },
+                      "orphan_tables": {
+                        "description": "Tables not classified to any module",
+                        "total": 52,
+                        "by_severity": {
+                          "critical": 0,
+                          "warning": 0,
+                          "info": 52
+                        }
+                      },
+                      "naming_issues": {
+                        "description": "Tables with non-standard naming conventions",
+                        "total": 8,
+                        "by_severity": {
+                          "critical": 0,
+                          "warning": 0,
+                          "info": 8
+                        }
+                      }
+                    },
+                    "generated_at": "2026-03-20T09:38:38.916528"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/anomalies/{category}": {
+      "get": {
+        "tags": ["Anomalies"],
+        "summary": "Get anomaly category details",
+        "description": "Returns detailed list of anomalies for a specific category.",
+        "operationId": "getAnomalyCategory",
+        "parameters": [
+          {
+            "name": "category",
+            "in": "path",
+            "required": true,
+            "description": "Anomaly category",
+            "schema": {
+              "type": "string",
+              "enum": ["missing_primary_keys", "missing_indexes", "large_tables_no_index", "orphan_tables", "naming_issues"]
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Items per page",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 50
+            }
+          },
+          {
+            "name": "severity",
+            "in": "query",
+            "description": "Filter by severity",
+            "schema": {
+              "type": "string",
+              "enum": ["all", "critical", "warning", "info"],
+              "default": "all"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnomalyCategoryResponse"
+                },
+                "example": {
+                  "success": true,
+                  "data": {
+                    "category": "missing_primary_keys",
+                    "description": "Tables without primary key",
+                    "total": 192,
+                    "by_severity": {
+                      "critical": 24,
+                      "warning": 45,
+                      "info": 123
+                    },
+                    "items": [
+                      {
+                        "table": "data_correct",
+                        "row_count": 8437993,
+                        "severity": "CRITICAL",
+                        "module": "other",
+                        "recommendation": "Add PRIMARY KEY on (hospcode, tablename)"
+                      },
+                      {
+                        "table": "PERSON",
+                        "row_count": 105707,
+                        "severity": "CRITICAL",
+                        "module": "patient",
+                        "recommendation": "Add PRIMARY KEY on 'id' column"
+                      }
+                    ],
+                    "pagination": {
+                      "page": 1,
+                      "limit": 50,
+                      "total": 192,
+                      "total_pages": 4
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Category not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/indexes/recommendations": {
+      "get": {
+        "tags": ["Indexes"],
+        "summary": "Get index recommendations",
+        "description": "Returns list of recommended indexes to improve database performance, prioritized by impact.",
+        "operationId": "getIndexRecommendations",
+        "parameters": [
+          {
+            "name": "priority",
+            "in": "query",
+            "description": "Filter by priority level",
+            "schema": {
+              "type": "string",
+              "enum": ["all", "high", "medium", "low"],
+              "default": "all"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Maximum number of recommendations",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 50
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/IndexRecommendationsResponse"
+                },
+                "example": {
+                  "success": true,
+                  "data": {
+                    "summary": {
+                      "total": 90,
+                      "by_priority": {
+                        "high": 30,
+                        "medium": 35,
+                        "low": 25
+                      }
+                    },
+                    "recommendations": [
+                      {
+                        "priority": "HIGH",
+                        "table": "data_correct",
+                        "row_count": 8437993,
+                        "recommendation": "Add PRIMARY KEY on (hospcode, tablename)",
+                        "sql": "ALTER TABLE data_correct ADD PRIMARY KEY (hospcode, tablename);",
+                        "impact": "Critical - Table has 8.4M rows without primary key",
+                        "estimated_benefit": "Significant performance improvement for lookups and joins"
+                      },
+                      {
+                        "priority": "HIGH",
+                        "table": "PERSON",
+                        "row_count": 105707,
+                        "recommendation": "Add PRIMARY KEY on 'id' column",
+                        "sql": "ALTER TABLE PERSON ADD PRIMARY KEY (id);",
+                        "impact": "Critical - Core patient table without primary key",
+                        "estimated_benefit": "Essential for data integrity and query performance"
+                      },
+                      {
+                        "priority": "MEDIUM",
+                        "table": "chronic",
+                        "row_count": 135555,
+                        "recommendation": "Add index on (hospcode, pid)",
+                        "sql": "CREATE INDEX idx_chronic_hospcode_pid ON chronic (hospcode, pid);",
+                        "impact": "Medium - Chronic disease table needs faster lookups",
+                        "estimated_benefit": "Improved query performance for chronic patient lookups"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/tables": {
+      "get": {
+        "tags": ["Tables"],
+        "summary": "Get all tables (paginated)",
+        "description": "Returns paginated list of all database tables with metadata.",
+        "operationId": "getAllTables",
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "description": "Page number",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Items per page",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "default": 50
+            }
+          },
+          {
+            "name": "module",
+            "in": "query",
+            "description": "Filter by module name",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "search",
+            "in": "query",
+            "description": "Search tables by name",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sort",
+            "in": "query",
+            "description": "Sort field",
+            "schema": {
+              "type": "string",
+              "enum": ["name", "row_count", "size_bytes"],
+              "default": "name"
+            }
+          },
+          {
+            "name": "order",
+            "in": "query",
+            "description": "Sort order",
+            "schema": {
+              "type": "string",
+              "enum": ["asc", "desc"],
+              "default": "asc"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TablesListResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/tables/{name}": {
+      "get": {
+        "tags": ["Tables"],
+        "summary": "Get table by name",
+        "description": "Returns detailed information about a specific table including columns, indexes, and anomalies.",
+        "operationId": "getTableByName",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "description": "Table name",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TableDetailResponse"
+                },
+                "example": {
+                  "success": true,
+                  "data": {
+                    "name": "PERSON",
+                    "module": "patient",
+                    "description": "ข้อมูลผู้ป่วยและบุคคล",
+                    "purpose": "transaction",
+                    "statistics": {
+                      "row_count": 105707,
+                      "size_bytes": 18399232,
+                      "size_mb": 17.55,
+                      "index_count": 0,
+                      "has_pk": false
+                    },
+                    "columns": [
+                      {
+                        "name": "id",
+                        "type": "int",
+                        "nullable": "NO",
+                        "key": "",
+                        "default": null,
+                        "extra": ""
+                      },
+                      {
+                        "name": "hn",
+                        "type": "varchar(13)",
+                        "nullable": "YES",
+                        "key": "",
+                        "default": null,
+                        "extra": ""
+                      }
+                    ],
+                    "indexes": [],
+                    "anomalies": [
+                      {
+                        "type": "missing_primary_keys",
+                        "severity": "CRITICAL",
+                        "description": "Table has 105,707 rows but no primary key"
+                      }
+                    ],
+                    "recommendations": [
+                      {
+                        "type": "primary_key",
+                        "priority": "HIGH",
+                        "sql": "ALTER TABLE PERSON ADD PRIMARY KEY (id);",
+                        "description": "Add primary key for data integrity and performance"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Table not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/search": {
+      "get": {
+        "tags": ["Search"],
+        "summary": "Search tables and modules",
+        "description": "Search for tables and modules matching the query string.",
+        "operationId": "searchDatabase",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "description": "Search query",
+            "schema": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "description": "Filter by type",
+            "schema": {
+              "type": "string",
+              "enum": ["all", "tables", "modules"],
+              "default": "all"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Maximum results per category",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 50,
+              "default": 10
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SearchResponse"
+                },
+                "example": {
+                  "success": true,
+                  "data": {
+                    "query": "patient",
+                    "results": {
+                      "modules": [
+                        {
+                          "name": "patient",
+                          "description": "ข้อมูลผู้ป่วยและบุคคล",
+                          "tables_count": 130,
+                          "relevance": 1.0
+                        }
+                      ],
+                      "tables": [
+                        {
+                          "name": "PERSON",
+                          "module": "patient",
+                          "row_count": 105707,
+                          "relevance": 0.95
+                        },
+                        {
+                          "name": "pt",
+                          "module": "patient",
+                          "row_count": 181351,
+                          "relevance": 0.85
+                        },
+                        {
+                          "name": "pttype",
+                          "module": "patient",
+                          "row_count": 96,
+                          "relevance": 0.80
+                        }
+                      ]
+                    },
+                    "total": {
+                      "modules": 1,
+                      "tables": 15
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid search query",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ErrorResponse"
+                },
+                "example": {
+                  "success": false,
+                  "error": {
+                    "code": "INVALID_QUERY",
+                    "message": "Search query must be at least 1 character"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ApiResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean"
+          },
+          "meta": {
+            "$ref": "#/components/schemas/ResponseMeta"
+          }
+        },
+        "required": ["success"]
+      },
+      "ResponseMeta": {
+        "type": "object",
+        "properties": {
+          "cached": {
+            "type": "boolean"
+          },
+          "generatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "source": {
+            "type": "string",
+            "enum": ["static", "database"]
+          }
+        }
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": false
+          },
+          "error": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string",
+                "description": "Error code",
+                "example": "MODULE_NOT_FOUND"
+              },
+              "message": {
+                "type": "string",
+                "description": "Human-readable error message",
+                "example": "Module 'unknown' not found"
+              },
+              "details": {
+                "type": "object",
+                "description": "Additional error details"
+              }
+            },
+            "required": ["code", "message"]
+          }
+        },
+        "required": ["success", "error"]
+      },
+      "OverviewResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ApiResponse"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "properties": {
+                  "database": {
+                    "type": "string",
+                    "example": "hidb10949"
+                  },
+                  "server_version": {
+                    "type": "string",
+                    "example": "10.11.16-MariaDB-ubu2404-log"
+                  },
+                  "total_tables": {
+                    "type": "integer",
+                    "example": 847
+                  },
+                  "total_rows": {
+                    "type": "integer",
+                    "example": 124948696
+                  },
+                  "data_size_mb": {
+                    "type": "number",
+                    "example": 11505.36
+                  },
+                  "index_size_mb": {
+                    "type": "number",
+                    "example": 6396.48
+                  },
+                  "total_size_mb": {
+                    "type": "number",
+                    "example": 17901.84
+                  },
+                  "modules_count": {
+                    "type": "integer",
+                    "example": 25
+                  },
+                  "anomalies": {
+                    "$ref": "#/components/schemas/AnomalyCounts"
+                  },
+                  "health_score": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 100,
+                    "description": "Overall database health score (0-100)",
+                    "example": 72
+                  },
+                  "top_modules_by_size": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/ModuleSummary"
+                    }
+                  },
+                  "connection_status": {
+                    "type": "string",
+                    "enum": ["success", "error"],
+                    "example": "success"
+                  },
+                  "connection_time_ms": {
+                    "type": "number",
+                    "example": 169.01
+                  }
+                },
+                "required": ["database", "total_tables", "total_rows", "anomalies", "health_score"]
+              }
+            },
+            "required": ["data"]
+          }
+        ]
+      },
+      "AnomalyCounts": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "integer",
+            "example": 527
+          },
+          "critical": {
+            "type": "integer",
+            "example": 24
+          },
+          "warning": {
+            "type": "integer",
+            "example": 152
+          },
+          "info": {
+            "type": "integer",
+            "example": 240
+          }
+        },
+        "required": ["total", "critical", "warning", "info"]
+      },
+      "ModuleSummary": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "patient"
+          },
+          "tables_count": {
+            "type": "integer",
+            "example": 130
+          },
+          "total_size_mb": {
+            "type": "number",
+            "example": 5526.39
+          },
+          "row_count": {
+            "type": "integer",
+            "example": 28944572
+          }
+        },
+        "required": ["name", "tables_count"]
+      },
+      "ModulesListResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ApiResponse"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "properties": {
+                  "modules": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Module"
+                    }
+                  },
+                  "total": {
+                    "type": "integer",
+                    "example": 25
+                  }
+                },
+                "required": ["modules", "total"]
+              }
+            },
+            "required": ["data"]
+          }
+        ]
+      },
+      "Module": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "patient"
+          },
+          "description": {
+            "type": "string",
+            "example": "ข้อมูลผู้ป่วยและบุคคล"
+          },
+          "tables_count": {
+            "type": "integer",
+            "example": 130
+          },
+          "total_rows": {
+            "type": "integer",
+            "example": 28944572
+          },
+          "total_size_bytes": {
+            "type": "integer",
+            "example": 5794839792
+          },
+          "total_size_mb": {
+            "type": "number",
+            "example": 5526.39
+          },
+          "top_tables": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/TableSummary"
+            }
+          }
+        },
+        "required": ["name", "tables_count"]
+      },
+      "ModuleDetailResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ApiResponse"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "statistics": {
+                    "$ref": "#/components/schemas/ModuleStatistics"
+                  },
+                  "tables": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/TableSummary"
+                    }
+                  },
+                  "anomaly_summary": {
+                    "$ref": "#/components/schemas/AnomalyCounts"
+                  }
+                },
+                "required": ["name", "statistics", "tables"]
+              }
+            },
+            "required": ["data"]
+          }
+        ]
+      },
+      "ModuleStatistics": {
+        "type": "object",
+        "properties": {
+          "tables_count": {
+            "type": "integer"
+          },
+          "total_rows": {
+            "type": "integer"
+          },
+          "total_size_bytes": {
+            "type": "integer"
+          },
+          "total_size_mb": {
+            "type": "number"
+          },
+          "avg_rows_per_table": {
+            "type": "integer"
+          },
+          "avg_size_per_table_mb": {
+            "type": "number"
+          }
+        }
+      },
+      "TableSummary": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "PERSON"
+          },
+          "row_count": {
+            "type": "integer",
+            "example": 105707
+          },
+          "size_bytes": {
+            "type": "integer",
+            "example": 18399232
+          }
+        },
+        "required": ["name"]
+      },
+      "AnomaliesSummaryResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ApiResponse"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "properties": {
+                  "summary": {
+                    "$ref": "#/components/schemas/AnomalyCounts"
+                  },
+                  "categories": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "$ref": "#/components/schemas/AnomalyCategory"
+                    }
+                  },
+                  "generated_at": {
+                    "type": "string",
+                    "format": "date-time"
+                  }
+                },
+                "required": ["summary", "categories"]
+              }
+            },
+            "required": ["data"]
+          }
+        ]
+      },
+      "AnomalyCategory": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string",
+            "example": "Tables without primary key"
+          },
+          "total": {
+            "type": "integer",
+            "example": 192
+          },
+          "by_severity": {
+            "$ref": "#/components/schemas/AnomalyCounts"
+          }
+        },
+        "required": ["description", "total"]
+      },
+      "AnomalyCategoryResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ApiResponse"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "properties": {
+                  "category": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "total": {
+                    "type": "integer"
+                  },
+                  "by_severity": {
+                    "$ref": "#/components/schemas/AnomalyCounts"
+                  },
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/AnomalyItem"
+                    }
+                  },
+                  "pagination": {
+                    "$ref": "#/components/schemas/Pagination"
+                  }
+                },
+                "required": ["category", "total", "items"]
+              }
+            },
+            "required": ["data"]
+          }
+        ]
+      },
+      "AnomalyItem": {
+        "type": "object",
+        "properties": {
+          "table": {
+            "type": "string",
+            "example": "PERSON"
+          },
+          "row_count": {
+            "type": "integer",
+            "example": 105707
+          },
+          "severity": {
+            "type": "string",
+            "enum": ["CRITICAL", "WARNING", "INFO"],
+            "example": "CRITICAL"
+          },
+          "module": {
+            "type": "string",
+            "example": "patient"
+          },
+          "recommendation": {
+            "type": "string",
+            "example": "Add PRIMARY KEY on 'id' column"
+          }
+        },
+        "required": ["table", "severity"]
+      },
+      "IndexRecommendationsResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ApiResponse"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "properties": {
+                  "summary": {
+                    "type": "object",
+                    "properties": {
+                      "total": {
+                        "type": "integer",
+                        "example": 90
+                      },
+                      "by_priority": {
+                        "type": "object",
+                        "properties": {
+                          "high": {
+                            "type": "integer",
+                            "example": 30
+                          },
+                          "medium": {
+                            "type": "integer",
+                            "example": 35
+                          },
+                          "low": {
+                            "type": "integer",
+                            "example": 25
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "recommendations": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/IndexRecommendation"
+                    }
+                  }
+                },
+                "required": ["summary", "recommendations"]
+              }
+            },
+            "required": ["data"]
+          }
+        ]
+      },
+      "IndexRecommendation": {
+        "type": "object",
+        "properties": {
+          "priority": {
+            "type": "string",
+            "enum": ["HIGH", "MEDIUM", "LOW"],
+            "example": "HIGH"
+          },
+          "table": {
+            "type": "string",
+            "example": "PERSON"
+          },
+          "row_count": {
+            "type": "integer",
+            "example": 105707
+          },
+          "recommendation": {
+            "type": "string",
+            "example": "Add PRIMARY KEY on 'id' column"
+          },
+          "sql": {
+            "type": "string",
+            "example": "ALTER TABLE PERSON ADD PRIMARY KEY (id);"
+          },
+          "impact": {
+            "type": "string",
+            "example": "Critical - Core patient table without primary key"
+          },
+          "estimated_benefit": {
+            "type": "string",
+            "example": "Essential for data integrity and query performance"
+          }
+        },
+        "required": ["priority", "table", "recommendation"]
+      },
+      "TablesListResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ApiResponse"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "properties": {
+                  "tables": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/TableSummary"
+                    }
+                  },
+                  "pagination": {
+                    "$ref": "#/components/schemas/Pagination"
+                  }
+                },
+                "required": ["tables", "pagination"]
+              }
+            },
+            "required": ["data"]
+          }
+        ]
+      },
+      "TableDetailResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ApiResponse"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "module": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "purpose": {
+                    "type": "string",
+                    "enum": ["data", "reference", "transaction", "link", "log"],
+                    "description": "Table purpose classification"
+                  },
+                  "statistics": {
+                    "type": "object",
+                    "properties": {
+                      "row_count": {
+                        "type": "integer"
+                      },
+                      "size_bytes": {
+                        "type": "integer"
+                      },
+                      "size_mb": {
+                        "type": "number"
+                      },
+                      "index_count": {
+                        "type": "integer"
+                      },
+                      "has_pk": {
+                        "type": "boolean"
+                      }
+                    }
+                  },
+                  "columns": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Column"
+                    }
+                  },
+                  "indexes": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Index"
+                    }
+                  },
+                  "anomalies": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/TableAnomaly"
+                    }
+                  },
+                  "recommendations": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/TableRecommendation"
+                    }
+                  }
+                },
+                "required": ["name", "module", "statistics"]
+              }
+            },
+            "required": ["data"]
+          }
+        ]
+      },
+      "Column": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "id"
+          },
+          "type": {
+            "type": "string",
+            "example": "int"
+          },
+          "nullable": {
+            "type": "string",
+            "enum": ["YES", "NO"],
+            "example": "NO"
+          },
+          "key": {
+            "type": "string",
+            "example": "PRI"
+          },
+          "default": {
+            "type": ["string", "null"],
+            "example": null
+          },
+          "extra": {
+            "type": "string",
+            "example": "auto_increment"
+          }
+        },
+        "required": ["name", "type"]
+      },
+      "Index": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "example": "PRIMARY"
+          },
+          "columns": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "example": ["id"]
+          },
+          "unique": {
+            "type": "boolean",
+            "example": true
+          },
+          "type": {
+            "type": "string",
+            "enum": ["PRIMARY", "UNIQUE", "INDEX", "FULLTEXT"],
+            "example": "PRIMARY"
+          }
+        },
+        "required": ["name", "columns"]
+      },
+      "TableAnomaly": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "example": "missing_primary_keys"
+          },
+          "severity": {
+            "type": "string",
+            "enum": ["CRITICAL", "WARNING", "INFO"],
+            "example": "CRITICAL"
+          },
+          "description": {
+            "type": "string",
+            "example": "Table has 105,707 rows but no primary key"
+          }
+        },
+        "required": ["type", "severity", "description"]
+      },
+      "TableRecommendation": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["primary_key", "index", "naming", "optimization"],
+            "example": "primary_key"
+          },
+          "priority": {
+            "type": "string",
+            "enum": ["HIGH", "MEDIUM", "LOW"],
+            "example": "HIGH"
+          },
+          "sql": {
+            "type": "string",
+            "example": "ALTER TABLE PERSON ADD PRIMARY KEY (id);"
+          },
+          "description": {
+            "type": "string",
+            "example": "Add primary key for data integrity and performance"
+          }
+        },
+        "required": ["type", "priority", "description"]
+      },
+      "Pagination": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "integer",
+            "example": 1
+          },
+          "limit": {
+            "type": "integer",
+            "example": 50
+          },
+          "total": {
+            "type": "integer",
+            "example": 847
+          },
+          "total_pages": {
+            "type": "integer",
+            "example": 17
+          }
+        },
+        "required": ["page", "limit", "total", "total_pages"]
+      },
+      "SearchResponse": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/ApiResponse"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "data": {
+                "type": "object",
+                "properties": {
+                  "query": {
+                    "type": "string",
+                    "example": "patient"
+                  },
+                  "results": {
+                    "type": "object",
+                    "properties": {
+                      "modules": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "#/components/schemas/SearchResultModule"
+                        }
+                      },
+                      "tables": {
+                        "type": "array",
+                        "items": {
+                          "$ref": "#/components/schemas/SearchResultTable"
+                        }
+                      }
+                    }
+                  },
+                  "total": {
+                    "type": "object",
+                    "properties": {
+                      "modules": {
+                        "type": "integer"
+                      },
+                      "tables": {
+                        "type": "integer"
+                      }
+                    }
+                  }
+                },
+                "required": ["query", "results"]
+              }
+            },
+            "required": ["data"]
+          }
+        ]
+      },
+      "SearchResultModule": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "tables_count": {
+            "type": "integer"
+          },
+          "relevance": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1,
+            "description": "Search relevance score (0-1)"
+          }
+        },
+        "required": ["name", "relevance"]
+      },
+      "SearchResultTable": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "module": {
+            "type": "string"
+          },
+          "row_count": {
+            "type": "integer"
+          },
+          "relevance": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          }
+        },
+        "required": ["name", "relevance"]
+      }
+    },
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "Optional authentication for future API access (currently not required)"
+      }
+    }
+  }
+}

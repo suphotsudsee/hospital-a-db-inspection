@@ -1,0 +1,6117 @@
+{
+  "database": "hidb10949",
+  "classified_at": "2026-03-20T09:36:30.348256",
+  "modules": {
+    "accident": {
+      "tables": [
+        "acci",
+        "accident",
+        "emergency"
+      ],
+      "total_rows": 49950,
+      "total_size_bytes": 6356992,
+      "description": "อุบัติเหตุและฉุกเฉิน"
+    },
+    "other": {
+      "tables": [
+        "BP",
+        "Claim_E",
+        "IP50new",
+        "IP51new",
+        "IP52new",
+        "IP53new",
+        "IP54new",
+        "Mrs_Center",
+        "Mrs_Dead",
+        "Mrs_ssHealth_Check",
+        "Mrs_ssOffice",
+        "Mrs_ssType",
+        "Mrsc_Pl",
+        "Mrsc_Pn",
+        "Mrsc_docter",
+        "Mrss_PA",
+        "Mrss_PAA",
+        "Mrss_PYY",
+        "aetype",
+        "aipn_ccode",
+        "aipn_checkcode",
+        "alevel",
+        "allgtype",
+        "ampur",
+        "areacode",
+        "areatype",
+        "aric",
+        "asa",
+        "asaps",
+        "aux_lbl",
+        "bldalert",
+        "btype",
+        "caseortype",
+        "chospital",
+        "ckd_alert",
+        "cln",
+        "code504p",
+        "code505p",
+        "code506p",
+        "community_service",
+        "ctzshp",
+        "cvt_vacc",
+        "data_correct",
+        "data_ini",
+        "dbpop",
+        "dchstts",
+        "dchtype",
+        "dctbtype",
+        "dctype",
+        "deldc",
+        "dentist",
+        "disa_dbpop",
+        "doutcome",
+        "dpm",
+        "dresult",
+        "drpcln",
+        "drpdetail",
+        "dtdx",
+        "dtdx_new",
+        "dtt_grp",
+        "dttxdt0",
+        "dttxpl",
+        "dttxpl0",
+        "dx",
+        "dx-routine",
+        "edtype",
+        "ekg",
+        "emp",
+        "firstdm",
+        "firstht",
+        "ftdate",
+        "generator_16",
+        "generator_256",
+        "generator_4k",
+        "generator_64k",
+        "hi7_checkinscl",
+        "hi7_claim_l_idtype",
+        "hi7_claim_l_regionen",
+        "hi7_claim_l_typehosp",
+        "hi7_claimtype",
+        "hi7_fdhtotal_visit",
+        "hi7_module",
+        "hi7_position",
+        "hi7_role",
+        "hi7_screenvitalsign",
+        "hi7_setupprogram",
+        "hi7priority",
+        "hi7visittoday",
+        "hi_ini",
+        "hi_setup",
+        "hi_type_control",
+        "hi_type_control_",
+        "hi_type_control_19-12-67",
+        "hi_upfile_type",
+        "hifields",
+        "hifields1",
+        "holiday",
+        "hserv",
+        "hxrisk",
+        "ifprsc",
+        "inscl",
+        "kios_setup",
+        "kwcode1",
+        "l_ER",
+        "l_PregT",
+        "l_activity",
+        "l_aeplace",
+        "l_aetype",
+        "l_armsling",
+        "l_asmsev",
+        "l_bplace",
+        "l_btype",
+        "l_careaccount",
+        "l_childbottle",
+        "l_childdev",
+        "l_claimcat",
+        "l_claimcount",
+        "l_class",
+        "l_clntype",
+        "l_clopido",
+        "l_codefoot",
+        "l_coderetina",
+        "l_codeset",
+        "l_comactivity",
+        "l_comaeye",
+        "l_comamove",
+        "l_comaspeak",
+        "l_completion",
+        "l_comservice",
+        "l_council",
+        "l_cvdrisk",
+        "l_dcservicehome",
+        "l_ddd",
+        "l_dentgum",
+        "l_dentnprosthesis",
+        "l_dentschooltype",
+        "l_denttype",
+        "l_department",
+        "l_disabtype",
+        "l_dispestat",
+        "l_emscode",
+        "l_funame_dnt",
+        "l_garbage",
+        "l_gennohiv",
+        "l_groupcdt2",
+        "l_hiv",
+        "l_housetype",
+        "l_insclcost",
+        "l_interacttype",
+        "l_loads",
+        "l_macro",
+        "l_micro",
+        "l_ocupation",
+        "l_ocupation1",
+        "l_ppresult",
+        "l_prdsecode",
+        "l_prefactor",
+        "l_prename",
+        "l_priority",
+        "l_problems",
+        "l_reimburser",
+        "l_resultservicehome",
+        "l_rfrtype",
+        "l_rrttype",
+        "l_serve_point_type",
+        "l_servpoint_status",
+        "l_sl",
+        "l_smitype",
+        "l_spacer",
+        "l_specialpp",
+        "l_statushiv",
+        "l_subgroupcdt2",
+        "l_tflag",
+        "l_toilet",
+        "l_ttm9",
+        "l_typein",
+        "l_typein_ae",
+        "l_typeout",
+        "l_typeserv",
+        "l_typeservicehome",
+        "l_vehicle",
+        "l_villagerisktype",
+        "l_vstatus",
+        "l_wastewater",
+        "l_watertype",
+        "lcgt",
+        "lmculture",
+        "lmgram",
+        "lmothua",
+        "lmparasit",
+        "lmplatelet",
+        "lmpmstage",
+        "lmpmtype",
+        "lmrbc",
+        "lmuacent",
+        "lmuacolor",
+        "lmuaepi",
+        "lmuarbc",
+        "lmuaturbid",
+        "lmuawbc",
+        "lmvtb",
+        "lmwbc",
+        "lr_c",
+        "male",
+        "microa",
+        "money",
+        "mrtlst",
+        "name504p",
+        "name505p",
+        "name506p",
+        "nameaccp",
+        "nameeye",
+        "newIncoth",
+        "newin",
+        "nhso_adp_type",
+        "nhsodeath",
+        "note_detail",
+        "ntnlty",
+        "o_archive_all_json",
+        "oappst",
+        "opno",
+        "orcasetype",
+        "order_note",
+        "ortwrk",
+        "phmdr",
+        "phrmcst",
+        "pillness",
+        "pname",
+        "pointphm",
+        "postlr_c",
+        "pprestype",
+        "prcd",
+        "prelr_c",
+        "productcat",
+        "profile_app",
+        "prscpoint",
+        "q4u_departments",
+        "q4u_grouppriority",
+        "q4u_malename",
+        "q4u_number",
+        "q4u_priorities",
+        "q4u_service_point_prefix",
+        "q4u_service_point_status",
+        "que_openapp",
+        "que_output_tv",
+        "que_type_group",
+        "que_webserver",
+        "rcedit",
+        "rcv_comp",
+        "regis_com",
+        "registerfu",
+        "relinscl",
+        "rep_claim",
+        "repform",
+        "rfrcs",
+        "rights",
+        "rlgn",
+        "role_app",
+        "rtnadvice",
+        "rtnallggrp",
+        "rtni",
+        "rtnl",
+        "rtnldt",
+        "rtnlfu",
+        "rtnlfudt",
+        "schedules",
+        "school",
+        "scr_it",
+        "scr_it8q",
+        "scr_it9q",
+        "screen",
+        "scrub",
+        "service_point",
+        "service_type",
+        "sign",
+        "sign_d",
+        "sign_d0",
+        "sign_merged_01",
+        "sign_merged_02",
+        "sign_merged_03",
+        "signk320",
+        "sitincoth",
+        "sitincothi",
+        "sitincotho",
+        "spclty",
+        "specialpp",
+        "ssop_ccode",
+        "ssop_dispensing",
+        "ssop_opservices",
+        "statustb",
+        "subinscl",
+        "sur_comp",
+        "surgtype",
+        "symp_d",
+        "tbcase",
+        "testinser",
+        "tpodi",
+        "triage",
+        "tumbon",
+        "tumbontb",
+        "txr",
+        "vacineonline20210713",
+        "view_address",
+        "visit2q",
+        "visit8q",
+        "visit9q",
+        "visit_pop",
+        "visitadvice",
+        "visitelderly",
+        "visitgfr",
+        "visitoae",
+        "visitpriorities",
+        "visitprt",
+        "visitratetriage",
+        "visitrequest_note",
+        "visitrrt",
+        "visitscreencovid19",
+        "visitsosscore",
+        "vrcode",
+        "xdose",
+        "xrydr",
+        "xryremark"
+      ],
+      "total_rows": 43688780,
+      "total_size_bytes": 5673441304,
+      "description": "อื่นๆ"
+    },
+    "system": {
+      "tables": [
+        "Mrs_ssUser",
+        "Mrss_Day_User",
+        "aipn_config",
+        "aipn_config_",
+        "dtdx_error",
+        "fdh_error_check",
+        "hi7_fdh_log",
+        "hi7_user",
+        "hi_api_config",
+        "hi_emr_config",
+        "hierror",
+        "l_dsyscore",
+        "l_mdiuser",
+        "loglabdr",
+        "logvisit",
+        "orders",
+        "phm_user",
+        "phr_visit_log",
+        "q4u_tokens",
+        "q4u_user_service_points",
+        "q4u_users",
+        "que_config",
+        "que_user",
+        "report_error_mdr",
+        "sign_backup_all",
+        "ssop_config",
+        "ssop_opservices_log",
+        "user",
+        "user_app",
+        "users",
+        "view_pt_log"
+      ],
+      "total_rows": 881364,
+      "total_size_bytes": 103602704,
+      "description": "ระบบและการตั้งค่า"
+    },
+    "patient": {
+      "tables": [
+        "Claim_HI",
+        "HNDM",
+        "Mrs_No_Pttype",
+        "Mrs_newSammary",
+        "Mrs_pttype",
+        "Mrsc_Re_check",
+        "PERSON",
+        "PERSONk",
+        "PERSONm",
+        "PTINFO",
+        "PTTY",
+        "VR10949",
+        "aipn_patient_",
+        "bhtr",
+        "bhtri",
+        "bhtro",
+        "ccd_person",
+        "child",
+        "chksitdrfee",
+        "cid_namyuen",
+        "cidhn",
+        "ckd",
+        "covidjully",
+        "datahn",
+        "datapit",
+        "dct",
+        "deaDMn",
+        "dengue",
+        "dengue_ny",
+        "dept_code",
+        "dr",
+        "drptype",
+        "dt",
+        "epi",
+        "export_person",
+        "field_descriptions",
+        "fp",
+        "hi7_claim_l_pttype",
+        "hi7_screen",
+        "hnble",
+        "hndb",
+        "hnjoj",
+        "hnptcut",
+        "hntarget",
+        "hpt",
+        "incoth",
+        "inspt",
+        "ipt",
+        "ipt-08-09-2566",
+        "ipttype",
+        "isitb",
+        "kios_pttype",
+        "l_aptype",
+        "l_aptype_icd",
+        "l_ptt",
+        "l_rcpt",
+        "l_typedischncd",
+        "l_viptype",
+        "lbbk_25-11-2565",
+        "lmkohrpt",
+        "lmpaprpt",
+        "lmupt",
+        "mathhn",
+        "mophicall060708",
+        "new PTTYPE",
+        "nhsodeadNY",
+        "o_archive_all",
+        "oapp",
+        "oapp_copy1",
+        "occptn",
+        "optriage",
+        "optype",
+        "optype_m",
+        "oroption",
+        "ositb",
+        "pcn",
+        "person_drp",
+        "personconsent",
+        "persong6pd",
+        "phm_ptmed",
+        "prsc",
+        "prsc_up23",
+        "psn_admin_verify",
+        "psn_config",
+        "psn_control_w",
+        "psn_dprtm",
+        "psn_dprtm_child",
+        "psn_finger_server",
+        "psn_latype",
+        "psn_ot_doc_total",
+        "psn_position",
+        "psn_prefix",
+        "psn_prefix_02-10-2566",
+        "psn_prename",
+        "psn_salary_type",
+        "psn_time_work",
+        "psn_timer",
+        "psn_timer_history",
+        "pt",
+        "pt_pab",
+        "pt_pab_nocutperson",
+        "pt_ก่อนปรับสิทธิ์การรักษา",
+        "pt_ก่อนปรับสิทธิ์การรักษา 30-10-66-14-41",
+        "ptble",
+        "pttype",
+        "pttype_03-10-67",
+        "pttype_smm",
+        "pttype_ก่อนเพิ่มสิทธิ์ใหม่",
+        "q4u_person",
+        "rcpt",
+        "rcpt_15.09.59",
+        "reptype",
+        "req_change_pttype",
+        "req_pttype",
+        "stm6702",
+        "stm6703",
+        "stm6704",
+        "stm6705",
+        "stm6706",
+        "stm6707",
+        "stm6801",
+        "stm6802",
+        "stm6803",
+        "stm6804",
+        "stm6805",
+        "stm6806",
+        "symp_d0",
+        "symptm",
+        "symptom",
+        "visitpttype"
+      ],
+      "total_rows": 28944572,
+      "total_size_bytes": 5794839792,
+      "description": "ข้อมูลผู้ป่วยและบุคคล"
+    },
+    "ipd": {
+      "tables": [
+        "IPD50_1",
+        "IPD51_1",
+        "IPD52_1",
+        "IPD53_1",
+        "IPD54_1",
+        "IPD56n",
+        "Mrs_ssDATA_IPD",
+        "Mrs_ssDATA_nIPD",
+        "Mrs_ssRoom",
+        "Mrsc_check_in",
+        "Mrss_IPD",
+        "Mrss_R_IPD",
+        "RWipd",
+        "anc",
+        "ancrisk",
+        "anes_co_dct",
+        "anes_dct",
+        "anesthesia",
+        "ans",
+        "ans_comp",
+        "ansno",
+        "anstype",
+        "beds",
+        "bedtype",
+        "bedtype_copy1",
+        "changwat",
+        "chkuseipt",
+        "hcode",
+        "hi7_book_fdh",
+        "hi_visit_nation",
+        "hospcode",
+        "hospcodeolde",
+        "idpm",
+        "informant",
+        "invoice",
+        "iptadm",
+        "iptadm1",
+        "iptadm_copy1",
+        "iptdr",
+        "iptdx",
+        "iptmove",
+        "l_benefitplan",
+        "l_company",
+        "l_otherplan",
+        "l_payplan",
+        "l_roomdetail",
+        "l_standing_order",
+        "l_standing_order_group",
+        "lmedtman",
+        "lmlabman",
+        "lmlabmanpic",
+        "mooban",
+        "mrs_ipdsticker",
+        "orderipd",
+        "orfro",
+        "orrgt",
+        "orroom",
+        "pcuyang",
+        "pitsanu",
+        "plan_treat",
+        "progress_note",
+        "q4u_docinroom",
+        "q4u_service_rooms",
+        "q4u_setroom",
+        "report_admit",
+        "report_admit_dc",
+        "service_room",
+        "thaicancerbase_his",
+        "thaicancerbase_his-old",
+        "visitanc",
+        "xryrgt",
+        "xryrqt"
+      ],
+      "total_rows": 2967845,
+      "total_size_bytes": 379024840,
+      "description": "บริการผู้ป่วยใน"
+    },
+    "blood": {
+      "tables": [
+        "bloodgrp",
+        "orblood",
+        "vital_sign"
+      ],
+      "total_rows": 18,
+      "total_size_bytes": 81920,
+      "description": "ธนาคารเลือด"
+    },
+    "appointment": {
+      "tables": [
+        "ccd_appointment",
+        "hi7_screen_queue",
+        "l_queue_status",
+        "q4u_monitorshow",
+        "q4u_queue",
+        "q4u_queue_detail",
+        "q4u_queue_group_detail",
+        "q4u_queue_number",
+        "q4u_queue_status",
+        "queue",
+        "queue_call",
+        "queue_detail",
+        "queue_number",
+        "vaccineall0664",
+        "vaccineallmonth060708",
+        "vaccineallmonth060708new",
+        "vaccinedrready",
+        "visitqueueid",
+        "visitqueueid_copy1"
+      ],
+      "total_rows": 1980949,
+      "total_size_bytes": 367099904,
+      "description": "นัดหมายและคิว"
+    },
+    "inventory": {
+      "tables": [
+        "ccd_dispense_items",
+        "debt",
+        "debt_item",
+        "l_itemserviceoth",
+        "nhso_adp_code",
+        "nondrugitems",
+        "ssop_dispenseditem",
+        "standing_order_items",
+        "visititemoth"
+      ],
+      "total_rows": 21570,
+      "total_size_bytes": 5219440,
+      "description": "คลังและพัสดุ"
+    },
+    "laboratory": {
+      "tables": [
+        "ccd_lab_result",
+        "l_maplab",
+        "lab",
+        "lab-routine",
+        "lab_08/04/2564",
+        "lab_co_mapping",
+        "lab_group",
+        "lab_mapping",
+        "lab_minio_log",
+        "lab_objective",
+        "lab_pcr_text",
+        "lab_pcr_text2",
+        "lab_pcr_text_3g",
+        "lab_permis",
+        "lab_provider",
+        "lab_sign",
+        "lab_speciment_type",
+        "lab_test_tool",
+        "lab_well_mapping",
+        "labblood",
+        "labcat",
+        "labcode_sps",
+        "labcodemap",
+        "labcomment",
+        "labdtx",
+        "lablabel",
+        "lablabel_16122564",
+        "lablis",
+        "laborderrun",
+        "labresult",
+        "labsend",
+        "labtype",
+        "lbbk_ก่อนปรับ labcode 362 เป็น 222",
+        "maplab",
+        "roche",
+        "tpodidt",
+        "vaccine_mophic_lab_log",
+        "visitcvdrisk"
+      ],
+      "total_rows": 1637955,
+      "total_size_bytes": 486246332,
+      "description": "ห้องปฏิบัติการและผลตรวจ"
+    },
+    "opd": {
+      "tables": [
+        "Mrs_OPD_Card",
+        "Mrs_OPD_Card_IN",
+        "Mrs_OPD_EKG",
+        "Mrs_OPD_Sub",
+        "Mrs_ssDATA_OPD",
+        "Mrss_OPD",
+        "Mrss_R_OPD",
+        "ccd_opd_visit",
+        "ccd_opd_visit_diag",
+        "ccd_opd_visit_diag_text",
+        "ccd_opd_visit_procedure",
+        "ccd_opd_visit_screen",
+        "chkuseopd",
+        "l_bdoctor",
+        "l_copdsev",
+        "l_nhso_dttm",
+        "nopd",
+        "ovst",
+        "ovst_28-11-2565",
+        "ovst_lso",
+        "ovst_view",
+        "ovstdr",
+        "ovstdx",
+        "ovstdx_28-11-2565",
+        "ovstist",
+        "ovstost",
+        "ovststatus",
+        "ssop_opdx"
+      ],
+      "total_rows": 20885760,
+      "total_size_bytes": 2532540324,
+      "description": "บริการผู้ป่วยนอก"
+    },
+    "chronic": {
+      "tables": [
+        "CHRONIC-hi",
+        "CHRONICk",
+        "CHRONICm",
+        "cgroup298disease",
+        "chronic",
+        "chronicfu",
+        "t_chronic"
+      ],
+      "total_rows": 1224335,
+      "total_size_bytes": 166420304,
+      "description": "โรคเรื้อรังและ NCD"
+    },
+    "icd": {
+      "tables": [
+        "cgroup298disease_ก่อนปรับ",
+        "checkcovid",
+        "cicd298group",
+        "codeeye",
+        "diarrhea",
+        "disability",
+        "dpmicd10",
+        "icd101",
+        "icd101_NEW",
+        "icd102",
+        "icd103",
+        "icd1032",
+        "icd9cm",
+        "icd9cm2",
+        "icd9dent",
+        "icd9dent_new",
+        "icd9pthai",
+        "icdcm1",
+        "icdcm2",
+        "icdcm3",
+        "icdda",
+        "ioprt",
+        "irfr",
+        "l_fund",
+        "l_fund_",
+        "l_fund_200467",
+        "l_icd10",
+        "l_icd9cm-icd10tm",
+        "l_popupdiagnosis",
+        "lchronic",
+        "op",
+        "oprt",
+        "orfri",
+        "orfupr",
+        "ors",
+        "report_op_diag",
+        "rtn",
+        "toydm",
+        "toyht",
+        "uri",
+        "visitdiagtext"
+      ],
+      "total_rows": 1985476,
+      "total_size_bytes": 344866912,
+      "description": "รหัสโรค ICD"
+    },
+    "vaccination": {
+      "tables": [
+        "checkvaccine",
+        "l_vaccine_reaction_stage",
+        "l_vaccine_reaction_symptom",
+        "l_vaccine_reaction_symptom_other",
+        "l_vaccine_reaction_type",
+        "l_vaccine_screen",
+        "vaccine",
+        "vaccine060764",
+        "vaccine07062564check",
+        "vaccine_genqrcode",
+        "vaccine_genqrcode1",
+        "vaccine_genqrcode_copy1",
+        "vaccine_mophic",
+        "vaccine_mophic_copy1",
+        "vaccine_mophic_copy2",
+        "vaccine_mophic_error_log",
+        "vaccine_mophic_error_log_copy1",
+        "vaccine_mophic_history",
+        "vaccine_mophic_vaccination_list",
+        "vaccine_pregnancy",
+        "vaccineaefi",
+        "vaccinemap",
+        "vaccinenotappoint",
+        "vaccineoffline"
+      ],
+      "total_rows": 163291,
+      "total_size_bytes": 147275776,
+      "description": "วัคซีนและภูมิคุ้มกัน"
+    },
+    "refer": {
+      "tables": [
+        "CMI",
+        "Mrs_ssRefer",
+        "eclaim",
+        "l_referhosp",
+        "referresult",
+        "referresulto",
+        "report_refer",
+        "report_refer_er",
+        "report_refer_ip",
+        "report_refer_op"
+      ],
+      "total_rows": 19342,
+      "total_size_bytes": 11075584,
+      "description": "ส่งต่อผู้ป่วย"
+    },
+    "anc": {
+      "tables": [
+        "dead"
+      ],
+      "total_rows": 289875,
+      "total_size_bytes": 18939904,
+      "description": "ฝากครรภ์"
+    },
+    "moph": {
+      "tables": [
+        "debt_account",
+        "export21f",
+        "hi7_endpoint",
+        "indexhi",
+        "l_disabpcu",
+        "l_syndrom",
+        "l_syndrom2",
+        "mophicchecklist",
+        "mophichi",
+        "orfind",
+        "orwound",
+        "pcukao",
+        "pcukud",
+        "pcunoon",
+        "pcusewi",
+        "pcusuk",
+        "phistory",
+        "proc_perform",
+        "q4u_service_points",
+        "q4u_sounds",
+        "registersendpost",
+        "rtndt",
+        "visitdrscreenncd",
+        "visitscreenfootncd",
+        "woundtype",
+        "xrylend"
+      ],
+      "total_rows": 6980234,
+      "total_size_bytes": 791626396,
+      "description": "เชื่อมต่อกระทรวงสาธารณสุข"
+    },
+    "pharmacy": {
+      "tables": [
+        "drugitems",
+        "drugitems_",
+        "interact",
+        "interactdb",
+        "iprsc",
+        "l_drug_rdu",
+        "l_drugflag",
+        "l_drugs",
+        "l_drugs_unit",
+        "l_rxdrughiv",
+        "l_tmtdrug",
+        "l_tmtdrug1",
+        "med2con",
+        "med_edtype",
+        "medgrp",
+        "meditem",
+        "meditem_copy1",
+        "meditemv",
+        "medreconcile",
+        "medtb",
+        "medusage",
+        "ormed",
+        "phm_medreconcile",
+        "prscdt",
+        "pt_meded",
+        "registertb",
+        "rtnallggrpdt",
+        "rtnidt",
+        "service_medusage",
+        "typemed_claim",
+        "visitevalutedruguse_ttm"
+      ],
+      "total_rows": 11982169,
+      "total_size_bytes": 1714022032,
+      "description": "ระบบร้านขายยาและยา"
+    },
+    "nutrition": {
+      "tables": [
+        "fooddm",
+        "foodmain",
+        "foodname",
+        "foodorder",
+        "foodsub",
+        "foodsum",
+        "fooduser",
+        "l_childfood",
+        "office"
+      ],
+      "total_rows": 138363,
+      "total_size_bytes": 14489988,
+      "description": "โภชนาการ"
+    },
+    "hr": {
+      "tables": [
+        "hi7_l_nurse_triage",
+        "hi7_l_screennurse",
+        "lr",
+        "nurse_notes",
+        "opstaff",
+        "orstaff",
+        "q4u_nursename",
+        "q4u_usernurse",
+        "rcstaff",
+        "staff_master",
+        "staff_master_dedup",
+        "visitnursenote",
+        "xrystaff"
+      ],
+      "total_rows": 7366,
+      "total_size_bytes": 3080192,
+      "description": "บุคลากร"
+    },
+    "report": {
+      "tables": [
+        "hi_notify_template",
+        "que_printer",
+        "que_printer_sticker",
+        "que_printserver",
+        "report_er_dx",
+        "report_fs",
+        "report_grouppdx",
+        "report_ip_dx",
+        "report_ip_visit",
+        "report_op_visit",
+        "report_other_pp",
+        "report_visit",
+        "reportbun",
+        "reportoth"
+      ],
+      "total_rows": 106,
+      "total_size_bytes": 182804,
+      "description": "รายงาน"
+    },
+    "finance": {
+      "tables": [
+        "income",
+        "l_income",
+        "prcd55",
+        "prcd_kn",
+        "prcd_n",
+        "prcd_pb",
+        "prcd_pbh",
+        "prcdv",
+        "ssop_billitem",
+        "ssop_billtran"
+      ],
+      "total_rows": 4636,
+      "total_size_bytes": 618080,
+      "description": "การเงินและการเงิน"
+    },
+    "insurance": {
+      "tables": [
+        "insure",
+        "insure_copy1",
+        "insure_copy2"
+      ],
+      "total_rows": 1084854,
+      "total_size_bytes": 208617472,
+      "description": "สิทธิการรักษา"
+    },
+    "surgery": {
+      "tables": [
+        "operation"
+      ],
+      "total_rows": 11,
+      "total_size_bytes": 16384,
+      "description": "ห้องผ่าตัด"
+    },
+    "dental": {
+      "tables": [
+        "visitdental"
+      ],
+      "total_rows": 9666,
+      "total_size_bytes": 1703936,
+      "description": "ทันตกรรม"
+    },
+    "xray": {
+      "tables": [
+        "xray"
+      ],
+      "total_rows": 209,
+      "total_size_bytes": 52752,
+      "description": "รังสีวิทยา"
+    }
+  },
+  "table_classifications": {
+    "acci": {
+      "module": "accident",
+      "purpose": "data",
+      "row_count": 17,
+      "size_bytes": 32768
+    },
+    "accident": {
+      "module": "accident",
+      "purpose": "data",
+      "row_count": 29,
+      "size_bytes": 32768
+    },
+    "aetype": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 3,
+      "size_bytes": 16384
+    },
+    "aipn_ccode": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 14,
+      "size_bytes": 3996
+    },
+    "aipn_checkcode": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 8,
+      "size_bytes": 32768
+    },
+    "aipn_config": {
+      "module": "system",
+      "purpose": "reference",
+      "row_count": 18,
+      "size_bytes": 16384
+    },
+    "aipn_config_": {
+      "module": "system",
+      "purpose": "reference",
+      "row_count": 4,
+      "size_bytes": 16384
+    },
+    "aipn_patient_": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 42,
+      "size_bytes": 16384
+    },
+    "alevel": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 8,
+      "size_bytes": 16384
+    },
+    "allgtype": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 4,
+      "size_bytes": 16384
+    },
+    "ampur": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 1017,
+      "size_bytes": 87756
+    },
+    "anc": {
+      "module": "ipd",
+      "purpose": "transaction",
+      "row_count": 21153,
+      "size_bytes": 4096000
+    },
+    "ancrisk": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 20,
+      "size_bytes": 4064
+    },
+    "anesthesia": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 9,
+      "size_bytes": 32768
+    },
+    "anes_co_dct": {
+      "module": "ipd",
+      "purpose": "transaction",
+      "row_count": 19422,
+      "size_bytes": 1867776
+    },
+    "anes_dct": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 7428,
+      "size_bytes": 425984
+    },
+    "ans": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 242,
+      "size_bytes": 16384
+    },
+    "ansno": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 10,
+      "size_bytes": 32768
+    },
+    "anstype": {
+      "module": "ipd",
+      "purpose": "reference",
+      "row_count": 12,
+      "size_bytes": 32768
+    },
+    "ans_comp": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 11,
+      "size_bytes": 32768
+    },
+    "areacode": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 355,
+      "size_bytes": 22428
+    },
+    "areatype": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 5,
+      "size_bytes": 32768
+    },
+    "aric": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 6,
+      "size_bytes": 32768
+    },
+    "asa": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 10,
+      "size_bytes": 32768
+    },
+    "asaps": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 10,
+      "size_bytes": 32768
+    },
+    "aux_lbl": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 257,
+      "size_bytes": 24300
+    },
+    "beds": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 3,
+      "size_bytes": 16384
+    },
+    "bedtype": {
+      "module": "ipd",
+      "purpose": "reference",
+      "row_count": 5,
+      "size_bytes": 49152
+    },
+    "bedtype_copy1": {
+      "module": "ipd",
+      "purpose": "reference",
+      "row_count": 5,
+      "size_bytes": 49152
+    },
+    "bhtr": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 9522,
+      "size_bytes": 1589248
+    },
+    "bhtri": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 542,
+      "size_bytes": 81920
+    },
+    "bhtro": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 11224,
+      "size_bytes": 1802240
+    },
+    "bldalert": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 14,
+      "size_bytes": 16384
+    },
+    "bloodgrp": {
+      "module": "blood",
+      "purpose": "data",
+      "row_count": 4,
+      "size_bytes": 32768
+    },
+    "BP": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 123,
+      "size_bytes": 16384
+    },
+    "btype": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 6,
+      "size_bytes": 16384
+    },
+    "caseortype": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 2,
+      "size_bytes": 2088
+    },
+    "ccd_appointment": {
+      "module": "appointment",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "ccd_dispense_items": {
+      "module": "inventory",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "ccd_lab_result": {
+      "module": "laboratory",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "ccd_opd_visit": {
+      "module": "opd",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "ccd_opd_visit_diag": {
+      "module": "opd",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "ccd_opd_visit_diag_text": {
+      "module": "opd",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "ccd_opd_visit_procedure": {
+      "module": "opd",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "ccd_opd_visit_screen": {
+      "module": "opd",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "ccd_person": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "cgroup298disease": {
+      "module": "chronic",
+      "purpose": "reference",
+      "row_count": 308,
+      "size_bytes": 57948
+    },
+    "cgroup298disease_ก่อนปรับ": {
+      "module": "icd",
+      "purpose": "reference",
+      "row_count": 298,
+      "size_bytes": 55752
+    },
+    "changwat": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 79,
+      "size_bytes": 5076
+    },
+    "checkcovid": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "checkvaccine": {
+      "module": "vaccination",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "child": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 5487,
+      "size_bytes": 1687552
+    },
+    "chksitdrfee": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 26383,
+      "size_bytes": 1399084
+    },
+    "chkuseipt": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 350,
+      "size_bytes": 49152
+    },
+    "chkuseopd": {
+      "module": "opd",
+      "purpose": "data",
+      "row_count": 1893,
+      "size_bytes": 131072
+    },
+    "chospital": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 15451,
+      "size_bytes": 4472832
+    },
+    "chronic": {
+      "module": "chronic",
+      "purpose": "transaction",
+      "row_count": 135555,
+      "size_bytes": 12107776
+    },
+    "CHRONIC-hi": {
+      "module": "chronic",
+      "purpose": "data",
+      "row_count": 450,
+      "size_bytes": 65536
+    },
+    "chronicfu": {
+      "module": "chronic",
+      "purpose": "transaction",
+      "row_count": 192089,
+      "size_bytes": 17350656
+    },
+    "CHRONICk": {
+      "module": "chronic",
+      "purpose": "data",
+      "row_count": 233,
+      "size_bytes": 49152
+    },
+    "CHRONICm": {
+      "module": "chronic",
+      "purpose": "data",
+      "row_count": 226,
+      "size_bytes": 49152
+    },
+    "cicd298group": {
+      "module": "icd",
+      "purpose": "reference",
+      "row_count": 16225,
+      "size_bytes": 3997696
+    },
+    "cidhn": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 2478,
+      "size_bytes": 147456
+    },
+    "cid_namyuen": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 208,
+      "size_bytes": 49152
+    },
+    "ckd": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "ckd_alert": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 2,
+      "size_bytes": 32768
+    },
+    "Claim_E": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 634,
+      "size_bytes": 98304
+    },
+    "Claim_HI": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 656,
+      "size_bytes": 147456
+    },
+    "cln": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 46,
+      "size_bytes": 7504
+    },
+    "CMI": {
+      "module": "refer",
+      "purpose": "data",
+      "row_count": 5914,
+      "size_bytes": 3686400
+    },
+    "code504p": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 38,
+      "size_bytes": 32768
+    },
+    "code505p": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 114,
+      "size_bytes": 32768
+    },
+    "code506p": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 231,
+      "size_bytes": 16384
+    },
+    "codeeye": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 329,
+      "size_bytes": 32768
+    },
+    "community_service": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 5115,
+      "size_bytes": 322892
+    },
+    "covidjully": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 17043,
+      "size_bytes": 4734976
+    },
+    "ctzshp": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 92,
+      "size_bytes": 6144
+    },
+    "cvt_vacc": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 17,
+      "size_bytes": 16384
+    },
+    "datahn": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 270,
+      "size_bytes": 16384
+    },
+    "datapit": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 5,
+      "size_bytes": 16384
+    },
+    "data_correct": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 8437993,
+      "size_bytes": 1713373184
+    },
+    "data_ini": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 60,
+      "size_bytes": 2532
+    },
+    "dbpop": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 1897835,
+      "size_bytes": 319651840
+    },
+    "dchstts": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 9,
+      "size_bytes": 3352
+    },
+    "dchtype": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 7,
+      "size_bytes": 3264
+    },
+    "dct": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 383,
+      "size_bytes": 81920
+    },
+    "dctbtype": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 10,
+      "size_bytes": 32768
+    },
+    "dctype": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 15,
+      "size_bytes": 2480
+    },
+    "dead": {
+      "module": "anc",
+      "purpose": "transaction",
+      "row_count": 289875,
+      "size_bytes": 18939904
+    },
+    "deaDMn": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 493488,
+      "size_bytes": 14172160
+    },
+    "debt": {
+      "module": "inventory",
+      "purpose": "data",
+      "row_count": 19,
+      "size_bytes": 16384
+    },
+    "debt_account": {
+      "module": "moph",
+      "purpose": "data",
+      "row_count": 57,
+      "size_bytes": 32768
+    },
+    "debt_item": {
+      "module": "inventory",
+      "purpose": "data",
+      "row_count": 20,
+      "size_bytes": 16384
+    },
+    "deldc": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 140,
+      "size_bytes": 16384
+    },
+    "dengue": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "dengue_ny": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "dentist": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 43,
+      "size_bytes": 5168
+    },
+    "dept_code": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 41,
+      "size_bytes": 32768
+    },
+    "diarrhea": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 34,
+      "size_bytes": 32768
+    },
+    "disability": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 1990,
+      "size_bytes": 196608
+    },
+    "disa_dbpop": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 44199,
+      "size_bytes": 8929280
+    },
+    "doutcome": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 3,
+      "size_bytes": 32768
+    },
+    "dpm": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 12,
+      "size_bytes": 3388
+    },
+    "dpmicd10": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 185,
+      "size_bytes": 32768
+    },
+    "dr": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 87369,
+      "size_bytes": 18151904
+    },
+    "dresult": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 4,
+      "size_bytes": 16384
+    },
+    "drpcln": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 11,
+      "size_bytes": 16384
+    },
+    "drpdetail": {
+      "module": "other",
+      "purpose": "link",
+      "row_count": 40,
+      "size_bytes": 16384
+    },
+    "drptype": {
+      "module": "patient",
+      "purpose": "reference",
+      "row_count": 13,
+      "size_bytes": 16384
+    },
+    "drugitems": {
+      "module": "pharmacy",
+      "purpose": "data",
+      "row_count": 1149,
+      "size_bytes": 1687552
+    },
+    "drugitems_": {
+      "module": "pharmacy",
+      "purpose": "data",
+      "row_count": 874,
+      "size_bytes": 1589248
+    },
+    "dt": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 216663,
+      "size_bytes": 33112064
+    },
+    "dtdx": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 430191,
+      "size_bytes": 63553536
+    },
+    "dtdx_error": {
+      "module": "system",
+      "purpose": "log",
+      "row_count": 238490,
+      "size_bytes": 30474240
+    },
+    "dtdx_new": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 237833,
+      "size_bytes": 30474240
+    },
+    "dttxdt0": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 10,
+      "size_bytes": 2268
+    },
+    "dttxpl": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 19,
+      "size_bytes": 49152
+    },
+    "dttxpl0": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 16,
+      "size_bytes": 3492
+    },
+    "dtt_grp": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 10,
+      "size_bytes": 2272
+    },
+    "dx": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 9628,
+      "size_bytes": 1092932
+    },
+    "dx-routine": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 6,
+      "size_bytes": 16384
+    },
+    "eclaim": {
+      "module": "refer",
+      "purpose": "transaction",
+      "row_count": 12856,
+      "size_bytes": 6832128
+    },
+    "edtype": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 7,
+      "size_bytes": 32768
+    },
+    "ekg": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 6,
+      "size_bytes": 5452
+    },
+    "emergency": {
+      "module": "accident",
+      "purpose": "transaction",
+      "row_count": 49904,
+      "size_bytes": 6291456
+    },
+    "emp": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 13,
+      "size_bytes": 16384
+    },
+    "epi": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 92767,
+      "size_bytes": 19447808
+    },
+    "export21f": {
+      "module": "moph",
+      "purpose": "transaction",
+      "row_count": 76534,
+      "size_bytes": 12140544
+    },
+    "export_person": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 45310,
+      "size_bytes": 2637824
+    },
+    "fdh_error_check": {
+      "module": "system",
+      "purpose": "log",
+      "row_count": 37,
+      "size_bytes": 16384
+    },
+    "field_descriptions": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 7448,
+      "size_bytes": 1933312
+    },
+    "firstdm": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 4868,
+      "size_bytes": 85276
+    },
+    "firstht": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 7972,
+      "size_bytes": 140796
+    },
+    "fooddm": {
+      "module": "nutrition",
+      "purpose": "data",
+      "row_count": 6,
+      "size_bytes": 16384
+    },
+    "foodmain": {
+      "module": "nutrition",
+      "purpose": "data",
+      "row_count": 11,
+      "size_bytes": 2300
+    },
+    "foodname": {
+      "module": "nutrition",
+      "purpose": "data",
+      "row_count": 2,
+      "size_bytes": 32768
+    },
+    "foodorder": {
+      "module": "nutrition",
+      "purpose": "data",
+      "row_count": 234,
+      "size_bytes": 98304
+    },
+    "foodsub": {
+      "module": "nutrition",
+      "purpose": "data",
+      "row_count": 28,
+      "size_bytes": 4232
+    },
+    "foodsum": {
+      "module": "nutrition",
+      "purpose": "transaction",
+      "row_count": 138066,
+      "size_bytes": 14204928
+    },
+    "fooduser": {
+      "module": "nutrition",
+      "purpose": "data",
+      "row_count": 8,
+      "size_bytes": 49152
+    },
+    "fp": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 10011,
+      "size_bytes": 1589248
+    },
+    "ftdate": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "generator_16": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "generator_256": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "generator_4k": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "generator_64k": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "hcode": {
+      "module": "ipd",
+      "purpose": "transaction",
+      "row_count": 14920,
+      "size_bytes": 3085620
+    },
+    "hi7priority": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 20,
+      "size_bytes": 16384
+    },
+    "hi7visittoday": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 219626,
+      "size_bytes": 31014912
+    },
+    "hi7_book_fdh": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 562,
+      "size_bytes": 81920
+    },
+    "hi7_checkinscl": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 86555,
+      "size_bytes": 6324224
+    },
+    "hi7_claimtype": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 4,
+      "size_bytes": 16384
+    },
+    "hi7_claim_l_idtype": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 5,
+      "size_bytes": 16384
+    },
+    "hi7_claim_l_pttype": {
+      "module": "patient",
+      "purpose": "reference",
+      "row_count": 8,
+      "size_bytes": 16384
+    },
+    "hi7_claim_l_regionen": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 12,
+      "size_bytes": 16384
+    },
+    "hi7_claim_l_typehosp": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 5,
+      "size_bytes": 16384
+    },
+    "hi7_endpoint": {
+      "module": "moph",
+      "purpose": "data",
+      "row_count": 438,
+      "size_bytes": 114688
+    },
+    "hi7_fdhtotal_visit": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 259,
+      "size_bytes": 16384
+    },
+    "hi7_fdh_log": {
+      "module": "system",
+      "purpose": "log",
+      "row_count": 11,
+      "size_bytes": 16384
+    },
+    "hi7_l_nurse_triage": {
+      "module": "hr",
+      "purpose": "data",
+      "row_count": 5,
+      "size_bytes": 16384
+    },
+    "hi7_l_screennurse": {
+      "module": "hr",
+      "purpose": "data",
+      "row_count": 12,
+      "size_bytes": 16384
+    },
+    "hi7_module": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 9,
+      "size_bytes": 16384
+    },
+    "hi7_position": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 77,
+      "size_bytes": 4172
+    },
+    "hi7_role": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 3,
+      "size_bytes": 16384
+    },
+    "hi7_screen": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 69489,
+      "size_bytes": 13697024
+    },
+    "hi7_screenvitalsign": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 4,
+      "size_bytes": 16384
+    },
+    "hi7_screen_queue": {
+      "module": "appointment",
+      "purpose": "data",
+      "row_count": 4,
+      "size_bytes": 32768
+    },
+    "hi7_setupprogram": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 65,
+      "size_bytes": 16384
+    },
+    "hi7_user": {
+      "module": "system",
+      "purpose": "data",
+      "row_count": 164,
+      "size_bytes": 49152
+    },
+    "hierror": {
+      "module": "system",
+      "purpose": "log",
+      "row_count": 1760,
+      "size_bytes": 262144
+    },
+    "hifields": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 1399,
+      "size_bytes": 29560
+    },
+    "hifields1": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 1361,
+      "size_bytes": 28764
+    },
+    "hi_api_config": {
+      "module": "system",
+      "purpose": "reference",
+      "row_count": 2,
+      "size_bytes": 16384
+    },
+    "hi_emr_config": {
+      "module": "system",
+      "purpose": "reference",
+      "row_count": 14,
+      "size_bytes": 32768
+    },
+    "hi_ini": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 28,
+      "size_bytes": 1676
+    },
+    "hi_notify_template": {
+      "module": "report",
+      "purpose": "data",
+      "row_count": 3,
+      "size_bytes": 2580
+    },
+    "hi_setup": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 63,
+      "size_bytes": 49152
+    },
+    "hi_type_control": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 94,
+      "size_bytes": 6468
+    },
+    "hi_type_control_": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 83,
+      "size_bytes": 6092
+    },
+    "hi_type_control_19-12-67": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 90,
+      "size_bytes": 6288
+    },
+    "hi_upfile_type": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 8,
+      "size_bytes": 2268
+    },
+    "hi_visit_nation": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 662,
+      "size_bytes": 180224
+    },
+    "hnble": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 2491,
+      "size_bytes": 540672
+    },
+    "hndb": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 3075,
+      "size_bytes": 147456
+    },
+    "HNDM": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 710,
+      "size_bytes": 49152
+    },
+    "hnjoj": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 5101,
+      "size_bytes": 1589248
+    },
+    "hnptcut": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 2479,
+      "size_bytes": 180224
+    },
+    "hntarget": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 36,
+      "size_bytes": 16384
+    },
+    "holiday": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 521,
+      "size_bytes": 23588
+    },
+    "hospcode": {
+      "module": "ipd",
+      "purpose": "transaction",
+      "row_count": 14929,
+      "size_bytes": 2352868
+    },
+    "hospcodeolde": {
+      "module": "ipd",
+      "purpose": "transaction",
+      "row_count": 14916,
+      "size_bytes": 3084696
+    },
+    "hpt": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 57,
+      "size_bytes": 5448
+    },
+    "hserv": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 368,
+      "size_bytes": 49152
+    },
+    "hxrisk": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 6,
+      "size_bytes": 2172
+    },
+    "icd101": {
+      "module": "icd",
+      "purpose": "transaction",
+      "row_count": 41846,
+      "size_bytes": 8642936
+    },
+    "icd101_NEW": {
+      "module": "icd",
+      "purpose": "transaction",
+      "row_count": 41716,
+      "size_bytes": 8295812
+    },
+    "icd102": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 8834,
+      "size_bytes": 467496
+    },
+    "icd103": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 7139,
+      "size_bytes": 278812
+    },
+    "icd1032": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 7273,
+      "size_bytes": 199908
+    },
+    "icd9cm": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 4212,
+      "size_bytes": 598112
+    },
+    "icd9cm2": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 499,
+      "size_bytes": 36180
+    },
+    "icd9dent": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 837,
+      "size_bytes": 229376
+    },
+    "icd9dent_new": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 675,
+      "size_bytes": 180224
+    },
+    "icd9pthai": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 471,
+      "size_bytes": 81920
+    },
+    "icdcm1": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 3873,
+      "size_bytes": 170160
+    },
+    "icdcm2": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 5567,
+      "size_bytes": 232172
+    },
+    "icdcm3": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 4853,
+      "size_bytes": 255044
+    },
+    "icdda": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 2196,
+      "size_bytes": 287352
+    },
+    "idpm": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 8,
+      "size_bytes": 3480
+    },
+    "ifprsc": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 4,
+      "size_bytes": 65536
+    },
+    "income": {
+      "module": "finance",
+      "purpose": "data",
+      "row_count": 23,
+      "size_bytes": 4424
+    },
+    "incoth": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 11694065,
+      "size_bytes": 2128674816
+    },
+    "indexhi": {
+      "module": "moph",
+      "purpose": "data",
+      "row_count": 101,
+      "size_bytes": 5116
+    },
+    "informant": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 4,
+      "size_bytes": 16384
+    },
+    "inscl": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 120004,
+      "size_bytes": 6078492
+    },
+    "inspt": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 66646,
+      "size_bytes": 4277548
+    },
+    "insure": {
+      "module": "insurance",
+      "purpose": "transaction",
+      "row_count": 476475,
+      "size_bytes": 96124928
+    },
+    "insure_copy1": {
+      "module": "insurance",
+      "purpose": "transaction",
+      "row_count": 301941,
+      "size_bytes": 55721984
+    },
+    "insure_copy2": {
+      "module": "insurance",
+      "purpose": "transaction",
+      "row_count": 306438,
+      "size_bytes": 56770560
+    },
+    "interact": {
+      "module": "pharmacy",
+      "purpose": "data",
+      "row_count": 399,
+      "size_bytes": 102356
+    },
+    "interactdb": {
+      "module": "pharmacy",
+      "purpose": "data",
+      "row_count": 8768,
+      "size_bytes": 9977856
+    },
+    "invoice": {
+      "module": "ipd",
+      "purpose": "transaction",
+      "row_count": 176625,
+      "size_bytes": 41533440
+    },
+    "ioprt": {
+      "module": "icd",
+      "purpose": "transaction",
+      "row_count": 90610,
+      "size_bytes": 15794176
+    },
+    "IP50new": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 6049,
+      "size_bytes": 1589248
+    },
+    "IP51new": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 6437,
+      "size_bytes": 1589248
+    },
+    "IP52new": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 6740,
+      "size_bytes": 1589248
+    },
+    "IP53new": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 7353,
+      "size_bytes": 1589248
+    },
+    "IP54new": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 5635,
+      "size_bytes": 1589248
+    },
+    "IPD50_1": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 5950,
+      "size_bytes": 1589248
+    },
+    "IPD51_1": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 6521,
+      "size_bytes": 1589248
+    },
+    "IPD52_1": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 6656,
+      "size_bytes": 1589248
+    },
+    "IPD53_1": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 7320,
+      "size_bytes": 1589248
+    },
+    "IPD54_1": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 5611,
+      "size_bytes": 1589248
+    },
+    "IPD56n": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 6242,
+      "size_bytes": 1589248
+    },
+    "iprsc": {
+      "module": "pharmacy",
+      "purpose": "transaction",
+      "row_count": 887412,
+      "size_bytes": 175931392
+    },
+    "ipt": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 162881,
+      "size_bytes": 21544960
+    },
+    "ipt-08-09-2566": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 150838,
+      "size_bytes": 19447808
+    },
+    "iptadm": {
+      "module": "ipd",
+      "purpose": "transaction",
+      "row_count": 160433,
+      "size_bytes": 12615680
+    },
+    "iptadm1": {
+      "module": "ipd",
+      "purpose": "transaction",
+      "row_count": 110425,
+      "size_bytes": 15794176
+    },
+    "iptadm_copy1": {
+      "module": "ipd",
+      "purpose": "transaction",
+      "row_count": 159826,
+      "size_bytes": 8929280
+    },
+    "iptdr": {
+      "module": "ipd",
+      "purpose": "transaction",
+      "row_count": 616557,
+      "size_bytes": 25739264
+    },
+    "iptdx": {
+      "module": "ipd",
+      "purpose": "transaction",
+      "row_count": 341435,
+      "size_bytes": 32030720
+    },
+    "iptmove": {
+      "module": "ipd",
+      "purpose": "transaction",
+      "row_count": 56280,
+      "size_bytes": 6864896
+    },
+    "ipttype": {
+      "module": "patient",
+      "purpose": "reference",
+      "row_count": 10,
+      "size_bytes": 2248
+    },
+    "irfr": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 1913,
+      "size_bytes": 163840
+    },
+    "isitb": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 472,
+      "size_bytes": 65536
+    },
+    "kios_pttype": {
+      "module": "patient",
+      "purpose": "reference",
+      "row_count": 91620,
+      "size_bytes": 395214848
+    },
+    "kios_setup": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 18,
+      "size_bytes": 16384
+    },
+    "kwcode1": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 7430,
+      "size_bytes": 393216
+    },
+    "lab": {
+      "module": "laboratory",
+      "purpose": "data",
+      "row_count": 1397,
+      "size_bytes": 428908
+    },
+    "lab-routine": {
+      "module": "laboratory",
+      "purpose": "data",
+      "row_count": 8,
+      "size_bytes": 16384
+    },
+    "labblood": {
+      "module": "laboratory",
+      "purpose": "data",
+      "row_count": 133,
+      "size_bytes": 32768
+    },
+    "labcat": {
+      "module": "laboratory",
+      "purpose": "reference",
+      "row_count": 729,
+      "size_bytes": 163840
+    },
+    "labcodemap": {
+      "module": "laboratory",
+      "purpose": "link",
+      "row_count": 444,
+      "size_bytes": 41520
+    },
+    "labcode_sps": {
+      "module": "laboratory",
+      "purpose": "data",
+      "row_count": 663,
+      "size_bytes": 65536
+    },
+    "labcomment": {
+      "module": "laboratory",
+      "purpose": "data",
+      "row_count": 60,
+      "size_bytes": 16384
+    },
+    "labdtx": {
+      "module": "laboratory",
+      "purpose": "data",
+      "row_count": 67,
+      "size_bytes": 16384
+    },
+    "lablabel": {
+      "module": "laboratory",
+      "purpose": "data",
+      "row_count": 7164,
+      "size_bytes": 756952
+    },
+    "lablabel_16122564": {
+      "module": "laboratory",
+      "purpose": "data",
+      "row_count": 4140,
+      "size_bytes": 419912
+    },
+    "lablis": {
+      "module": "laboratory",
+      "purpose": "data",
+      "row_count": 2995,
+      "size_bytes": 425984
+    },
+    "laborderrun": {
+      "module": "laboratory",
+      "purpose": "transaction",
+      "row_count": 52687,
+      "size_bytes": 9502720
+    },
+    "labresult": {
+      "module": "laboratory",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 49152
+    },
+    "labsend": {
+      "module": "laboratory",
+      "purpose": "data",
+      "row_count": 25,
+      "size_bytes": 16384
+    },
+    "labtype": {
+      "module": "laboratory",
+      "purpose": "reference",
+      "row_count": 5,
+      "size_bytes": 16384
+    },
+    "lab_08/04/2564": {
+      "module": "laboratory",
+      "purpose": "data",
+      "row_count": 878,
+      "size_bytes": 255232
+    },
+    "lab_co_mapping": {
+      "module": "laboratory",
+      "purpose": "link",
+      "row_count": 893,
+      "size_bytes": 81920
+    },
+    "lab_group": {
+      "module": "laboratory",
+      "purpose": "reference",
+      "row_count": 9,
+      "size_bytes": 16384
+    },
+    "lab_mapping": {
+      "module": "laboratory",
+      "purpose": "link",
+      "row_count": 10604,
+      "size_bytes": 2375680
+    },
+    "lab_minio_log": {
+      "module": "laboratory",
+      "purpose": "log",
+      "row_count": 26117,
+      "size_bytes": 1589248
+    },
+    "lab_objective": {
+      "module": "laboratory",
+      "purpose": "data",
+      "row_count": 20,
+      "size_bytes": 16384
+    },
+    "lab_pcr_text": {
+      "module": "laboratory",
+      "purpose": "data",
+      "row_count": 5,
+      "size_bytes": 16384
+    },
+    "lab_pcr_text2": {
+      "module": "laboratory",
+      "purpose": "data",
+      "row_count": 5,
+      "size_bytes": 16384
+    },
+    "lab_pcr_text_3g": {
+      "module": "laboratory",
+      "purpose": "data",
+      "row_count": 5,
+      "size_bytes": 16384
+    },
+    "lab_permis": {
+      "module": "laboratory",
+      "purpose": "data",
+      "row_count": 20,
+      "size_bytes": 16384
+    },
+    "lab_provider": {
+      "module": "laboratory",
+      "purpose": "data",
+      "row_count": 7,
+      "size_bytes": 16384
+    },
+    "lab_sign": {
+      "module": "laboratory",
+      "purpose": "data",
+      "row_count": 4,
+      "size_bytes": 32768
+    },
+    "lab_speciment_type": {
+      "module": "laboratory",
+      "purpose": "reference",
+      "row_count": 16,
+      "size_bytes": 32768
+    },
+    "lab_test_tool": {
+      "module": "laboratory",
+      "purpose": "data",
+      "row_count": 59,
+      "size_bytes": 49152
+    },
+    "lab_well_mapping": {
+      "module": "laboratory",
+      "purpose": "link",
+      "row_count": 11460,
+      "size_bytes": 2064384
+    },
+    "lbbk_25-11-2565": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 1357072,
+      "size_bytes": 429555712
+    },
+    "lbbk_ก่อนปรับ labcode 362 เป็น 222": {
+      "module": "laboratory",
+      "purpose": "transaction",
+      "row_count": 1446600,
+      "size_bytes": 462077952
+    },
+    "lcgt": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 111880,
+      "size_bytes": 4734976
+    },
+    "lchronic": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 1041,
+      "size_bytes": 180224
+    },
+    "lmculture": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 37,
+      "size_bytes": 16384
+    },
+    "lmedtman": {
+      "module": "ipd",
+      "purpose": "transaction",
+      "row_count": 37221,
+      "size_bytes": 3686400
+    },
+    "lmgram": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 97,
+      "size_bytes": 32768
+    },
+    "lmkohrpt": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 8,
+      "size_bytes": 49152
+    },
+    "lmlabman": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 22,
+      "size_bytes": 32768
+    },
+    "lmlabmanpic": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 2,
+      "size_bytes": 114688
+    },
+    "lmothua": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 395,
+      "size_bytes": 65536
+    },
+    "lmpaprpt": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 27,
+      "size_bytes": 32768
+    },
+    "lmparasit": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 154,
+      "size_bytes": 49152
+    },
+    "lmplatelet": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 10,
+      "size_bytes": 32768
+    },
+    "lmpmstage": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 7,
+      "size_bytes": 49152
+    },
+    "lmpmtype": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 8,
+      "size_bytes": 49152
+    },
+    "lmrbc": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 93,
+      "size_bytes": 32768
+    },
+    "lmuacent": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 3,
+      "size_bytes": 32768
+    },
+    "lmuacolor": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 14,
+      "size_bytes": 32768
+    },
+    "lmuaepi": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 11,
+      "size_bytes": 32768
+    },
+    "lmuarbc": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 11,
+      "size_bytes": 32768
+    },
+    "lmuaturbid": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 4,
+      "size_bytes": 32768
+    },
+    "lmuawbc": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 11,
+      "size_bytes": 32768
+    },
+    "lmupt": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 2,
+      "size_bytes": 32768
+    },
+    "lmvtb": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 14,
+      "size_bytes": 32768
+    },
+    "lmwbc": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 11,
+      "size_bytes": 49152
+    },
+    "loglabdr": {
+      "module": "system",
+      "purpose": "log",
+      "row_count": 4568,
+      "size_bytes": 229376
+    },
+    "logvisit": {
+      "module": "system",
+      "purpose": "log",
+      "row_count": 18981,
+      "size_bytes": 1916928
+    },
+    "lr": {
+      "module": "hr",
+      "purpose": "data",
+      "row_count": 5616,
+      "size_bytes": 2015232
+    },
+    "lr_c": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 4,
+      "size_bytes": 32768
+    },
+    "l_activity": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 8,
+      "size_bytes": 32768
+    },
+    "l_aeplace": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 13,
+      "size_bytes": 16384
+    },
+    "l_aetype": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 19,
+      "size_bytes": 16384
+    },
+    "l_aptype": {
+      "module": "patient",
+      "purpose": "reference",
+      "row_count": 136,
+      "size_bytes": 16384
+    },
+    "l_aptype_icd": {
+      "module": "patient",
+      "purpose": "reference",
+      "row_count": 195,
+      "size_bytes": 49152
+    },
+    "l_armsling": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "l_asmsev": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 3,
+      "size_bytes": 16384
+    },
+    "l_bdoctor": {
+      "module": "opd",
+      "purpose": "data",
+      "row_count": 6,
+      "size_bytes": 16384
+    },
+    "l_benefitplan": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 12,
+      "size_bytes": 16384
+    },
+    "l_bplace": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 5,
+      "size_bytes": 16384
+    },
+    "l_btype": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 6,
+      "size_bytes": 16384
+    },
+    "l_careaccount": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 4,
+      "size_bytes": 16384
+    },
+    "l_childbottle": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 2,
+      "size_bytes": 16384
+    },
+    "l_childdev": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 3,
+      "size_bytes": 16384
+    },
+    "l_childfood": {
+      "module": "nutrition",
+      "purpose": "data",
+      "row_count": 6,
+      "size_bytes": 16384
+    },
+    "l_claimcat": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 4,
+      "size_bytes": 16384
+    },
+    "l_claimcount": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 2,
+      "size_bytes": 16384
+    },
+    "l_class": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 6,
+      "size_bytes": 16384
+    },
+    "l_clntype": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 2,
+      "size_bytes": 16384
+    },
+    "l_clopido": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "l_codefoot": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 4,
+      "size_bytes": 16384
+    },
+    "l_coderetina": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 6,
+      "size_bytes": 16384
+    },
+    "l_codeset": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 4,
+      "size_bytes": 16384
+    },
+    "l_comactivity": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 47,
+      "size_bytes": 5456
+    },
+    "l_comaeye": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 4,
+      "size_bytes": 16384
+    },
+    "l_comamove": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 6,
+      "size_bytes": 16384
+    },
+    "l_comaspeak": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 5,
+      "size_bytes": 16384
+    },
+    "l_company": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 482,
+      "size_bytes": 81920
+    },
+    "l_completion": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 2,
+      "size_bytes": 16384
+    },
+    "l_comservice": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 260,
+      "size_bytes": 25624
+    },
+    "l_copdsev": {
+      "module": "opd",
+      "purpose": "data",
+      "row_count": 4,
+      "size_bytes": 16384
+    },
+    "l_council": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 20,
+      "size_bytes": 16384
+    },
+    "l_cvdrisk": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 6,
+      "size_bytes": 16384
+    },
+    "l_dcservicehome": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 6,
+      "size_bytes": 16384
+    },
+    "l_ddd": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 341,
+      "size_bytes": 65536
+    },
+    "l_dentgum": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 7,
+      "size_bytes": 16384
+    },
+    "l_dentnprosthesis": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 4,
+      "size_bytes": 16384
+    },
+    "l_dentschooltype": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 8,
+      "size_bytes": 16384
+    },
+    "l_denttype": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 5,
+      "size_bytes": 16384
+    },
+    "l_department": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 8694,
+      "size_bytes": 908432
+    },
+    "l_disabpcu": {
+      "module": "moph",
+      "purpose": "data",
+      "row_count": 16,
+      "size_bytes": 3920
+    },
+    "l_disabtype": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 7,
+      "size_bytes": 16384
+    },
+    "l_dispestat": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 4,
+      "size_bytes": 16384
+    },
+    "l_drugflag": {
+      "module": "pharmacy",
+      "purpose": "data",
+      "row_count": 4,
+      "size_bytes": 1104
+    },
+    "l_drugs": {
+      "module": "pharmacy",
+      "purpose": "transaction",
+      "row_count": 82329,
+      "size_bytes": 11111856
+    },
+    "l_drugs_unit": {
+      "module": "pharmacy",
+      "purpose": "data",
+      "row_count": 35,
+      "size_bytes": 2748
+    },
+    "l_drug_rdu": {
+      "module": "pharmacy",
+      "purpose": "transaction",
+      "row_count": 53875,
+      "size_bytes": 13697024
+    },
+    "l_dsyscore": {
+      "module": "system",
+      "purpose": "data",
+      "row_count": 5,
+      "size_bytes": 16384
+    },
+    "l_emscode": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 9,
+      "size_bytes": 3276
+    },
+    "l_ER": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "l_funame_dnt": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 21,
+      "size_bytes": 32768
+    },
+    "l_fund": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 30,
+      "size_bytes": 81920
+    },
+    "l_fund_": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 42,
+      "size_bytes": 49152
+    },
+    "l_fund_200467": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 22,
+      "size_bytes": 81920
+    },
+    "l_garbage": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 6,
+      "size_bytes": 16384
+    },
+    "l_gennohiv": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 8,
+      "size_bytes": 16384
+    },
+    "l_groupcdt2": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 15,
+      "size_bytes": 16384
+    },
+    "l_hiv": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 7,
+      "size_bytes": 16384
+    },
+    "l_housetype": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 7,
+      "size_bytes": 16384
+    },
+    "l_icd10": {
+      "module": "icd",
+      "purpose": "transaction",
+      "row_count": 38196,
+      "size_bytes": 30064640
+    },
+    "l_icd9cm-icd10tm": {
+      "module": "icd",
+      "purpose": "transaction",
+      "row_count": 16894,
+      "size_bytes": 2637824
+    },
+    "l_income": {
+      "module": "finance",
+      "purpose": "data",
+      "row_count": 59,
+      "size_bytes": 9044
+    },
+    "l_insclcost": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 11,
+      "size_bytes": 32768
+    },
+    "l_interacttype": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 5,
+      "size_bytes": 16384
+    },
+    "l_itemserviceoth": {
+      "module": "inventory",
+      "purpose": "data",
+      "row_count": 28,
+      "size_bytes": 16384
+    },
+    "l_loads": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 5,
+      "size_bytes": 16384
+    },
+    "l_macro": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 17,
+      "size_bytes": 16384
+    },
+    "l_maplab": {
+      "module": "laboratory",
+      "purpose": "link",
+      "row_count": 46,
+      "size_bytes": 16384
+    },
+    "l_mdiuser": {
+      "module": "system",
+      "purpose": "data",
+      "row_count": 9,
+      "size_bytes": 16384
+    },
+    "l_micro": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 115,
+      "size_bytes": 16384
+    },
+    "l_nhso_dttm": {
+      "module": "opd",
+      "purpose": "data",
+      "row_count": 224,
+      "size_bytes": 212992
+    },
+    "l_ocupation": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 125,
+      "size_bytes": 16384
+    },
+    "l_ocupation1": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 129,
+      "size_bytes": 16384
+    },
+    "l_otherplan": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 6,
+      "size_bytes": 16384
+    },
+    "l_payplan": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 8,
+      "size_bytes": 16384
+    },
+    "l_popupdiagnosis": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 22,
+      "size_bytes": 49152
+    },
+    "l_ppresult": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 3,
+      "size_bytes": 16384
+    },
+    "l_prdsecode": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 7,
+      "size_bytes": 16384
+    },
+    "l_prefactor": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 34,
+      "size_bytes": 32768
+    },
+    "l_PregT": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "l_prename": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 505,
+      "size_bytes": 81920
+    },
+    "l_priority": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 9,
+      "size_bytes": 16384
+    },
+    "l_problems": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 13,
+      "size_bytes": 16384
+    },
+    "l_ptt": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "l_queue_status": {
+      "module": "appointment",
+      "purpose": "data",
+      "row_count": 6,
+      "size_bytes": 16384
+    },
+    "l_rcpt": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "l_referhosp": {
+      "module": "refer",
+      "purpose": "reference",
+      "row_count": 3,
+      "size_bytes": 16384
+    },
+    "l_reimburser": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 3,
+      "size_bytes": 16384
+    },
+    "l_resultservicehome": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 6,
+      "size_bytes": 16384
+    },
+    "l_rfrtype": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 13,
+      "size_bytes": 16384
+    },
+    "l_roomdetail": {
+      "module": "ipd",
+      "purpose": "link",
+      "row_count": 33,
+      "size_bytes": 32768
+    },
+    "l_rrttype": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 4,
+      "size_bytes": 16384
+    },
+    "l_rxdrughiv": {
+      "module": "pharmacy",
+      "purpose": "data",
+      "row_count": 4,
+      "size_bytes": 16384
+    },
+    "l_serve_point_type": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 11,
+      "size_bytes": 16384
+    },
+    "l_servpoint_status": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 2,
+      "size_bytes": 16384
+    },
+    "l_sl": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 9,
+      "size_bytes": 16384
+    },
+    "l_smitype": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 5,
+      "size_bytes": 1288
+    },
+    "l_spacer": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 6,
+      "size_bytes": 16384
+    },
+    "l_specialpp": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 292,
+      "size_bytes": 81920
+    },
+    "l_standing_order": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 2,
+      "size_bytes": 16384
+    },
+    "l_standing_order_group": {
+      "module": "ipd",
+      "purpose": "reference",
+      "row_count": 2,
+      "size_bytes": 16384
+    },
+    "l_statushiv": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 3,
+      "size_bytes": 16384
+    },
+    "l_subgroupcdt2": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 82,
+      "size_bytes": 32768
+    },
+    "l_syndrom": {
+      "module": "moph",
+      "purpose": "data",
+      "row_count": 58,
+      "size_bytes": 16384
+    },
+    "l_syndrom2": {
+      "module": "moph",
+      "purpose": "data",
+      "row_count": 58,
+      "size_bytes": 16384
+    },
+    "l_tflag": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 3,
+      "size_bytes": 16384
+    },
+    "l_tmtdrug": {
+      "module": "pharmacy",
+      "purpose": "transaction",
+      "row_count": 31463,
+      "size_bytes": 5553532
+    },
+    "l_tmtdrug1": {
+      "module": "pharmacy",
+      "purpose": "transaction",
+      "row_count": 25104,
+      "size_bytes": 2771652
+    },
+    "l_toilet": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 7,
+      "size_bytes": 16384
+    },
+    "l_ttm9": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "l_typedischncd": {
+      "module": "patient",
+      "purpose": "reference",
+      "row_count": 10,
+      "size_bytes": 16384
+    },
+    "l_typein": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 5,
+      "size_bytes": 16384
+    },
+    "l_typein_ae": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 8,
+      "size_bytes": 16384
+    },
+    "l_typeout": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 6,
+      "size_bytes": 32768
+    },
+    "l_typeserv": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 8,
+      "size_bytes": 16384
+    },
+    "l_typeservicehome": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 5,
+      "size_bytes": 16384
+    },
+    "l_vaccine_reaction_stage": {
+      "module": "vaccination",
+      "purpose": "data",
+      "row_count": 2,
+      "size_bytes": 16384
+    },
+    "l_vaccine_reaction_symptom": {
+      "module": "vaccination",
+      "purpose": "data",
+      "row_count": 11,
+      "size_bytes": 16384
+    },
+    "l_vaccine_reaction_symptom_other": {
+      "module": "vaccination",
+      "purpose": "data",
+      "row_count": 55,
+      "size_bytes": 16384
+    },
+    "l_vaccine_reaction_type": {
+      "module": "vaccination",
+      "purpose": "reference",
+      "row_count": 4,
+      "size_bytes": 16384
+    },
+    "l_vaccine_screen": {
+      "module": "vaccination",
+      "purpose": "data",
+      "row_count": 7,
+      "size_bytes": 16384
+    },
+    "l_vehicle": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 14,
+      "size_bytes": 16384
+    },
+    "l_villagerisktype": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 18,
+      "size_bytes": 16384
+    },
+    "l_viptype": {
+      "module": "patient",
+      "purpose": "reference",
+      "row_count": 6,
+      "size_bytes": 16384
+    },
+    "l_vstatus": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 5,
+      "size_bytes": 2164
+    },
+    "l_wastewater": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 3,
+      "size_bytes": 16384
+    },
+    "l_watertype": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 8,
+      "size_bytes": 16384
+    },
+    "male": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 2,
+      "size_bytes": 2088
+    },
+    "maplab": {
+      "module": "laboratory",
+      "purpose": "link",
+      "row_count": 850,
+      "size_bytes": 81920
+    },
+    "mathhn": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 125843,
+      "size_bytes": 19988480
+    },
+    "med2con": {
+      "module": "pharmacy",
+      "purpose": "data",
+      "row_count": 4,
+      "size_bytes": 32768
+    },
+    "medgrp": {
+      "module": "pharmacy",
+      "purpose": "data",
+      "row_count": 34,
+      "size_bytes": 16384
+    },
+    "meditem": {
+      "module": "pharmacy",
+      "purpose": "data",
+      "row_count": 1676,
+      "size_bytes": 1275512
+    },
+    "meditemv": {
+      "module": "pharmacy",
+      "purpose": "data",
+      "row_count": 1930,
+      "size_bytes": 913308
+    },
+    "meditem_copy1": {
+      "module": "pharmacy",
+      "purpose": "data",
+      "row_count": 1400,
+      "size_bytes": 830552
+    },
+    "medreconcile": {
+      "module": "pharmacy",
+      "purpose": "data",
+      "row_count": 1,
+      "size_bytes": 3128
+    },
+    "medtb": {
+      "module": "pharmacy",
+      "purpose": "data",
+      "row_count": 4,
+      "size_bytes": 32768
+    },
+    "medusage": {
+      "module": "pharmacy",
+      "purpose": "data",
+      "row_count": 1054,
+      "size_bytes": 104264
+    },
+    "med_edtype": {
+      "module": "pharmacy",
+      "purpose": "reference",
+      "row_count": 7,
+      "size_bytes": 2412
+    },
+    "microa": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 2251,
+      "size_bytes": 72672
+    },
+    "money": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "mooban": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 5298,
+      "size_bytes": 390860
+    },
+    "mophicall060708": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "mophicchecklist": {
+      "module": "moph",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "mophichi": {
+      "module": "moph",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "Mrsc_check_in": {
+      "module": "ipd",
+      "purpose": "transaction",
+      "row_count": 76759,
+      "size_bytes": 21544960
+    },
+    "Mrsc_docter": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 53,
+      "size_bytes": 16384
+    },
+    "Mrsc_Pl": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 15,
+      "size_bytes": 16384
+    },
+    "Mrsc_Pn": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 38,
+      "size_bytes": 16384
+    },
+    "Mrsc_Re_check": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 67224,
+      "size_bytes": 14172160
+    },
+    "Mrss_Day_User": {
+      "module": "system",
+      "purpose": "data",
+      "row_count": 8,
+      "size_bytes": 16384
+    },
+    "Mrss_IPD": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 3224,
+      "size_bytes": 2637824
+    },
+    "Mrss_OPD": {
+      "module": "opd",
+      "purpose": "data",
+      "row_count": 753,
+      "size_bytes": 409600
+    },
+    "Mrss_PA": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 5,
+      "size_bytes": 16384
+    },
+    "Mrss_PAA": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 3,
+      "size_bytes": 16384
+    },
+    "Mrss_PYY": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 66,
+      "size_bytes": 49152
+    },
+    "Mrss_R_IPD": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 2948,
+      "size_bytes": 1589248
+    },
+    "Mrss_R_OPD": {
+      "module": "opd",
+      "purpose": "data",
+      "row_count": 571,
+      "size_bytes": 229376
+    },
+    "Mrs_Center": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 10,
+      "size_bytes": 16384
+    },
+    "Mrs_Dead": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 169,
+      "size_bytes": 16384
+    },
+    "mrs_ipdsticker": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 6573,
+      "size_bytes": 1589248
+    },
+    "Mrs_newSammary": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 76378,
+      "size_bytes": 22593536
+    },
+    "Mrs_No_Pttype": {
+      "module": "patient",
+      "purpose": "reference",
+      "row_count": 32977,
+      "size_bytes": 9977856
+    },
+    "Mrs_OPD_Card": {
+      "module": "opd",
+      "purpose": "data",
+      "row_count": 2310,
+      "size_bytes": 2162688
+    },
+    "Mrs_OPD_Card_IN": {
+      "module": "opd",
+      "purpose": "data",
+      "row_count": 2182,
+      "size_bytes": 442368
+    },
+    "Mrs_OPD_EKG": {
+      "module": "opd",
+      "purpose": "data",
+      "row_count": 477,
+      "size_bytes": 114688
+    },
+    "Mrs_OPD_Sub": {
+      "module": "opd",
+      "purpose": "data",
+      "row_count": 12,
+      "size_bytes": 16384
+    },
+    "Mrs_pttype": {
+      "module": "patient",
+      "purpose": "reference",
+      "row_count": 34,
+      "size_bytes": 3620
+    },
+    "Mrs_ssDATA_IPD": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 782,
+      "size_bytes": 1589248
+    },
+    "Mrs_ssDATA_nIPD": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 350,
+      "size_bytes": 524288
+    },
+    "Mrs_ssDATA_OPD": {
+      "module": "opd",
+      "purpose": "data",
+      "row_count": 172,
+      "size_bytes": 131072
+    },
+    "Mrs_ssHealth_Check": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 4,
+      "size_bytes": 16384
+    },
+    "Mrs_ssOffice": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 42,
+      "size_bytes": 16384
+    },
+    "Mrs_ssRefer": {
+      "module": "refer",
+      "purpose": "reference",
+      "row_count": 4,
+      "size_bytes": 16384
+    },
+    "Mrs_ssRoom": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 3,
+      "size_bytes": 16384
+    },
+    "Mrs_ssType": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 2,
+      "size_bytes": 16384
+    },
+    "Mrs_ssUser": {
+      "module": "system",
+      "purpose": "data",
+      "row_count": 4,
+      "size_bytes": 16384
+    },
+    "mrtlst": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 7,
+      "size_bytes": 2196
+    },
+    "name504p": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 21,
+      "size_bytes": 32768
+    },
+    "name505p": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 75,
+      "size_bytes": 32768
+    },
+    "name506p": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 74,
+      "size_bytes": 32768
+    },
+    "nameaccp": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 16,
+      "size_bytes": 32768
+    },
+    "nameeye": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 11,
+      "size_bytes": 32768
+    },
+    "new PTTYPE": {
+      "module": "patient",
+      "purpose": "reference",
+      "row_count": 3318,
+      "size_bytes": 1589248
+    },
+    "newin": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "newIncoth": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "nhsodeadNY": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 406,
+      "size_bytes": 81920
+    },
+    "nhsodeath": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 2456958,
+      "size_bytes": 143917056
+    },
+    "nhso_adp_code": {
+      "module": "inventory",
+      "purpose": "data",
+      "row_count": 5992,
+      "size_bytes": 1736704
+    },
+    "nhso_adp_type": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 20,
+      "size_bytes": 32768
+    },
+    "nondrugitems": {
+      "module": "inventory",
+      "purpose": "data",
+      "row_count": 2000,
+      "size_bytes": 1327104
+    },
+    "nopd": {
+      "module": "opd",
+      "purpose": "data",
+      "row_count": 67,
+      "size_bytes": 16384
+    },
+    "note_detail": {
+      "module": "other",
+      "purpose": "link",
+      "row_count": 7,
+      "size_bytes": 16384
+    },
+    "ntnlty": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 93,
+      "size_bytes": 7684
+    },
+    "nurse_notes": {
+      "module": "hr",
+      "purpose": "data",
+      "row_count": 12,
+      "size_bytes": 16384
+    },
+    "oapp": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 1509969,
+      "size_bytes": 307773440
+    },
+    "oappst": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 3,
+      "size_bytes": 32768
+    },
+    "oapp_copy1": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 1191930,
+      "size_bytes": 244776960
+    },
+    "occptn": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 128,
+      "size_bytes": 11384
+    },
+    "office": {
+      "module": "nutrition",
+      "purpose": "data",
+      "row_count": 2,
+      "size_bytes": 65536
+    },
+    "op": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 199,
+      "size_bytes": 32768
+    },
+    "operation": {
+      "module": "surgery",
+      "purpose": "data",
+      "row_count": 11,
+      "size_bytes": 16384
+    },
+    "opno": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 9,
+      "size_bytes": 2228
+    },
+    "oprt": {
+      "module": "icd",
+      "purpose": "transaction",
+      "row_count": 1682120,
+      "size_bytes": 270974976
+    },
+    "opstaff": {
+      "module": "hr",
+      "purpose": "data",
+      "row_count": 97,
+      "size_bytes": 16384
+    },
+    "optriage": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 428668,
+      "size_bytes": 28344320
+    },
+    "optype": {
+      "module": "patient",
+      "purpose": "reference",
+      "row_count": 3,
+      "size_bytes": 16384
+    },
+    "optype_m": {
+      "module": "patient",
+      "purpose": "reference",
+      "row_count": 2,
+      "size_bytes": 16384
+    },
+    "orblood": {
+      "module": "blood",
+      "purpose": "data",
+      "row_count": 2,
+      "size_bytes": 16384
+    },
+    "orcasetype": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 5,
+      "size_bytes": 2164
+    },
+    "orderipd": {
+      "module": "ipd",
+      "purpose": "transaction",
+      "row_count": 406075,
+      "size_bytes": 21544960
+    },
+    "orders": {
+      "module": "system",
+      "purpose": "data",
+      "row_count": 40,
+      "size_bytes": 16384
+    },
+    "order_note": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 9,
+      "size_bytes": 16384
+    },
+    "orfind": {
+      "module": "moph",
+      "purpose": "data",
+      "row_count": 5,
+      "size_bytes": 16384
+    },
+    "orfri": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 4456,
+      "size_bytes": 360448
+    },
+    "orfro": {
+      "module": "ipd",
+      "purpose": "transaction",
+      "row_count": 71789,
+      "size_bytes": 10010624
+    },
+    "orfupr": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 119,
+      "size_bytes": 12108
+    },
+    "ormed": {
+      "module": "pharmacy",
+      "purpose": "data",
+      "row_count": 73,
+      "size_bytes": 49152
+    },
+    "oroption": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 11,
+      "size_bytes": 16384
+    },
+    "orrgt": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 130,
+      "size_bytes": 98304
+    },
+    "orroom": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 11,
+      "size_bytes": 16384
+    },
+    "ors": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 145,
+      "size_bytes": 13628
+    },
+    "orstaff": {
+      "module": "hr",
+      "purpose": "data",
+      "row_count": 33,
+      "size_bytes": 16384
+    },
+    "ortwrk": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 11,
+      "size_bytes": 16384
+    },
+    "orwound": {
+      "module": "moph",
+      "purpose": "data",
+      "row_count": 11,
+      "size_bytes": 16384
+    },
+    "ositb": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 9248,
+      "size_bytes": 720896
+    },
+    "ovst": {
+      "module": "opd",
+      "purpose": "transaction",
+      "row_count": 3248483,
+      "size_bytes": 778076160
+    },
+    "ovstdr": {
+      "module": "opd",
+      "purpose": "transaction",
+      "row_count": 5997041,
+      "size_bytes": 437813248
+    },
+    "ovstdx": {
+      "module": "opd",
+      "purpose": "transaction",
+      "row_count": 4008465,
+      "size_bytes": 328630272
+    },
+    "ovstdx_28-11-2565": {
+      "module": "opd",
+      "purpose": "transaction",
+      "row_count": 3561541,
+      "size_bytes": 279265280
+    },
+    "ovstist": {
+      "module": "opd",
+      "purpose": "data",
+      "row_count": 4,
+      "size_bytes": 16384
+    },
+    "ovstost": {
+      "module": "opd",
+      "purpose": "data",
+      "row_count": 5,
+      "size_bytes": 16384
+    },
+    "ovststatus": {
+      "module": "opd",
+      "purpose": "transaction",
+      "row_count": 1368963,
+      "size_bytes": 56180736
+    },
+    "ovst_28-11-2565": {
+      "module": "opd",
+      "purpose": "transaction",
+      "row_count": 2669147,
+      "size_bytes": 643694592
+    },
+    "ovst_lso": {
+      "module": "opd",
+      "purpose": "transaction",
+      "row_count": 13629,
+      "size_bytes": 2965504
+    },
+    "ovst_view": {
+      "module": "opd",
+      "purpose": "data",
+      "row_count": 9345,
+      "size_bytes": 1949696
+    },
+    "o_archive_all": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 2,
+      "size_bytes": 16384
+    },
+    "o_archive_all_json": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 1709071,
+      "size_bytes": 1111490560
+    },
+    "pcn": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 24,
+      "size_bytes": 65536
+    },
+    "pcukao": {
+      "module": "moph",
+      "purpose": "data",
+      "row_count": 34,
+      "size_bytes": 16384
+    },
+    "pcukud": {
+      "module": "moph",
+      "purpose": "data",
+      "row_count": 84,
+      "size_bytes": 16384
+    },
+    "pcunoon": {
+      "module": "moph",
+      "purpose": "data",
+      "row_count": 50,
+      "size_bytes": 16384
+    },
+    "pcusewi": {
+      "module": "moph",
+      "purpose": "data",
+      "row_count": 286,
+      "size_bytes": 65536
+    },
+    "pcusuk": {
+      "module": "moph",
+      "purpose": "data",
+      "row_count": 129,
+      "size_bytes": 16384
+    },
+    "pcuyang": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 18,
+      "size_bytes": 16384
+    },
+    "PERSON": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 105707,
+      "size_bytes": 18399232
+    },
+    "personconsent": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 14,
+      "size_bytes": 32768
+    },
+    "persong6pd": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 405,
+      "size_bytes": 32768
+    },
+    "PERSONk": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 686,
+      "size_bytes": 131072
+    },
+    "PERSONm": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 369,
+      "size_bytes": 81920
+    },
+    "person_drp": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 2,
+      "size_bytes": 16384
+    },
+    "phistory": {
+      "module": "moph",
+      "purpose": "log",
+      "row_count": 6898284,
+      "size_bytes": 778534912
+    },
+    "phmdr": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 185841,
+      "size_bytes": 9977856
+    },
+    "phm_medreconcile": {
+      "module": "pharmacy",
+      "purpose": "data",
+      "row_count": 73,
+      "size_bytes": 16384
+    },
+    "phm_ptmed": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 2,
+      "size_bytes": 16384
+    },
+    "phm_user": {
+      "module": "system",
+      "purpose": "data",
+      "row_count": 3,
+      "size_bytes": 16384
+    },
+    "phrmcst": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 19,
+      "size_bytes": 16384
+    },
+    "phr_visit_log": {
+      "module": "system",
+      "purpose": "log",
+      "row_count": 614315,
+      "size_bytes": 69828608
+    },
+    "pillness": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 8276320,
+      "size_bytes": 727547904
+    },
+    "pitsanu": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 3,
+      "size_bytes": 16384
+    },
+    "plan_treat": {
+      "module": "ipd",
+      "purpose": "transaction",
+      "row_count": 92672,
+      "size_bytes": 13156352
+    },
+    "pname": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 505,
+      "size_bytes": 49152
+    },
+    "pointphm": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 4,
+      "size_bytes": 16384
+    },
+    "postlr_c": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 3,
+      "size_bytes": 16384
+    },
+    "pprestype": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 3,
+      "size_bytes": 16384
+    },
+    "prcd": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 918,
+      "size_bytes": 143028
+    },
+    "prcd55": {
+      "module": "finance",
+      "purpose": "data",
+      "row_count": 452,
+      "size_bytes": 57792
+    },
+    "prcdv": {
+      "module": "finance",
+      "purpose": "data",
+      "row_count": 452,
+      "size_bytes": 57792
+    },
+    "prcd_kn": {
+      "module": "finance",
+      "purpose": "data",
+      "row_count": 302,
+      "size_bytes": 37220
+    },
+    "prcd_n": {
+      "module": "finance",
+      "purpose": "data",
+      "row_count": 452,
+      "size_bytes": 57792
+    },
+    "prcd_pb": {
+      "module": "finance",
+      "purpose": "data",
+      "row_count": 304,
+      "size_bytes": 47784
+    },
+    "prcd_pbh": {
+      "module": "finance",
+      "purpose": "data",
+      "row_count": 807,
+      "size_bytes": 131508
+    },
+    "prelr_c": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 6,
+      "size_bytes": 32768
+    },
+    "proc_perform": {
+      "module": "moph",
+      "purpose": "data",
+      "row_count": 5,
+      "size_bytes": 16384
+    },
+    "productcat": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 7,
+      "size_bytes": 1244
+    },
+    "profile_app": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 16,
+      "size_bytes": 16384
+    },
+    "progress_note": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 3,
+      "size_bytes": 49152
+    },
+    "prsc": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 2819717,
+      "size_bytes": 601817088
+    },
+    "prscdt": {
+      "module": "pharmacy",
+      "purpose": "transaction",
+      "row_count": 10698227,
+      "size_bytes": 1474936832
+    },
+    "prscpoint": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 811250,
+      "size_bytes": 74579968
+    },
+    "prsc_up23": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 1484983,
+      "size_bytes": 324599808
+    },
+    "psn_admin_verify": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 4,
+      "size_bytes": 2212
+    },
+    "psn_config": {
+      "module": "patient",
+      "purpose": "reference",
+      "row_count": 5,
+      "size_bytes": 2168
+    },
+    "psn_control_w": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 863,
+      "size_bytes": 37476
+    },
+    "psn_dprtm": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 146,
+      "size_bytes": 16384
+    },
+    "psn_dprtm_child": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 3,
+      "size_bytes": 16384
+    },
+    "psn_finger_server": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 15,
+      "size_bytes": 2772
+    },
+    "psn_latype": {
+      "module": "patient",
+      "purpose": "reference",
+      "row_count": 7,
+      "size_bytes": 16384
+    },
+    "psn_ot_doc_total": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 3,
+      "size_bytes": 2132
+    },
+    "psn_position": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 187,
+      "size_bytes": 10676
+    },
+    "psn_prefix": {
+      "module": "patient",
+      "purpose": "reference",
+      "row_count": 227,
+      "size_bytes": 12452
+    },
+    "psn_prefix_02-10-2566": {
+      "module": "patient",
+      "purpose": "reference",
+      "row_count": 17,
+      "size_bytes": 16384
+    },
+    "psn_prename": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 505,
+      "size_bytes": 81920
+    },
+    "psn_salary_type": {
+      "module": "patient",
+      "purpose": "reference",
+      "row_count": 14,
+      "size_bytes": 16384
+    },
+    "psn_timer": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 1,
+      "size_bytes": 2065
+    },
+    "psn_timer_history": {
+      "module": "patient",
+      "purpose": "log",
+      "row_count": 1,
+      "size_bytes": 2063
+    },
+    "psn_time_work": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 12,
+      "size_bytes": 2300
+    },
+    "pt": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 181351,
+      "size_bytes": 70402048
+    },
+    "ptble": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 4910,
+      "size_bytes": 1589248
+    },
+    "PTINFO": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 171129,
+      "size_bytes": 19788944
+    },
+    "PTTY": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 107,
+      "size_bytes": 49152
+    },
+    "pttype": {
+      "module": "patient",
+      "purpose": "reference",
+      "row_count": 96,
+      "size_bytes": 13244
+    },
+    "pttype_03-10-67": {
+      "module": "patient",
+      "purpose": "reference",
+      "row_count": 92,
+      "size_bytes": 10440
+    },
+    "pttype_smm": {
+      "module": "patient",
+      "purpose": "reference",
+      "row_count": 64,
+      "size_bytes": 5324
+    },
+    "pttype_ก่อนเพิ่มสิทธิ์ใหม่": {
+      "module": "patient",
+      "purpose": "reference",
+      "row_count": 85,
+      "size_bytes": 8604
+    },
+    "pt_meded": {
+      "module": "pharmacy",
+      "purpose": "transaction",
+      "row_count": 98485,
+      "size_bytes": 8962048
+    },
+    "pt_pab": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 113838,
+      "size_bytes": 55230464
+    },
+    "pt_pab_nocutperson": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 115303,
+      "size_bytes": 56279040
+    },
+    "pt_ก่อนปรับสิทธิ์การรักษา": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 181305,
+      "size_bytes": 63029248
+    },
+    "pt_ก่อนปรับสิทธิ์การรักษา 30-10-66-14-41": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 184437,
+      "size_bytes": 63029248
+    },
+    "q4u_departments": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 45,
+      "size_bytes": 16384
+    },
+    "q4u_docinroom": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 2273,
+      "size_bytes": 229376
+    },
+    "q4u_grouppriority": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 10,
+      "size_bytes": 16384
+    },
+    "q4u_malename": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 2,
+      "size_bytes": 16384
+    },
+    "q4u_monitorshow": {
+      "module": "appointment",
+      "purpose": "data",
+      "row_count": 3,
+      "size_bytes": 32768
+    },
+    "q4u_number": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 200,
+      "size_bytes": 16384
+    },
+    "q4u_nursename": {
+      "module": "hr",
+      "purpose": "data",
+      "row_count": 7,
+      "size_bytes": 16384
+    },
+    "q4u_person": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 74790,
+      "size_bytes": 7880704
+    },
+    "q4u_priorities": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 19,
+      "size_bytes": 16384
+    },
+    "q4u_queue": {
+      "module": "appointment",
+      "purpose": "transaction",
+      "row_count": 663582,
+      "size_bytes": 286097408
+    },
+    "q4u_queue_detail": {
+      "module": "appointment",
+      "purpose": "link",
+      "row_count": 194,
+      "size_bytes": 16384
+    },
+    "q4u_queue_group_detail": {
+      "module": "appointment",
+      "purpose": "reference",
+      "row_count": 4152,
+      "size_bytes": 212992
+    },
+    "q4u_queue_number": {
+      "module": "appointment",
+      "purpose": "transaction",
+      "row_count": 26400,
+      "size_bytes": 1589248
+    },
+    "q4u_queue_status": {
+      "module": "appointment",
+      "purpose": "data",
+      "row_count": 6,
+      "size_bytes": 16384
+    },
+    "q4u_service_points": {
+      "module": "moph",
+      "purpose": "data",
+      "row_count": 43,
+      "size_bytes": 49152
+    },
+    "q4u_service_point_prefix": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 4,
+      "size_bytes": 16384
+    },
+    "q4u_service_point_status": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 2,
+      "size_bytes": 16384
+    },
+    "q4u_service_rooms": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 56,
+      "size_bytes": 32768
+    },
+    "q4u_setroom": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 5,
+      "size_bytes": 16384
+    },
+    "q4u_sounds": {
+      "module": "moph",
+      "purpose": "data",
+      "row_count": 12,
+      "size_bytes": 16384
+    },
+    "q4u_tokens": {
+      "module": "system",
+      "purpose": "data",
+      "row_count": 2,
+      "size_bytes": 16384
+    },
+    "q4u_usernurse": {
+      "module": "hr",
+      "purpose": "data",
+      "row_count": 6,
+      "size_bytes": 16384
+    },
+    "q4u_users": {
+      "module": "system",
+      "purpose": "data",
+      "row_count": 7,
+      "size_bytes": 65536
+    },
+    "q4u_user_service_points": {
+      "module": "system",
+      "purpose": "data",
+      "row_count": 12,
+      "size_bytes": 32768
+    },
+    "queue": {
+      "module": "appointment",
+      "purpose": "data",
+      "row_count": 48,
+      "size_bytes": 16384
+    },
+    "queue_call": {
+      "module": "appointment",
+      "purpose": "data",
+      "row_count": 2,
+      "size_bytes": 16384
+    },
+    "queue_detail": {
+      "module": "appointment",
+      "purpose": "link",
+      "row_count": 6,
+      "size_bytes": 16384
+    },
+    "queue_number": {
+      "module": "appointment",
+      "purpose": "data",
+      "row_count": 8,
+      "size_bytes": 16384
+    },
+    "que_config": {
+      "module": "system",
+      "purpose": "reference",
+      "row_count": 17,
+      "size_bytes": 32768
+    },
+    "que_openapp": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 12,
+      "size_bytes": 16384
+    },
+    "que_output_tv": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 3,
+      "size_bytes": 16384
+    },
+    "que_printer": {
+      "module": "report",
+      "purpose": "data",
+      "row_count": 3,
+      "size_bytes": 16384
+    },
+    "que_printer_sticker": {
+      "module": "report",
+      "purpose": "data",
+      "row_count": 5,
+      "size_bytes": 49152
+    },
+    "que_printserver": {
+      "module": "report",
+      "purpose": "data",
+      "row_count": 4,
+      "size_bytes": 32768
+    },
+    "que_type_group": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 3,
+      "size_bytes": 16384
+    },
+    "que_user": {
+      "module": "system",
+      "purpose": "data",
+      "row_count": 9,
+      "size_bytes": 32768
+    },
+    "que_webserver": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 3,
+      "size_bytes": 32768
+    },
+    "rcedit": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 815,
+      "size_bytes": 114688
+    },
+    "rcpt": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 563037,
+      "size_bytes": 86114304
+    },
+    "rcpt_15.09.59": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 335083,
+      "size_bytes": 46235648
+    },
+    "rcstaff": {
+      "module": "hr",
+      "purpose": "data",
+      "row_count": 27,
+      "size_bytes": 16384
+    },
+    "rcv_comp": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 9,
+      "size_bytes": 16384
+    },
+    "referresult": {
+      "module": "refer",
+      "purpose": "reference",
+      "row_count": 561,
+      "size_bytes": 458752
+    },
+    "referresulto": {
+      "module": "refer",
+      "purpose": "reference",
+      "row_count": 4,
+      "size_bytes": 65536
+    },
+    "registerfu": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 164521,
+      "size_bytes": 9514616
+    },
+    "registersendpost": {
+      "module": "moph",
+      "purpose": "data",
+      "row_count": 223,
+      "size_bytes": 32768
+    },
+    "registertb": {
+      "module": "pharmacy",
+      "purpose": "data",
+      "row_count": 606,
+      "size_bytes": 65536
+    },
+    "regis_com": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 155,
+      "size_bytes": 10032
+    },
+    "relinscl": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 4,
+      "size_bytes": 2128
+    },
+    "repform": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 199,
+      "size_bytes": 13716
+    },
+    "reportbun": {
+      "module": "report",
+      "purpose": "data",
+      "row_count": 33,
+      "size_bytes": 16384
+    },
+    "reportoth": {
+      "module": "report",
+      "purpose": "data",
+      "row_count": 58,
+      "size_bytes": 65536
+    },
+    "report_admit": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "report_admit_dc": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "report_error_mdr": {
+      "module": "system",
+      "purpose": "log",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "report_er_dx": {
+      "module": "report",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "report_fs": {
+      "module": "report",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "report_grouppdx": {
+      "module": "report",
+      "purpose": "reference",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "report_ip_dx": {
+      "module": "report",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "report_ip_visit": {
+      "module": "report",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "report_op_diag": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "report_op_visit": {
+      "module": "report",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "report_other_pp": {
+      "module": "report",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "report_refer": {
+      "module": "refer",
+      "purpose": "reference",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "report_refer_er": {
+      "module": "refer",
+      "purpose": "reference",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "report_refer_ip": {
+      "module": "refer",
+      "purpose": "reference",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "report_refer_op": {
+      "module": "refer",
+      "purpose": "reference",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "report_visit": {
+      "module": "report",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "reptype": {
+      "module": "patient",
+      "purpose": "reference",
+      "row_count": 15,
+      "size_bytes": 2404
+    },
+    "rep_claim": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 37,
+      "size_bytes": 16384
+    },
+    "req_change_pttype": {
+      "module": "patient",
+      "purpose": "reference",
+      "row_count": 320,
+      "size_bytes": 16384
+    },
+    "req_pttype": {
+      "module": "patient",
+      "purpose": "reference",
+      "row_count": 3,
+      "size_bytes": 16384
+    },
+    "rfrcs": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 10,
+      "size_bytes": 2480
+    },
+    "rights": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 4,
+      "size_bytes": 2148
+    },
+    "rlgn": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 6,
+      "size_bytes": 2168
+    },
+    "roche": {
+      "module": "laboratory",
+      "purpose": "data",
+      "row_count": 70,
+      "size_bytes": 16384
+    },
+    "role_app": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 3,
+      "size_bytes": 16384
+    },
+    "rtn": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 497,
+      "size_bytes": 33504
+    },
+    "rtnadvice": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 24,
+      "size_bytes": 16384
+    },
+    "rtnallggrp": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 4,
+      "size_bytes": 32768
+    },
+    "rtnallggrpdt": {
+      "module": "pharmacy",
+      "purpose": "data",
+      "row_count": 41,
+      "size_bytes": 32768
+    },
+    "rtndt": {
+      "module": "moph",
+      "purpose": "data",
+      "row_count": 1648,
+      "size_bytes": 122704
+    },
+    "rtni": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 25,
+      "size_bytes": 4880
+    },
+    "rtnidt": {
+      "module": "pharmacy",
+      "purpose": "data",
+      "row_count": 107,
+      "size_bytes": 12904
+    },
+    "rtnl": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 62,
+      "size_bytes": 6676
+    },
+    "rtnldt": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 405,
+      "size_bytes": 20388
+    },
+    "rtnlfu": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 27,
+      "size_bytes": 3688
+    },
+    "rtnlfudt": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 125,
+      "size_bytes": 9668
+    },
+    "RWipd": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "schedules": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 94677,
+      "size_bytes": 3686400
+    },
+    "school": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 40,
+      "size_bytes": 2860
+    },
+    "screen": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 14661,
+      "size_bytes": 1818624
+    },
+    "scrub": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 54,
+      "size_bytes": 32768
+    },
+    "scr_it": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 11415,
+      "size_bytes": 4734976
+    },
+    "scr_it8q": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 70,
+      "size_bytes": 16384
+    },
+    "scr_it9q": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 73,
+      "size_bytes": 16384
+    },
+    "service_medusage": {
+      "module": "pharmacy",
+      "purpose": "data",
+      "row_count": 9,
+      "size_bytes": 49152
+    },
+    "service_point": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 3,
+      "size_bytes": 16384
+    },
+    "service_room": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 5,
+      "size_bytes": 16384
+    },
+    "service_type": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 3118600,
+      "size_bytes": 83460096
+    },
+    "sign": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 3989291,
+      "size_bytes": 577798144
+    },
+    "signk320": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 501,
+      "size_bytes": 20364
+    },
+    "sign_backup_all": {
+      "module": "system",
+      "purpose": "data",
+      "row_count": 1503,
+      "size_bytes": 114688
+    },
+    "sign_d": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 295735,
+      "size_bytes": 51544064
+    },
+    "sign_d0": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 321,
+      "size_bytes": 29756
+    },
+    "sign_merged_01": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 25184,
+      "size_bytes": 1589248
+    },
+    "sign_merged_02": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 71233,
+      "size_bytes": 4734976
+    },
+    "sign_merged_03": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 6416349,
+      "size_bytes": 448774144
+    },
+    "sitincoth": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 8472,
+      "size_bytes": 491520
+    },
+    "sitincothi": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 542,
+      "size_bytes": 65536
+    },
+    "sitincotho": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 11325,
+      "size_bytes": 638976
+    },
+    "spclty": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 11,
+      "size_bytes": 16384
+    },
+    "specialpp": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 65811,
+      "size_bytes": 3686400
+    },
+    "ssop_billitem": {
+      "module": "finance",
+      "purpose": "data",
+      "row_count": 1414,
+      "size_bytes": 148128
+    },
+    "ssop_billtran": {
+      "module": "finance",
+      "purpose": "data",
+      "row_count": 371,
+      "size_bytes": 66596
+    },
+    "ssop_ccode": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 24,
+      "size_bytes": 7612
+    },
+    "ssop_config": {
+      "module": "system",
+      "purpose": "reference",
+      "row_count": 10,
+      "size_bytes": 16384
+    },
+    "ssop_dispenseditem": {
+      "module": "inventory",
+      "purpose": "data",
+      "row_count": 701,
+      "size_bytes": 74864
+    },
+    "ssop_dispensing": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 225,
+      "size_bytes": 42456
+    },
+    "ssop_opdx": {
+      "module": "opd",
+      "purpose": "data",
+      "row_count": 466,
+      "size_bytes": 32676
+    },
+    "ssop_opservices": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 1513,
+      "size_bytes": 209580
+    },
+    "ssop_opservices_log": {
+      "module": "system",
+      "purpose": "log",
+      "row_count": 156,
+      "size_bytes": 23056
+    },
+    "staff_master": {
+      "module": "hr",
+      "purpose": "reference",
+      "row_count": 808,
+      "size_bytes": 475136
+    },
+    "staff_master_dedup": {
+      "module": "hr",
+      "purpose": "reference",
+      "row_count": 730,
+      "size_bytes": 393216
+    },
+    "standing_order_items": {
+      "module": "inventory",
+      "purpose": "data",
+      "row_count": 3,
+      "size_bytes": 16384
+    },
+    "statustb": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 5,
+      "size_bytes": 16384
+    },
+    "stm6702": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 408,
+      "size_bytes": 65536
+    },
+    "stm6703": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 480,
+      "size_bytes": 81920
+    },
+    "stm6704": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 403,
+      "size_bytes": 65536
+    },
+    "stm6705": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 648,
+      "size_bytes": 98304
+    },
+    "stm6706": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 582,
+      "size_bytes": 81920
+    },
+    "stm6707": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 555,
+      "size_bytes": 81920
+    },
+    "stm6801": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 610,
+      "size_bytes": 98304
+    },
+    "stm6802": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 519,
+      "size_bytes": 81920
+    },
+    "stm6803": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 534,
+      "size_bytes": 81920
+    },
+    "stm6804": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 473,
+      "size_bytes": 81920
+    },
+    "stm6805": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 493,
+      "size_bytes": 81920
+    },
+    "stm6806": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 349,
+      "size_bytes": 65536
+    },
+    "subinscl": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 12,
+      "size_bytes": 2468
+    },
+    "surgtype": {
+      "module": "other",
+      "purpose": "reference",
+      "row_count": 11,
+      "size_bytes": 16384
+    },
+    "sur_comp": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 5,
+      "size_bytes": 16384
+    },
+    "symptm": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 4429310,
+      "size_bytes": 603357184
+    },
+    "symptom": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 5027,
+      "size_bytes": 365980
+    },
+    "symp_d": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 307497,
+      "size_bytes": 46268416
+    },
+    "symp_d0": {
+      "module": "patient",
+      "purpose": "data",
+      "row_count": 359,
+      "size_bytes": 31604
+    },
+    "tbcase": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 22,
+      "size_bytes": 32768
+    },
+    "testinser": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 1000,
+      "size_bytes": 81920
+    },
+    "thaicancerbase_his": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "thaicancerbase_his-old": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "toydm": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "toyht": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "tpodi": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 6,
+      "size_bytes": 16384
+    },
+    "tpodidt": {
+      "module": "laboratory",
+      "purpose": "data",
+      "row_count": 3,
+      "size_bytes": 16384
+    },
+    "triage": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 5,
+      "size_bytes": 2148
+    },
+    "tumbon": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 8100,
+      "size_bytes": 543356
+    },
+    "tumbontb": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 32,
+      "size_bytes": 3824
+    },
+    "txr": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 41,
+      "size_bytes": 32768
+    },
+    "typemed_claim": {
+      "module": "pharmacy",
+      "purpose": "reference",
+      "row_count": 6,
+      "size_bytes": 16384
+    },
+    "t_chronic": {
+      "module": "chronic",
+      "purpose": "transaction",
+      "row_count": 895474,
+      "size_bytes": 136740084
+    },
+    "uri": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 51,
+      "size_bytes": 16384
+    },
+    "user": {
+      "module": "system",
+      "purpose": "data",
+      "row_count": 21,
+      "size_bytes": 49152
+    },
+    "users": {
+      "module": "system",
+      "purpose": "data",
+      "row_count": 19,
+      "size_bytes": 16384
+    },
+    "user_app": {
+      "module": "system",
+      "purpose": "data",
+      "row_count": 17,
+      "size_bytes": 16384
+    },
+    "vaccine": {
+      "module": "vaccination",
+      "purpose": "data",
+      "row_count": 26,
+      "size_bytes": 32768
+    },
+    "vaccine060764": {
+      "module": "vaccination",
+      "purpose": "data",
+      "row_count": 230,
+      "size_bytes": 147456
+    },
+    "vaccine07062564check": {
+      "module": "vaccination",
+      "purpose": "data",
+      "row_count": 248,
+      "size_bytes": 81920
+    },
+    "vaccineaefi": {
+      "module": "vaccination",
+      "purpose": "data",
+      "row_count": 1033,
+      "size_bytes": 507904
+    },
+    "vaccineall0664": {
+      "module": "appointment",
+      "purpose": "data",
+      "row_count": 408,
+      "size_bytes": 131072
+    },
+    "vaccineallmonth060708": {
+      "module": "appointment",
+      "purpose": "data",
+      "row_count": 9855,
+      "size_bytes": 2637824
+    },
+    "vaccineallmonth060708new": {
+      "module": "appointment",
+      "purpose": "data",
+      "row_count": 9817,
+      "size_bytes": 2637824
+    },
+    "vaccinedrready": {
+      "module": "appointment",
+      "purpose": "data",
+      "row_count": 187,
+      "size_bytes": 65536
+    },
+    "vaccinemap": {
+      "module": "vaccination",
+      "purpose": "link",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "vaccinenotappoint": {
+      "module": "vaccination",
+      "purpose": "data",
+      "row_count": 99,
+      "size_bytes": 16384
+    },
+    "vaccineoffline": {
+      "module": "vaccination",
+      "purpose": "data",
+      "row_count": 275,
+      "size_bytes": 49152
+    },
+    "vaccine_genqrcode": {
+      "module": "vaccination",
+      "purpose": "transaction",
+      "row_count": 11724,
+      "size_bytes": 1589248
+    },
+    "vaccine_genqrcode1": {
+      "module": "vaccination",
+      "purpose": "data",
+      "row_count": 40,
+      "size_bytes": 16384
+    },
+    "vaccine_genqrcode_copy1": {
+      "module": "vaccination",
+      "purpose": "data",
+      "row_count": 9,
+      "size_bytes": 16384
+    },
+    "vaccine_mophic": {
+      "module": "vaccination",
+      "purpose": "transaction",
+      "row_count": 64202,
+      "size_bytes": 11567104
+    },
+    "vaccine_mophic_copy1": {
+      "module": "vaccination",
+      "purpose": "data",
+      "row_count": 98,
+      "size_bytes": 32768
+    },
+    "vaccine_mophic_copy2": {
+      "module": "vaccination",
+      "purpose": "transaction",
+      "row_count": 39538,
+      "size_bytes": 7241728
+    },
+    "vaccine_mophic_error_log": {
+      "module": "vaccination",
+      "purpose": "log",
+      "row_count": 7,
+      "size_bytes": 16384
+    },
+    "vaccine_mophic_error_log_copy1": {
+      "module": "vaccination",
+      "purpose": "log",
+      "row_count": 198,
+      "size_bytes": 376832
+    },
+    "vaccine_mophic_history": {
+      "module": "vaccination",
+      "purpose": "log",
+      "row_count": 10171,
+      "size_bytes": 118112256
+    },
+    "vaccine_mophic_lab_log": {
+      "module": "laboratory",
+      "purpose": "log",
+      "row_count": 2242,
+      "size_bytes": 196608
+    },
+    "vaccine_mophic_vaccination_list": {
+      "module": "vaccination",
+      "purpose": "transaction",
+      "row_count": 35148,
+      "size_bytes": 7372800
+    },
+    "vaccine_pregnancy": {
+      "module": "vaccination",
+      "purpose": "data",
+      "row_count": 166,
+      "size_bytes": 16384
+    },
+    "vacineonline20210713": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 317,
+      "size_bytes": 49152
+    },
+    "view_address": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "view_pt_log": {
+      "module": "system",
+      "purpose": "log",
+      "row_count": 1158,
+      "size_bytes": 212992
+    },
+    "visit2q": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 148980,
+      "size_bytes": 6324224
+    },
+    "visit8q": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 1946,
+      "size_bytes": 163840
+    },
+    "visit9q": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 2746,
+      "size_bytes": 212992
+    },
+    "visitadvice": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 17561,
+      "size_bytes": 3276800
+    },
+    "visitanc": {
+      "module": "ipd",
+      "purpose": "data",
+      "row_count": 5,
+      "size_bytes": 16384
+    },
+    "visitcvdrisk": {
+      "module": "laboratory",
+      "purpose": "transaction",
+      "row_count": 67525,
+      "size_bytes": 5275648
+    },
+    "visitdental": {
+      "module": "dental",
+      "purpose": "data",
+      "row_count": 9666,
+      "size_bytes": 1703936
+    },
+    "visitdiagtext": {
+      "module": "icd",
+      "purpose": "data",
+      "row_count": 67,
+      "size_bytes": 16384
+    },
+    "visitdrscreenncd": {
+      "module": "moph",
+      "purpose": "data",
+      "row_count": 272,
+      "size_bytes": 65536
+    },
+    "visitelderly": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 28,
+      "size_bytes": 32768
+    },
+    "visitevalutedruguse_ttm": {
+      "module": "pharmacy",
+      "purpose": "transaction",
+      "row_count": 87016,
+      "size_bytes": 4227072
+    },
+    "visitgfr": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 728114,
+      "size_bytes": 30474240
+    },
+    "visititemoth": {
+      "module": "inventory",
+      "purpose": "transaction",
+      "row_count": 12807,
+      "size_bytes": 2015232
+    },
+    "visitnursenote": {
+      "module": "hr",
+      "purpose": "data",
+      "row_count": 2,
+      "size_bytes": 49152
+    },
+    "visitoae": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 701,
+      "size_bytes": 65536
+    },
+    "visitpriorities": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 644133,
+      "size_bytes": 25198592
+    },
+    "visitprt": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 80424,
+      "size_bytes": 4734976
+    },
+    "visitpttype": {
+      "module": "patient",
+      "purpose": "reference",
+      "row_count": 27280,
+      "size_bytes": 2048000
+    },
+    "visitqueueid": {
+      "module": "appointment",
+      "purpose": "transaction",
+      "row_count": 772245,
+      "size_bytes": 45170688
+    },
+    "visitqueueid_copy1": {
+      "module": "appointment",
+      "purpose": "transaction",
+      "row_count": 494026,
+      "size_bytes": 28377088
+    },
+    "visitratetriage": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 48925,
+      "size_bytes": 4227072
+    },
+    "visitrequest_note": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 4,
+      "size_bytes": 32768
+    },
+    "visitrrt": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 72,
+      "size_bytes": 32768
+    },
+    "visitscreencovid19": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 2,
+      "size_bytes": 32768
+    },
+    "visitscreenfootncd": {
+      "module": "moph",
+      "purpose": "data",
+      "row_count": 1851,
+      "size_bytes": 262144
+    },
+    "visitsosscore": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 158167,
+      "size_bytes": 7372800
+    },
+    "visit_pop": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 0,
+      "size_bytes": 0
+    },
+    "vital_sign": {
+      "module": "blood",
+      "purpose": "data",
+      "row_count": 12,
+      "size_bytes": 32768
+    },
+    "VR10949": {
+      "module": "patient",
+      "purpose": "transaction",
+      "row_count": 55730,
+      "size_bytes": 4734976
+    },
+    "vrcode": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 28,
+      "size_bytes": 16384
+    },
+    "woundtype": {
+      "module": "moph",
+      "purpose": "reference",
+      "row_count": 5,
+      "size_bytes": 16384
+    },
+    "xdose": {
+      "module": "other",
+      "purpose": "transaction",
+      "row_count": 2113217,
+      "size_bytes": 79265792
+    },
+    "xray": {
+      "module": "xray",
+      "purpose": "data",
+      "row_count": 209,
+      "size_bytes": 52752
+    },
+    "xrydr": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 2,
+      "size_bytes": 5192
+    },
+    "xrylend": {
+      "module": "moph",
+      "purpose": "data",
+      "row_count": 30,
+      "size_bytes": 16384
+    },
+    "xryremark": {
+      "module": "other",
+      "purpose": "data",
+      "row_count": 1132,
+      "size_bytes": 55052
+    },
+    "xryrgt": {
+      "module": "ipd",
+      "purpose": "transaction",
+      "row_count": 254290,
+      "size_bytes": 84049920
+    },
+    "xryrqt": {
+      "module": "ipd",
+      "purpose": "transaction",
+      "row_count": 252152,
+      "size_bytes": 47284224
+    },
+    "xrystaff": {
+      "module": "hr",
+      "purpose": "data",
+      "row_count": 11,
+      "size_bytes": 16384
+    }
+  },
+  "statistics": {
+    "total_tables": 847,
+    "modules_count": 25,
+    "unclassified_count": 322
+  }
+}

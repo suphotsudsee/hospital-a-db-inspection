@@ -1,0 +1,143 @@
+{
+  "project_type": "dashboard-nextjs",
+  "project_name": "hospital-db-dashboard",
+  "description": "สร้าง Dashboard จริงแบบ Next.js + API สำหรับโครงการตรวจสอบฐานข้อมูลโรงพยาบาล",
+  "created_at": "2026-03-20T11:32:00+07:00",
+  "phases": [
+    {
+      "phase": 1,
+      "name": "Task Planning",
+      "agent": "02-task-planner",
+      "status": "PENDING",
+      "depends_on": [],
+      "expected_outputs": [
+        "outputs/dashboard_tasks.md",
+        "state/dashboard_plan.json"
+      ],
+      "description": "วิเคราะห์ข้อมูล inspection และวางแผน Dashboard features, pages, API endpoints"
+    },
+    {
+      "phase": 2,
+      "name": "System Architecture",
+      "agent": "17-system-architect",
+      "status": "PENDING",
+      "depends_on": ["Task Planning"],
+      "expected_outputs": [
+        "outputs/system_architecture.md",
+        "outputs/api_spec.json"
+      ],
+      "description": "ออกแบบโครงสร้างโปรเจกต์ Next.js, folder structure, API design, database connection strategy"
+    },
+    {
+      "phase": 3,
+      "name": "Dashboard Architecture",
+      "agent": "13-dashboard-architect",
+      "status": "PENDING",
+      "depends_on": ["System Architecture"],
+      "expected_outputs": [
+        "outputs/dashboard_components.md",
+        "outputs/dashboard_layout.json"
+      ],
+      "description": "ออกแบบ UI components, charts, widgets, responsive layout, navigation"
+    },
+    {
+      "phase": 4,
+      "name": "SQL Query Design",
+      "agent": "04-sql-dba",
+      "status": "PENDING",
+      "depends_on": ["Dashboard Architecture"],
+      "expected_outputs": [
+        "outputs/dashboard_queries.sql",
+        "outputs/query_metrics.json"
+      ],
+      "description": "สร้าง optimized SQL queries สำหรับ Dashboard API endpoints"
+    },
+    {
+      "phase": 5,
+      "name": "Data Engineering",
+      "agent": "05-data-engineer",
+      "status": "PENDING",
+      "depends_on": ["SQL Query Design"],
+      "expected_outputs": [
+        "outputs/data_transformations.md",
+        "outputs/api_response_schemas.json"
+      ],
+      "description": "Data transformation logic, API response formatting, aggregation strategies"
+    },
+    {
+      "phase": 6,
+      "name": "Backend Implementation",
+      "agent": "06-backend-engineer",
+      "status": "PENDING",
+      "depends_on": ["Data Engineering"],
+      "expected_outputs": [
+        "src/pages/api/*.ts",
+        "src/lib/db.ts",
+        "src/lib/queries.ts"
+      ],
+      "description": "Implement Next.js API routes, database connection, error handling"
+    },
+    {
+      "phase": 7,
+      "name": "Frontend Implementation",
+      "agent": "07-frontend-engineer",
+      "status": "PENDING",
+      "depends_on": ["Backend Implementation"],
+      "expected_outputs": [
+        "src/pages/index.tsx",
+        "src/components/**/*.tsx",
+        "src/styles/**/*.css"
+      ],
+      "description": "Implement Dashboard UI, charts, tables, real-time updates"
+    },
+    {
+      "phase": 8,
+      "name": "Documentation",
+      "agent": "11-doc-writer",
+      "status": "PENDING",
+      "depends_on": ["Frontend Implementation"],
+      "expected_outputs": [
+        "README.md",
+        "docs/API.md",
+        "docs/SETUP.md"
+      ],
+      "description": "API documentation, setup guide, deployment instructions"
+    },
+    {
+      "phase": 9,
+      "name": "QA Review",
+      "agent": "10-qa-reviewer",
+      "status": "PENDING",
+      "depends_on": ["Documentation"],
+      "expected_outputs": [
+        "outputs/qa_dashboard.md",
+        "outputs/test_results.json"
+      ],
+      "description": "Testing, performance review, security check, code quality"
+    },
+    {
+      "phase": 10,
+      "name": "Release Manager",
+      "agent": "20-release-manager",
+      "status": "PENDING",
+      "depends_on": ["QA Review"],
+      "expected_outputs": [
+        "outputs/release_notes.md",
+        "outputs/deployment_guide.md"
+      ],
+      "description": "Final deployment checklist, release notes, production readiness"
+    }
+  ],
+  "handoff_messages": {
+    "02-task-planner": "วิเคราะห์ข้อมูล inspection จาก outputs/*.json และ state/dashboard_schema.json กำหนด Dashboard features ที่ควรมี เช่น Database Overview, Module Summary, Anomaly Alerts, Index Recommendations, Real-time Stats",
+    "17-system-architect": "จาก dashboard_plan.json ออกแบบ Next.js App Router structure, API routes (/api/db-stats, /api/modules, /api/anomalies, /api/index-gaps), database connection (MariaDB MySQL), environment setup",
+    "13-dashboard-architect": "ออกแบบ Dashboard layout: sidebar navigation, main content area, responsive grid. Components: DatabaseStatsCard, ModuleChart, AnomalyTable, IndexGapList, TrendChart",
+    "04-sql-dba": "สร้าง SQL queries สำหรับ: database overview stats, module row counts, anomaly detection, index gap analysis. Optimize ด้วย indexes ที่แนะนำจาก inspection",
+    "05-data-engineer": "Transform raw SQL results เป็น API response format, aggregate module data, calculate percentages, format anomalies",
+    "06-backend-engineer": "Implement Next.js API routes, use mysql2/promise for connection pooling, error handling, rate limiting. Store queries in src/lib/queries.ts",
+    "07-frontend-engineer": "Build Dashboard pages: / (overview), /modules, /anomalies, /indexes. Use Chart.js or Recharts for visualizations, Tailwind CSS for styling",
+    "11-doc-writer": "Document API endpoints, setup instructions, environment variables, database connection string format",
+    "10-qa-reviewer": "Test API responses, check SQL injection prevention, verify responsive design, performance test with large datasets",
+    "20-release-manager": "Create deployment guide for production (pm2, nginx, SSL), environment checklist, rollback procedure"
+  }
+}

@@ -1,0 +1,1115 @@
+{
+  "version": "1.0.0",
+  "created": "2026-03-20",
+  "project": "Hospital DB Dashboard",
+  "database": "hidb10949",
+  "layout": {
+    "type": "sidebar-left",
+    "headerHeight": "4rem",
+    "sidebarWidth": "16rem",
+    "sidebarCollapsedWidth": "4rem",
+    "footerHeight": "3rem",
+    "mainPadding": "1.5rem"
+  },
+  "responsiveBreakpoints": {
+    "mobile": {
+      "minWidth": 0,
+      "maxWidth": 639,
+      "columns": 1,
+      "sidebarBehavior": "hidden",
+      "chartHeight": 250
+    },
+    "tablet": {
+      "minWidth": 640,
+      "maxWidth": 1023,
+      "columns": 2,
+      "sidebarBehavior": "hidden",
+      "chartHeight": 300
+    },
+    "desktop": {
+      "minWidth": 1024,
+      "maxWidth": 1279,
+      "columns": 3,
+      "sidebarBehavior": "collapsed",
+      "chartHeight": 350
+    },
+    "largeDesktop": {
+      "minWidth": 1280,
+      "maxWidth": null,
+      "columns": 4,
+      "sidebarBehavior": "expanded",
+      "chartHeight": 400
+    }
+  },
+  "navigation": {
+    "type": "vertical-sidebar",
+    "mobileNav": "hamburger-menu",
+    "items": [
+      {
+        "id": "overview",
+        "title": "Overview",
+        "href": "/",
+        "icon": "LayoutDashboard",
+        "badge": null,
+        "description": "Database overview and health status",
+        "priority": 1,
+        "children": null
+      },
+      {
+        "id": "modules",
+        "title": "Modules",
+        "href": "/modules",
+        "icon": "Package",
+        "badge": null,
+        "description": "Explore database modules and tables",
+        "priority": 2,
+        "children": null
+      },
+      {
+        "id": "anomalies",
+        "title": "Anomalies",
+        "href": "/anomalies",
+        "icon": "AlertTriangle",
+        "badge": 527,
+        "badgeVariant": "danger",
+        "description": "Database issues and anomalies",
+        "priority": 3,
+        "children": [
+          {
+            "id": "anomalies-missing-pk",
+            "title": "Missing Primary Keys",
+            "href": "/anomalies/missing_primary_keys",
+            "badge": 242
+          },
+          {
+            "id": "anomalies-missing-index",
+            "title": "Missing Indexes",
+            "href": "/anomalies/missing_indexes",
+            "badge": 172
+          },
+          {
+            "id": "anomalies-large-tables",
+            "title": "Large Tables Without Index",
+            "href": "/anomalies/large_tables_no_index",
+            "badge": 110
+          },
+          {
+            "id": "anomalies-orphan",
+            "title": "Orphan Tables",
+            "href": "/anomalies/orphan_tables",
+            "badge": 50
+          },
+          {
+            "id": "anomalies-naming",
+            "title": "Naming Issues",
+            "href": "/anomalies/naming_issues",
+            "badge": 8
+          }
+        ]
+      },
+      {
+        "id": "indexes",
+        "title": "Index Recommendations",
+        "href": "/indexes",
+        "icon": "Database",
+        "badge": 90,
+        "badgeVariant": "warning",
+        "description": "Index optimization suggestions",
+        "priority": 4,
+        "children": null
+      },
+      {
+        "id": "search",
+        "title": "Search",
+        "href": "/search",
+        "icon": "Search",
+        "badge": null,
+        "description": "Search tables and modules",
+        "priority": 5,
+        "children": null
+      }
+    ]
+  },
+  "pages": {
+    "/": {
+      "title": "Database Overview",
+      "description": "Overview of database health, statistics, and key metrics",
+      "layout": "dashboard",
+      "meta": {
+        "ogTitle": "Hospital DB Dashboard - Overview",
+        "ogDescription": "Monitor your hospital database health and statistics"
+      },
+      "sections": [
+        {
+          "id": "header",
+          "type": "page-header",
+          "content": {
+            "title": "Database Overview",
+            "subtitle": "hidb10949 - Hospital Database",
+            "lastUpdated": true
+          }
+        },
+        {
+          "id": "summary-cards",
+          "type": "grid",
+          "responsive": {
+            "mobile": { "columns": 1, "gap": "1rem" },
+            "tablet": { "columns": 2, "gap": "1rem" },
+            "desktop": { "columns": 4, "gap": "1rem" }
+          },
+          "components": [
+            {
+              "name": "SummaryCard",
+              "props": {
+                "title": "Total Tables",
+                "icon": "Table2",
+                "color": "blue",
+                "dataPath": "overview.totalTables"
+              }
+            },
+            {
+              "name": "SummaryCard",
+              "props": {
+                "title": "Total Rows",
+                "icon": "Database",
+                "color": "green",
+                "dataPath": "overview.totalRows"
+              }
+            },
+            {
+              "name": "SummaryCard",
+              "props": {
+                "title": "Database Size",
+                "icon": "Layers",
+                "color": "purple",
+                "dataPath": "overview.totalSize"
+              }
+            },
+            {
+              "name": "SummaryCard",
+              "props": {
+                "title": "Anomalies",
+                "icon": "AlertTriangle",
+                "color": "red",
+                "dataPath": "overview.anomalyCount"
+              }
+            }
+          ]
+        },
+        {
+          "id": "health-and-distribution",
+          "type": "grid",
+          "responsive": {
+            "mobile": { "columns": 1, "gap": "1rem" },
+            "tablet": { "columns": 1, "gap": "1rem" },
+            "desktop": { "columns": 2, "gap": "1rem" }
+          },
+          "components": [
+            {
+              "name": "HealthScoreIndicator",
+              "props": {
+                "scorePath": "overview.healthScore",
+                "anomaliesPath": "overview.anomalies"
+              }
+            },
+            {
+              "name": "ModuleDistributionChart",
+              "props": {
+                "dataPath": "overview.topModules",
+                "metric": "tableCount",
+                "title": "Module Distribution"
+              }
+            }
+          ]
+        },
+        {
+          "id": "anomaly-summary",
+          "type": "section",
+          "title": "Anomaly Summary",
+          "components": [
+            {
+              "name": "AnomalySummaryCards",
+              "props": {
+                "categoriesPath": "overview.anomalyCategories"
+              }
+            }
+          ]
+        }
+      ],
+      "apiEndpoint": "/api/overview",
+      "cacheStrategy": "ISR-1h"
+    },
+    "/modules": {
+      "title": "Module Explorer",
+      "description": "Explore all database modules and their tables",
+      "layout": "dashboard",
+      "meta": {
+        "ogTitle": "Hospital DB Dashboard - Modules",
+        "ogDescription": "Browse database modules and tables"
+      },
+      "sections": [
+        {
+          "id": "header",
+          "type": "page-header",
+          "content": {
+            "title": "Module Explorer",
+            "subtitle": "25 modules in database",
+            "searchPlaceholder": "Search modules..."
+          }
+        },
+        {
+          "id": "search-filter",
+          "type": "search-filter",
+          "components": [
+            {
+              "name": "SearchInput",
+              "props": {
+                "placeholder": "Search modules...",
+                "paramKey": "q"
+              }
+            },
+            {
+              "name": "SortSelect",
+              "props": {
+                "options": [
+                  { "value": "name", "label": "Name" },
+                  { "value": "tableCount", "label": "Table Count" },
+                  { "value": "totalSize", "label": "Size" },
+                  { "value": "totalRows", "label": "Row Count" }
+                ],
+                "defaultValue": "name"
+              }
+            }
+          ]
+        },
+        {
+          "id": "module-grid",
+          "type": "grid",
+          "responsive": {
+            "mobile": { "columns": 1, "gap": "1rem" },
+            "tablet": { "columns": 2, "gap": "1rem" },
+            "desktop": { "columns": 3, "gap": "1rem" },
+            "largeDesktop": { "columns": 4, "gap": "1rem" }
+          },
+          "components": [
+            {
+              "name": "ModuleCard",
+              "repeat": "modules",
+              "props": {
+                "namePath": "name",
+                "tableCountPath": "tableCount",
+                "totalRowsPath": "totalRows",
+                "totalSizePath": "totalSize",
+                "descriptionPath": "description",
+                "href": "/modules/[name]"
+              }
+            }
+          ]
+        }
+      ],
+      "apiEndpoint": "/api/modules",
+      "cacheStrategy": "ISR-1h"
+    },
+    "/modules/[name]": {
+      "title": "Module Detail",
+      "description": "View tables and statistics for a specific module",
+      "layout": "dashboard",
+      "dynamic": true,
+      "sections": [
+        {
+          "id": "header",
+          "type": "page-header",
+          "content": {
+            "titlePath": "module.name",
+            "subtitlePath": "module.description",
+            "breadcrumb": [
+              { "label": "Modules", "href": "/modules" },
+              { "labelPath": "module.name" }
+            ]
+          }
+        },
+        {
+          "id": "module-stats",
+          "type": "grid",
+          "responsive": {
+            "mobile": { "columns": 1, "gap": "1rem" },
+            "tablet": { "columns": 3, "gap": "1rem" }
+          },
+          "components": [
+            {
+              "name": "StatCard",
+              "props": {
+                "title": "Tables",
+                "valuePath": "module.tableCount",
+                "icon": "Table2"
+              }
+            },
+            {
+              "name": "StatCard",
+              "props": {
+                "title": "Total Rows",
+                "valuePath": "module.totalRows",
+                "icon": "Database",
+                "format": "number"
+              }
+            },
+            {
+              "name": "StatCard",
+              "props": {
+                "title": "Total Size",
+                "valuePath": "module.totalSizeBytes",
+                "icon": "Layers",
+                "format": "bytes"
+              }
+            }
+          ]
+        },
+        {
+          "id": "size-chart",
+          "type": "single",
+          "responsive": {
+            "mobile": { "height": 250 },
+            "tablet": { "height": 300 },
+            "desktop": { "height": 350 }
+          },
+          "components": [
+            {
+              "name": "SizeDistributionChart",
+              "props": {
+                "dataPath": "module.tables",
+                "title": "Table Size Distribution",
+                "limit": 10
+              }
+            }
+          ]
+        },
+        {
+          "id": "table-list",
+          "type": "section",
+          "title": "Tables in Module",
+          "components": [
+            {
+              "name": "DataTable",
+              "props": {
+                "dataPath": "module.tables",
+                "columns": [
+                  { "key": "name", "header": "Table Name", "sortable": true },
+                  { "key": "rows", "header": "Rows", "sortable": true, "format": "number" },
+                  { "key": "size", "header": "Size", "sortable": true, "format": "bytes" },
+                  { "key": "hasPk", "header": "Primary Key", "format": "boolean" },
+                  { "key": "indexCount", "header": "Indexes", "sortable": true },
+                  { "key": "issues", "header": "Issues", "format": "count" }
+                ],
+                "rowLink": "/tables/[name]",
+                "pagination": true,
+                "pageSize": 20
+              }
+            }
+          ]
+        }
+      ],
+      "apiEndpoint": "/api/modules/[name]",
+      "cacheStrategy": "ISR-1h"
+    },
+    "/anomalies": {
+      "title": "Anomaly Dashboard",
+      "description": "Database issues and problems overview",
+      "layout": "dashboard",
+      "meta": {
+        "ogTitle": "Hospital DB Dashboard - Anomalies",
+        "ogDescription": "View database issues and problems"
+      },
+      "sections": [
+        {
+          "id": "header",
+          "type": "page-header",
+          "content": {
+            "title": "Anomaly Dashboard",
+            "subtitle": "527 issues detected",
+            "alert": {
+              "variant": "warning",
+              "message": "24 critical issues require immediate attention"
+            }
+          }
+        },
+        {
+          "id": "severity-tabs",
+          "type": "tabs",
+          "components": [
+            {
+              "name": "Tabs",
+              "props": {
+                "tabs": [
+                  { "id": "all", "label": "All", "badge": 527 },
+                  { "id": "critical", "label": "Critical", "badge": 24, "variant": "danger" },
+                  { "id": "warning", "label": "Warning", "badge": 152, "variant": "warning" },
+                  { "id": "info", "label": "Info", "badge": 351, "variant": "info" }
+                ],
+                "defaultTab": "all"
+              }
+            }
+          ]
+        },
+        {
+          "id": "anomaly-categories",
+          "type": "grid",
+          "responsive": {
+            "mobile": { "columns": 1, "gap": "1rem" },
+            "tablet": { "columns": 2, "gap": "1rem" },
+            "desktop": { "columns": 3, "gap": "1rem" }
+          },
+          "components": [
+            {
+              "name": "AnomalyCategoryCard",
+              "repeat": "categories",
+              "props": {
+                "titlePath": "name",
+                "countPath": "total",
+                "descriptionPath": "description",
+                "severityBreakdownPath": "bySeverity",
+                "href": "/anomalies/[category]"
+              }
+            }
+          ]
+        }
+      ],
+      "apiEndpoint": "/api/anomalies",
+      "cacheStrategy": "ISR-30m"
+    },
+    "/anomalies/[category]": {
+      "title": "Anomaly Category",
+      "description": "Detailed view of a specific anomaly category",
+      "layout": "dashboard",
+      "dynamic": true,
+      "sections": [
+        {
+          "id": "header",
+          "type": "page-header",
+          "content": {
+            "titlePath": "category.name",
+            "subtitlePath": "category.description",
+            "breadcrumb": [
+              { "label": "Anomalies", "href": "/anomalies" },
+              { "labelPath": "category.name" }
+            ]
+          }
+        },
+        {
+          "id": "stats",
+          "type": "grid",
+          "responsive": {
+            "mobile": { "columns": 1, "gap": "1rem" },
+            "tablet": { "columns": 3, "gap": "1rem" }
+          },
+          "components": [
+            {
+              "name": "StatCard",
+              "props": {
+                "title": "Critical",
+                "valuePath": "category.bySeverity.critical",
+                "color": "red"
+              }
+            },
+            {
+              "name": "StatCard",
+              "props": {
+                "title": "Warning",
+                "valuePath": "category.bySeverity.warning",
+                "color": "yellow"
+              }
+            },
+            {
+              "name": "StatCard",
+              "props": {
+                "title": "Info",
+                "valuePath": "category.bySeverity.info",
+                "color": "blue"
+              }
+            }
+          ]
+        },
+        {
+          "id": "filter",
+          "type": "filter-bar",
+          "components": [
+            {
+              "name": "SeverityFilter",
+              "props": {
+                "options": ["ALL", "CRITICAL", "WARNING", "INFO"]
+              }
+            },
+            {
+              "name": "ModuleFilter",
+              "props": {
+                "optionsPath": "modules"
+              }
+            },
+            {
+              "name": "SearchInput",
+              "props": {
+                "placeholder": "Search tables...",
+                "paramKey": "q"
+              }
+            }
+          ]
+        },
+        {
+          "id": "table-list",
+          "type": "section",
+          "title": "Affected Tables",
+          "components": [
+            {
+              "name": "DataTable",
+              "props": {
+                "dataPath": "category.items",
+                "columns": [
+                  { "key": "table", "header": "Table Name", "sortable": true },
+                  { "key": "module", "header": "Module", "sortable": true },
+                  { "key": "rowCount", "header": "Rows", "sortable": true, "format": "number" },
+                  { "key": "severity", "header": "Severity", "format": "badge" },
+                  { "key": "recommendation", "header": "Recommendation" }
+                ],
+                "rowLink": "/tables/[table]",
+                "pagination": true,
+                "pageSize": 25
+              }
+            }
+          ]
+        }
+      ],
+      "apiEndpoint": "/api/anomalies/[category]",
+      "cacheStrategy": "ISR-30m"
+    },
+    "/indexes": {
+      "title": "Index Recommendations",
+      "description": "Database index optimization suggestions",
+      "layout": "dashboard",
+      "meta": {
+        "ogTitle": "Hospital DB Dashboard - Index Recommendations",
+        "ogDescription": "View index optimization suggestions"
+      },
+      "sections": [
+        {
+          "id": "header",
+          "type": "page-header",
+          "content": {
+            "title": "Index Recommendations",
+            "subtitle": "90 optimization suggestions",
+            "alert": {
+              "variant": "info",
+              "message": "25 high-priority recommendations for large tables"
+            }
+          }
+        },
+        {
+          "id": "priority-tabs",
+          "type": "tabs",
+          "components": [
+            {
+              "name": "Tabs",
+              "props": {
+                "tabs": [
+                  { "id": "all", "label": "All", "badge": 90 },
+                  { "id": "high", "label": "High Priority", "badge": 25, "variant": "danger" },
+                  { "id": "medium", "label": "Medium", "badge": 40, "variant": "warning" },
+                  { "id": "low", "label": "Low", "badge": 25, "variant": "info" }
+                ],
+                "defaultTab": "all"
+              }
+            }
+          ]
+        },
+        {
+          "id": "recommendations",
+          "type": "list",
+          "components": [
+            {
+              "name": "IndexRecommendationCard",
+              "repeat": "recommendations",
+              "props": {
+                "tablePath": "table",
+                "rowCountPath": "rowCount",
+                "priorityPath": "priority",
+                "recommendationPath": "recommendation",
+                "sqlPath": "sql",
+                "impactPath": "impact"
+              }
+            }
+          ]
+        }
+      ],
+      "apiEndpoint": "/api/indexes/recommendations",
+      "cacheStrategy": "ISR-1h"
+    },
+    "/tables/[name]": {
+      "title": "Table Details",
+      "description": "Detailed information about a specific table",
+      "layout": "dashboard",
+      "dynamic": true,
+      "sections": [
+        {
+          "id": "header",
+          "type": "page-header",
+          "content": {
+            "titlePath": "table.name",
+            "subtitlePath": "table.module",
+            "breadcrumb": [
+              { "label": "Modules", "href": "/modules" },
+              { "labelPath": "table.module", "href": "/modules/[module]" },
+              { "labelPath": "table.name" }
+            ]
+          }
+        },
+        {
+          "id": "stats",
+          "type": "grid",
+          "responsive": {
+            "mobile": { "columns": 2, "gap": "1rem" },
+            "tablet": { "columns": 4, "gap": "1rem" }
+          },
+          "components": [
+            {
+              "name": "StatCard",
+              "props": {
+                "title": "Rows",
+                "valuePath": "table.rowCount",
+                "format": "number"
+              }
+            },
+            {
+              "name": "StatCard",
+              "props": {
+                "title": "Size",
+                "valuePath": "table.sizeBytes",
+                "format": "bytes"
+              }
+            },
+            {
+              "name": "StatCard",
+              "props": {
+                "title": "Indexes",
+                "valuePath": "table.indexCount"
+              }
+            },
+            {
+              "name": "StatCard",
+              "props": {
+                "title": "Primary Key",
+                "valuePath": "table.hasPk",
+                "format": "boolean"
+              }
+            }
+          ]
+        },
+        {
+          "id": "schema",
+          "type": "section",
+          "title": "Schema",
+          "components": [
+            {
+              "name": "SchemaTable",
+              "props": {
+                "columnsPath": "table.columns",
+                "headers": ["Column", "Type", "Nullable", "Default"]
+              }
+            }
+          ]
+        },
+        {
+          "id": "indexes",
+          "type": "section",
+          "title": "Indexes",
+          "components": [
+            {
+              "name": "IndexList",
+              "props": {
+                "indexesPath": "table.indexes"
+              }
+            }
+          ]
+        },
+        {
+          "id": "issues",
+          "type": "section",
+          "title": "Issues",
+          "condition": "table.issues.length > 0",
+          "components": [
+            {
+              "name": "IssueList",
+              "props": {
+                "issuesPath": "table.issues"
+              }
+            }
+          ]
+        },
+        {
+          "id": "related",
+          "type": "section",
+          "title": "Related Tables",
+          "components": [
+            {
+              "name": "RelatedTableList",
+              "props": {
+                "tablesPath": "table.relatedTables"
+              }
+            }
+          ]
+        }
+      ],
+      "apiEndpoint": "/api/tables/[name]",
+      "cacheStrategy": "ISR-1h"
+    },
+    "/search": {
+      "title": "Search",
+      "description": "Search tables and modules",
+      "layout": "dashboard",
+      "meta": {
+        "ogTitle": "Hospital DB Dashboard - Search",
+        "ogDescription": "Search for tables and modules"
+      },
+      "sections": [
+        {
+          "id": "header",
+          "type": "page-header",
+          "content": {
+            "title": "Search",
+            "subtitle": "Search across 847 tables and 25 modules"
+          }
+        },
+        {
+          "id": "search",
+          "type": "search-section",
+          "components": [
+            {
+              "name": "SearchInput",
+              "props": {
+                "placeholder": "Search tables, modules, or columns...",
+                "paramKey": "q",
+                "autoFocus": true
+              }
+            }
+          ]
+        },
+        {
+          "id": "results",
+          "type": "search-results",
+          "condition": "query.length > 0",
+          "components": [
+            {
+              "name": "SearchResults",
+              "props": {
+                "modulesPath": "results.modules",
+                "tablesPath": "results.tables",
+                "totalResultsPath": "results.totalResults"
+              }
+            }
+          ]
+        }
+      ],
+      "apiEndpoint": "/api/search",
+      "cacheStrategy": "no-cache"
+    }
+  },
+  "components": {
+    "layout": {
+      "Sidebar": {
+        "description": "Main navigation sidebar",
+        "file": "components/layout/sidebar.tsx",
+        "responsive": {
+          "mobile": "hidden",
+          "tablet": "hidden",
+          "desktop": "visible",
+          "largeDesktop": "visible"
+        },
+        "features": ["collapsible", "activeState", "badges", "keyboardNavigation"]
+      },
+      "Header": {
+        "description": "Top navigation header",
+        "file": "components/layout/header.tsx",
+        "responsive": {
+          "mobile": "visible",
+          "tablet": "visible",
+          "desktop": "visible",
+          "largeDesktop": "visible"
+        },
+        "features": ["breadcrumb", "themeToggle", "notifications", "search"]
+      },
+      "MobileNav": {
+        "description": "Mobile navigation menu",
+        "file": "components/layout/mobile-nav.tsx",
+        "responsive": {
+          "mobile": "visible",
+          "tablet": "visible",
+          "desktop": "hidden",
+          "largeDesktop": "hidden"
+        },
+        "features": ["hamburger", "fullScreen", "closeOnNavigate"]
+      },
+      "Footer": {
+        "description": "Page footer with links",
+        "file": "components/layout/footer.tsx",
+        "responsive": {
+          "mobile": "visible",
+          "tablet": "visible",
+          "desktop": "visible",
+          "largeDesktop": "visible"
+        },
+        "features": ["copyright", "links", "version"]
+      },
+      "Breadcrumb": {
+        "description": "Navigation breadcrumb",
+        "file": "components/layout/breadcrumb.tsx",
+        "responsive": {
+          "mobile": "visible",
+          "tablet": "visible",
+          "desktop": "visible",
+          "largeDesktop": "visible"
+        },
+        "features": ["truncate", "homeLink", "lastItemNoLink"]
+      }
+    },
+    "ui": {
+      "Button": {
+        "description": "Primary button component",
+        "file": "components/ui/button.tsx",
+        "variants": ["primary", "secondary", "ghost", "danger"],
+        "sizes": ["sm", "md", "lg", "icon"]
+      },
+      "Card": {
+        "description": "Container card component",
+        "file": "components/ui/card.tsx",
+        "parts": ["Card", "CardHeader", "CardTitle", "CardContent", "CardFooter"]
+      },
+      "Badge": {
+        "description": "Status badge component",
+        "file": "components/ui/badge.tsx",
+        "variants": ["default", "secondary", "success", "warning", "danger", "info"]
+      },
+      "Tabs": {
+        "description": "Tab navigation component",
+        "file": "components/ui/tabs.tsx",
+        "features": ["controlled", "uncontrolled", "badges"]
+      },
+      "Table": {
+        "description": "Data table component",
+        "file": "components/ui/table.tsx",
+        "features": ["sortable", "pagination", "rowClick", "responsive"]
+      },
+      "Input": {
+        "description": "Text input component",
+        "file": "components/ui/input.tsx",
+        "variants": ["default", "search", "error"]
+      },
+      "Select": {
+        "description": "Dropdown select component",
+        "file": "components/ui/select.tsx",
+        "features": ["searchable", "multiSelect"]
+      },
+      "Skeleton": {
+        "description": "Loading skeleton component",
+        "file": "components/ui/skeleton.tsx",
+        "variants": ["text", "card", "table", "chart"]
+      },
+      "Progress": {
+        "description": "Progress bar component",
+        "file": "components/ui/progress.tsx",
+        "features": ["determinate", "indeterminate"]
+      },
+      "Tooltip": {
+        "description": "Hover tooltip component",
+        "file": "components/ui/tooltip.tsx",
+        "features": ["delay", "position"]
+      },
+      "Dialog": {
+        "description": "Modal dialog component",
+        "file": "components/ui/dialog.tsx",
+        "features": ["open", "close", "overlay"]
+      }
+    },
+    "charts": {
+      "PieChart": {
+        "description": "Pie chart component",
+        "file": "components/charts/pie-chart.tsx",
+        "features": ["labels", "legend", "tooltip", "responsive"]
+      },
+      "BarChart": {
+        "description": "Bar chart component",
+        "file": "components/charts/bar-chart.tsx",
+        "features": ["horizontal", "vertical", "stacked", "grouped"]
+      },
+      "LineChart": {
+        "description": "Line chart component",
+        "file": "components/charts/line-chart.tsx",
+        "features": ["multiLine", "area", "responsive"]
+      },
+      "ModuleDistributionChart": {
+        "description": "Module distribution visualization",
+        "file": "components/charts/module-distribution-chart.tsx",
+        "features": ["pieChart", "topValues", "interactive"]
+      },
+      "SizeDistributionChart": {
+        "description": "Size distribution visualization",
+        "file": "components/charts/size-distribution-chart.tsx",
+        "features": ["horizontalBar", "topValues", "interactive"]
+      },
+      "TrendChart": {
+        "description": "Trend line chart",
+        "file": "components/charts/trend-chart.tsx",
+        "features": ["timeSeries", "multiMetric", "interactive"]
+      }
+    },
+    "feature": {
+      "SummaryCard": {
+        "description": "Statistics summary card",
+        "file": "components/overview/summary-cards.tsx",
+        "props": ["title", "value", "icon", "color", "trend"]
+      },
+      "HealthScoreIndicator": {
+        "description": "Database health score gauge",
+        "file": "components/overview/health-score-indicator.tsx",
+        "props": ["score", "anomalies"]
+      },
+      "AnomalySummaryCards": {
+        "description": "Anomaly category summary cards",
+        "file": "components/overview/anomaly-summary-cards.tsx",
+        "props": ["categories"]
+      },
+      "ModuleCard": {
+        "description": "Module information card",
+        "file": "components/modules/module-card.tsx",
+        "props": ["module", "onClick"]
+      },
+      "ModuleList": {
+        "description": "List of modules",
+        "file": "components/modules/module-list.tsx",
+        "props": ["modules", "searchable", "sortable"]
+      },
+      "SeverityBadge": {
+        "description": "Anomaly severity badge",
+        "file": "components/anomalies/severity-badge.tsx",
+        "props": ["severity", "showIcon"]
+      },
+      "AnomalyCard": {
+        "description": "Anomaly information card",
+        "file": "components/anomalies/anomaly-card.tsx",
+        "props": ["anomaly", "onClick"]
+      },
+      "CategoryTabs": {
+        "description": "Anomaly category tabs",
+        "file": "components/anomalies/category-tabs.tsx",
+        "props": ["categories", "activeCategory"]
+      },
+      "SQLPreview": {
+        "description": "SQL code preview with copy",
+        "file": "components/indexes/sql-preview.tsx",
+        "props": ["sql", "title"]
+      },
+      "IndexCard": {
+        "description": "Index recommendation card",
+        "file": "components/indexes/index-card.tsx",
+        "props": ["recommendation", "onApply"]
+      },
+      "SearchInput": {
+        "description": "Global search input",
+        "file": "components/search/search-input.tsx",
+        "props": ["placeholder", "onSearch", "autoFocus"]
+      },
+      "SearchResults": {
+        "description": "Search results list",
+        "file": "components/search/search-results.tsx",
+        "props": ["results", "query"]
+      },
+      "DataTable": {
+        "description": "Generic data table",
+        "file": "components/tables/data-table.tsx",
+        "props": ["data", "columns", "sortable", "pagination", "rowLink"]
+      },
+      "TableCard": {
+        "description": "Table information card",
+        "file": "components/tables/table-card.tsx",
+        "props": ["table", "onClick"]
+      }
+    }
+  },
+  "theme": {
+    "default": "light",
+    "modes": ["light", "dark"],
+    "colors": {
+      "primary": {
+        "50": "#eff6ff",
+        "100": "#dbeafe",
+        "200": "#bfdbfe",
+        "300": "#93c5fd",
+        "400": "#60a5fa",
+        "500": "#3b82f6",
+        "600": "#2563eb",
+        "700": "#1d4ed8",
+        "800": "#1e40af",
+        "900": "#1e3a8a"
+      },
+      "success": {
+        "50": "#f0fdf4",
+        "100": "#dcfce7",
+        "500": "#22c55e",
+        "600": "#16a34a",
+        "700": "#15803d"
+      },
+      "warning": {
+        "50": "#fffbeb",
+        "100": "#fef3c7",
+        "500": "#f59e0b",
+        "600": "#d97706",
+        "700": "#b45309"
+      },
+      "danger": {
+        "50": "#fef2f2",
+        "100": "#fee2e2",
+        "500": "#ef4444",
+        "600": "#dc2626",
+        "700": "#b91c1c"
+      },
+      "info": {
+        "50": "#eff6ff",
+        "100": "#dbeafe",
+        "500": "#3b82f6",
+        "600": "#2563eb",
+        "700": "#1d4ed8"
+      }
+    },
+    "fontFamily": {
+      "sans": ["Inter", "system-ui", "-apple-system", "sans-serif"],
+      "mono": ["JetBrains Mono", "Menlo", "monospace"]
+    }
+  },
+  "accessibility": {
+    "skipLinks": true,
+    "keyboardNavigation": true,
+    "focusIndicators": true,
+    "ariaLabels": true,
+    "colorContrast": "WCAG-2.1-AA",
+    "reducedMotion": true
+  },
+  "performance": {
+    "lazyLoading": {
+      "images": true,
+      "components": ["charts", "tables"],
+      "belowFold": true
+    },
+    "codeSplitting": {
+      "pages": true,
+      "components": true
+    },
+    "caching": {
+      "staticPages": "ISR-1h",
+      "dynamicPages": "ISR-30m",
+      "searchPages": "no-cache"
+    },
+    "bundleSize": {
+      "target": {
+        "initial": "200KB",
+        "total": "500KB"
+      },
+      "optimizations": ["treeShaking", "minification", "compression"]
+    }
+  }
+}

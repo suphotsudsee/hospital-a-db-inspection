@@ -1,0 +1,120 @@
+{
+  "reviewed_at": "2026-03-20T09:39:43.617194",
+  "files_checked": [
+    {
+      "phase": "Phase 1 - Connection Check",
+      "file": "outputs/connection_status.json",
+      "status": "OK",
+      "size": 232
+    },
+    {
+      "phase": "Phase 2 - Schema Discovery",
+      "file": "outputs/schema_inventory.json",
+      "status": "OK",
+      "size": 2221092
+    },
+    {
+      "phase": "Phase 2 - Schema Discovery",
+      "file": "outputs/schema_inventory.md",
+      "status": "OK",
+      "size": 4387
+    },
+    {
+      "phase": "Phase 3 - Table Classification",
+      "file": "outputs/module_map.json",
+      "status": "OK",
+      "size": 139300
+    },
+    {
+      "phase": "Phase 3 - Table Classification",
+      "file": "outputs/module_summary.md",
+      "status": "OK",
+      "size": 10439
+    },
+    {
+      "phase": "Phase 4 - Relationship Mapping",
+      "file": "outputs/relationship_map.json",
+      "status": "OK",
+      "size": 135889
+    },
+    {
+      "phase": "Phase 4 - Relationship Mapping",
+      "file": "outputs/relationship_map.md",
+      "status": "OK",
+      "size": 2316
+    },
+    {
+      "phase": "Phase 5 - Index Review",
+      "file": "outputs/index_gap_report.md",
+      "status": "OK",
+      "size": 6794
+    },
+    {
+      "phase": "Phase 5 - Index Review",
+      "file": "outputs/recommended_indexes.sql",
+      "status": "OK",
+      "size": 9254
+    },
+    {
+      "phase": "Phase 6 - Report Generation",
+      "file": "outputs/executive_summary.md",
+      "status": "OK",
+      "size": 6052
+    },
+    {
+      "phase": "Phase 6 - Report Generation",
+      "file": "outputs/final_recommendation.md",
+      "status": "OK",
+      "size": 7932
+    },
+    {
+      "phase": "Phase 6 - Report Generation",
+      "file": "outputs/anomalies.json",
+      "status": "OK",
+      "size": 61134
+    },
+    {
+      "phase": "Phase 7 - Dashboard Update",
+      "file": "state/dashboard_schema.json",
+      "status": "OK",
+      "size": 5680
+    }
+  ],
+  "data_validations": [
+    {
+      "file": "outputs/connection_status.json",
+      "status": "OK"
+    },
+    {
+      "file": "outputs/schema_inventory.json",
+      "status": "OK"
+    },
+    {
+      "file": "outputs/module_map.json",
+      "status": "OK"
+    },
+    {
+      "file": "outputs/relationship_map.json",
+      "status": "OK"
+    },
+    {
+      "file": "outputs/anomalies.json",
+      "status": "OK"
+    },
+    {
+      "file": "state/dashboard_schema.json",
+      "status": "OK"
+    }
+  ],
+  "issues": [
+    "Critical anomalies found: 24"
+  ],
+  "status": "PASS",
+  "summary": {
+    "total_files_checked": 13,
+    "files_passed": 13,
+    "files_failed": 0,
+    "issues_count": 1,
+    "overall_status": "PASS"
+  }
+}
